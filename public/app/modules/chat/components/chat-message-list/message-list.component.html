@@ -5,12 +5,12 @@
                 <img src="assets/img/user-img2.jpg"/>
             </span>
             <div class="chatbg">
-                <span class="chattext">{{message.text}}</span>
-                <!--<span class="chattext" ng-if="message.type=2">Image:-->
-                    <!--<span class="chat-fullimage">-->
-                        <!--<img src="{{message.text}}" alt="">-->
-                    <!--</span>-->
-                <!--</span>-->
+                <span class="chattext" ng-if="message.type==1">{{message.text}}</span>
+                <span class="chattext" ng-if="message.type==2">Image:
+                    <span class="chat-fullimage">
+                        <img src="{{message.text}}" alt="">
+                    </span>
+                </span>
             </div>
             <span class="info">Sent an hour ago</span>
         </li>

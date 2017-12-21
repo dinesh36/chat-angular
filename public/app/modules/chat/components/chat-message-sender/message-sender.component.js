@@ -89,7 +89,7 @@
                         var obj = {
                             text:data,
                             msgTo:vm.toUser.id,
-                            msgFrom:userId,
+                            msgFrom:parseInt(userId),
                             type:2
                         };
                         if (data) {

@@ -50,6 +50,7 @@
                     }
                 }
                 vm.messages.push(data.data);
+                $scope.$apply();
             });
             $rootScope.$on('NEW_MESSAGE', function(event,data){
                 console.log(data.data);
