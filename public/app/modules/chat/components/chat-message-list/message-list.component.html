@@ -1,6 +1,6 @@
 <div class="chat-window">
-    <ul class="chattext-list" ng-repeat="message in vl.messages track by $index">
-        <li ng-class="message.isLoggingUser?'odd':'even'">
+    <ul class="chattext-list" >
+        <li ng-class="message.isLoggingUser?'odd':'even'" ng-repeat="message in vl.messages track by $index">
             <span class="chat-userimg">
                 <img src="assets/img/user-img2.jpg"/>
             </span>

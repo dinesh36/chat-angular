@@ -2238,3 +2238,19 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 .livechat-list .livechat-img img{ max-width: 100%;}
 .livechat-list .livechat-text{ display: inline-block;  vertical-align: middle; padding-left: 10px;}
 .livechat-list-main .livechat-list-title{ background-color: #00c0f3; color: #fff; padding: 20px; border-radius: 10px 10px 0 0; }
+
+.btn{ background-color: #1e93bf; font-weight: 400;
+    border-radius: 3px;
+    outline: 0 !important;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    padding: 5px 12px;}
+.btn:hover{background-color: #1c80a5; color: #fff;}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content{ padding: 0;}
+.modal-header{ background-color: #00c0f3; color: #fff; border-radius: 5px 5px 0 0;}
+.modal-header h4{ width: 80%; display: inline-block; padding: 0; margin: 0;}
+.modal-header .close-icon{ width: 10px; display: inline-block;}
+.model-body { padding: 15px;}
+.model-body .deal-list{ padding: 5px;}

@@ -1,8 +1,24 @@
-<div>
-    <div ng-if="vf.dealList.length" ng-repeat="deal in vf.dealList">
-        <a ng-click="vf.selectDeal(deal)">{{deal.title}} {{deal.value}}</a>
-    </div>
-    <div ng-if="!vf.dealList.length">
+<div class="model">
 
+    <!--<div ng-if="vf.dealList.length" ng-repeat="deal in vf.dealList">-->
+    <!--<a ng-click="vf.selectDeal(deal)">{{deal.title}} {{deal.value}}</a>-->
+    <!--</div>-->
+    <!--<div ng-if="!vf.dealList.length">-->
+
+    <!--</div>-->
+    <div class="modal-header clearfix"><h4 class="pull-left">Deal list</h4><a ng-click="vf.closeDialog()" class="close-icon pull-right">X</a></div>
+    <div class="model-body">
+        <div class="deal-list" ng-if="vf.dealList.length" ng-repeat="deal in vf.dealList">
+            <a ng-click="vf.selectDeal(deal)"><i class="fa fa-tags" aria-hidden="true"></i> {{deal.title}}</a>
+        </div>
+        <div ng-if="!vf.dealList.length">
+
+        </div>
+    </div>
+    <div class="modal-footer">
+    <button class="btn">Close</button>
     </div>
 </div>
+
+
+
