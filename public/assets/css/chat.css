@@ -1,11 +1,12 @@
+.navbar-collapse, .app-content, .app-footer{ margin-left: 0;}
 #main {
     padding-left: 0;
 }
 #main .row{ margin: 0;}
 .chat-page .chat-userlist {
-    width: 23%;
+    /*width: 23%;*/
     background: #fff;
-    border-right: solid 1px #dfe2f2;
+    border-right: solid 1px #e9eef2;
     height: 100vh;
 }
 .chat-page .chat-userlist .filterlist {
@@ -82,13 +83,20 @@
     height: 300px;
 }
 .chat-page .chat-userlist .search-results ul li {
-    border-bottom: solid 1px #edeff5;
+    border-left: solid 3px transparent;
 }
 .chat-page .chat-window-main {
-    width: 51%;
+    /*width: 51%;*/
+}
+.chat-page .chat-window-main .chat-window{background-color: #edf5f8;}
+.chat-page .chat-window .chattitle .chat-userimg{    border-radius: 50%;
+    overflow: hidden;
+    width: 33px;
+    height: 33px;
+    float: left;
 }
 .chat-page .user-detail {
-    width: 22%;
+    /*width: 22%;*/
 }
 .chat-page .search-box {
     background: #f7f8fc;
@@ -151,9 +159,8 @@
 }
 .chat-page .chatlist ul li {
     list-style: none;
-    padding: 20px 18px;
+    padding: 10px 18px;
     margin: 0;
-    border-bottom: solid 1px #edeff5;
 }
 .chat-page .chatlist ul li .chat-user-img-main {
     position: relative;
@@ -179,6 +186,32 @@
     vertical-align: middle;
     margin-right: 10px;
 }
+
+
+.chat-page .chat-window .chattitle .chat-user-img-main {
+    position: relative;
+    display: inline-block;
+}
+.chat-page .chat-window .chattitle .chat-user-img-main .online {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    background-color: #00c272;
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+}
+.chat-page .chat-window .chattitle .chat-user-img-main .chat-user-img {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
 .chat-page .chatlist ul li a:hover {
     text-decoration: none;
     outline: none;
@@ -187,7 +220,8 @@
     background: #f2f4fc;
 }
 .chat-page .chatlist ul li.active {
-    background: #f2f4fc;
+    background: #edf5f8;
+    border-left: solid 3px #28bebd;
 }
 .chat-page .chatlist h4 {
     font-size: 15px;
@@ -319,7 +353,7 @@
 }
 .chat-page .chat-window .chattitle {
     width: 100%;
-    padding: 15px 0;
+    padding: 15px 10px;
     text-align: center;
     background-color: #fff;
     border-bottom: solid 1px #edeff5;

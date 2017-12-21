@@ -7,7 +7,7 @@
     angular
         .module('MessageSender',[])
         .directive('messageSender', Directive);
-    Controller.$inject = ['$scope', 'lodash','$rootScope','ChatService'];
+    Controller.$inject = ['$scope', 'lodash','$rootScope','ChatService','$location'];
 
     /**
      * @method Directive
@@ -30,7 +30,7 @@
      * @constructor
      * @ticket: BOMB-3280
      */
-    function Controller($scope, _,$rootScope,ChatService) {
+    function Controller($scope, _,$rootScope,ChatService,$location) {
         var vm = this;
         var certificateFiles = [],
             companyInfoFiles = [];
@@ -40,6 +40,7 @@
         vm.certificateFilesDropZone = {};
         vm.sendMessage = sendMessage;
         vm.uploadFile = uploadFile;
+        vm.checkIfEnterKeyWasPressed = checkIfEnterKeyWasPressed;
         activate();
 
         /**
@@ -48,6 +49,7 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
+console.log(123)
             var acceptedFiles = [
                 'application/pdf',
                 'image/png',
@@ -59,64 +61,77 @@
                 'image/x-icon'
             ];
             // setTimeout(function(){
-                vm.dropzoneConfig = {
-                    options:{
-                        paramName:'files',
-                        acceptedFiles:'application/pdf,.jpg,.png,.jpeg,.gif,.bmp,.ico',
-                        url:'/api/supplier/upload-vendor',
-                        autoProcessQueue:false,
-                        parallelUploads:5000
+            vm.dropzoneConfig = {
+                options:{
+                    paramName:'files',
+                    acceptedFiles:'application/pdf,.jpg,.png,.jpeg,.gif,.bmp,.ico',
+                    url:'/api/supplier/upload-vendor',
+                    autoProcessQueue:false,
+                    parallelUploads:5000
+                },
+                eventHandlers:{
+                    addedfile:function(file, dataUri){
+                        debugger;
+                        if(acceptedFiles.indexOf(file.type) === -1){
+                            // $rootScope.ShowErrorNotification('File is not allowed');
+                            alert('File is not allowed');
+                            vm.certificateFilesDropZone.removeFile(file);
+                        } else if(file.size > 4194304){
+                            // $rootScope.ShowErrorNotification('File size should not be greater than 4 MB.');
+                            alert('File size should not be greater than 4 MB.');
+                            vm.certificateFilesDropZone.removeFile(file);
+                        }
+                        //setting the $apply to refersh the file list in the html
+                        $scope.$apply(function(){});
                     },
-                    eventHandlers:{
-                        addedfile:function(file, dataUri){
-                            debugger;
-                            if(acceptedFiles.indexOf(file.type) === -1){
-                                // $rootScope.ShowErrorNotification('File is not allowed');
-                                alert('File is not allowed');
-                                vm.certificateFilesDropZone.removeFile(file);
-                            } else if(file.size > 4194304){
-                                // $rootScope.ShowErrorNotification('File size should not be greater than 4 MB.');
-                                alert('File size should not be greater than 4 MB.');
-                                vm.certificateFilesDropZone.removeFile(file);
-                            }
-                            //setting the $apply to refersh the file list in the html
-                            $scope.$apply(function(){});
-                        },
-                        thumbnail:function(file,data){
-                            console.log(data);
-                            var obj = {
-                                text:data,
-                                msgFrom:userId,
-                                type:2
-                            };
-                        },
-                        success:function(file, data){
-                            debugger;
-                            if(file.status === 'success'){
-                                file.data = data.Data;
-                                if(file.isComapyInfo){
-                                    companyInfoFiles.push(file);
-                                } else {
-                                    certificateFiles.push(file);
-                                }
-                            }
-                        },
-                        queuecomplete:function(){
-                            debugger;
-                            var fileLength = certificateFiles.length + companyInfoFiles.length;
-                            if(fileLength === vm.certificateFilesDropZone.files.length){
-                                $rootScope.$broadcast('uploadCompleted');
-                            } else{
-                                $rootScope.$broadcast('uploadError');
+                    thumbnail:function(file,data){
+                        console.log(data);
+                        var obj = {
+                            text:data,
+                            msgFrom:userId,
+                            type:2
+                        };
+                    },
+                    success:function(file, data){
+                        debugger;
+                        if(file.status === 'success'){
+                            file.data = data.Data;
+                            if(file.isComapyInfo){
+                                companyInfoFiles.push(file);
+                            } else {
+                                certificateFiles.push(file);
                             }
                         }
+                    },
+                    queuecomplete:function(){
+                        debugger;
+                        var fileLength = certificateFiles.length + companyInfoFiles.length;
+                        if(fileLength === vm.certificateFilesDropZone.files.length){
+                            $rootScope.$broadcast('uploadCompleted');
+                        } else{
+                            $rootScope.$broadcast('uploadError');
+                        }
                     }
-                };
+                }
+            };
             // }, 500);
             //set title to get rid of the ADA compliance
             setTimeout(function () {
                 $('.uploader input').attr('title', 'upload files');
             }, 3000);
+            $rootScope.$on('userChange',function(event, data){
+                vm.toUser = data;
+                console.log(12)
+                //$scope.$apply();
+            });
+        }
+
+        function checkIfEnterKeyWasPressed($event){
+            var keyCode = $event.which || $event.keyCode;
+            if (keyCode === 13) {
+                sendMessage();
+                // Do that thing you finally wanted to do
+            }
         }
 
         $scope.$on('uploadError', function(){
@@ -150,9 +165,16 @@
         });
 
         function sendMessage(){
-            console.log('hi');
+            var userId = $location.search().id;
+
+            var obj = {
+                text:vm.message,
+                msgTo:vm.toUser.id,
+                msgFrom:userId,
+                type:1
+            };
             if (vm.message) {
-                $rootScope.$broadcast('SEND_MESSAGE',{action:'send',data:vm.message});
+                $rootScope.$broadcast('SEND_MESSAGE',{action:'send',data:obj});
                 vm.message = '';
                 // setTimeout(() => ChatService.scrollToBottom(), 200);
             }
