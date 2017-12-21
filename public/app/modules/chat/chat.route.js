@@ -14,5 +14,9 @@
                 url:'/chat-temp',
                 templateUrl:'/app/modules/chat/template/chat-temp.html'
             })
+			.state('app.screen-share', {
+				url:'/screen-share',
+				template:'<screen-player></screen-player>'
+			})
 	}
 })();
