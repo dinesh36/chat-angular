@@ -3,8 +3,8 @@
 	angular
 		.module('HTAdminApp')
 		.factory('ChatService', ChatService);
-	ChatService.$inject = ['$http', '$q','RoHttp','$rootScope'];
-	function ChatService($http,$q,RoHttp,$rootScope){
+	ChatService.$inject = ['$http', '$q','RoHttp','$rootScope','$location'];
+	function ChatService($http,$q,RoHttp,$rootScope,$location){
 
 		return {
             init:init,
@@ -47,9 +47,14 @@
 				})
 			},1000);
         }
-		function getMessages(){
-			return $http.get('api/chats');
+		function getMessages(data){
 
+			console.log(data);
+			console.log('msgFrom',parseInt($location.search().id));
+			console.log('msgTo',data.id);
+			var msgFrom = parseInt($location.search().id);
+			var msgTo = data.id;
+			return $http.get('api/chats?msgFrom='+msgFrom+'&msgTo='+msgTo);
 		}
 	}
 })();
