@@ -1,0 +1,12 @@
+[
+  {
+    "text": "White space",
+    "name":"br",
+    "isDefault":true
+  },
+  {
+    "text": "Horizontal line",
+    "name":"hr",
+    "isDefault":true
+  }
+]

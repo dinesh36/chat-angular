@@ -1,0 +1,31 @@
+[
+  {
+    "text": "Top image with caption",
+    "name":"top-image",
+    "isDefault":true
+  },
+  {
+    "text": "Two images with side caption",
+    "name":"two-side"
+  },
+  {
+    "text": "Two images with bottom caption",
+    "name":"two-bottom"
+  },
+  {
+    "text": "Three images with bottom caption",
+    "name":"three-bottom"
+  },
+  {
+    "text": "Full banner with text in center",
+    "name":"full-banner-center-text"
+  },
+  {
+    "text": "Full banner with text in left",
+    "name":"full-banner-left-text"
+  },
+  {
+    "text": "Full banner with text in right",
+    "name":"full-banner-right-text"
+  }
+]

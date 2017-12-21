@@ -1,0 +1,209 @@
+<ul class="nav nav-tabs ht-tabs ng-isolate-scope">
+    <li role="presentation" ng-class="vm.isUsage?'':'active'" ng-click="vm.isUsage = !vm.isUsage">
+        <a title="Info">Info</a>
+    </li>
+    <li role="presentation" ng-class="vm.isUsage?'active':''" ng-click="vm.isUsage = !vm.isUsage">
+        <a title="File Usage">File Usage</a>
+    </li>
+</ul>
+<div class="bg-light lter b-b wrapper-md clearfix ng-scope">
+    <h3 class="m-n h4 text-black pull-left ng-binding">{{vm.isUsage?'File Usage':'Info'}}</h3>
+</div>
+<div ng-class="vm.isSurfingMode?'image-select-mode':''" class="fileInfo">
+    <div ng-if="!vm.isUsage">
+        <h4 class="text-ellipsis"><b>File:</b> {{vm.fileInfo.fileName}}</h4>
+        <hr>
+        <div class="form-group">
+            <div class="col-md-12" ng-if="vm.linkSelectionMode" ng-show="false">
+                <div class="checkbox" style="color:#337AB7;margin-top:0px">
+                    <label><input ng-model="vm.isNewTab" type="checkbox"> Open in new tab</label>
+                </div>
+            </div>
+            <div class="filePath" ng-if="vm.isSurfingMode==false">
+                <div class="form-group">
+                    <label><b>File Path:</b></label>
+                    <span>{{vm.filePath}}</span>
+                </div>
+            </div>
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>
+                        File Resolution
+                    </th>
+                    <th>
+                        File Size
+                    </th>
+                    <th class="text-center">
+                        Preview
+                    </th>
+                    <th class="text-center">
+                        {{vm.isSurfingMode?(vm.linkSelectionMode?'Insert Link':'Insert'):'Download'}}
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                <span ng-show="!vm.fileInfo.isImage">
+                    N/A
+                </span>
+                <span ng-show="vm.fileInfo.isImage">
+                    {{vm.resolution}} ( Original )
+                </span>
+                    </td>
+                    <td>
+                        {{vm.fileInfo.fileSize}}
+                    </td>
+                    <td align="center">
+                        <a href="{{vm.fileInfo.Url}}" target="blank" class="text-xs text-u-l m-r-xs actionIcon viewIcon"
+                           title="Preview"><i class="fa fa-eye"></i></a>
+                    </td>
+                    <td align="center">
+                        <a ng-if="vm.isSurfingMode==false" href="{{vm.fileInfo.Url}}" target="_blank"
+                           title="Download"
+                           target="_blank"
+                           class="text-xs text-u-l m-r-xs actionIcon downIcon" download>
+                            <i class="fa fa-download"></i>
+                        </a>
+                        <a ng-if="vm.isSurfingMode==true" ng-click="vm.insertImage(vm.fileInfo)" target="_blank"
+                           class="text-xs text-u-l m-r-xs actionIcon downIcon" title="Insert"><i class="fa "
+                                                                                                 ng-class="vm.linkSelectionMode?'fa-link':'fa-plus-circle'"></i></a>
+                    </td>
+                </tr>
+
+                <tr ng-if="vm.otherResolution != []" ng-repeat="fl in vm.otherResolution"
+                    ng-show="vm.fileInfo.isImage">
+                    <td>
+                        {{fl.Resolution}}
+                    </td>
+                    <td>
+                        {{fl.Size}}
+                    </td>
+                    <td align="center">
+                        <a href="{{fl.Url}}" target="_blank" class="text-xs text-u-l m-r-xs actionIcon viewIcon"
+                           title="file url"><i class="fa fa-eye"></i></a>
+                    </td>
+                    <td align="center">
+                        <a ng-if="vm.isSurfingMode==false"
+                           href="{{fl.Url}}"
+                           target="_blank"
+                           title="Download"
+                           class="text-xs text-u-l m-r-xs actionIcon downIcon" download><i
+                                class="fa fa-download"></i></a>
+                        <a ng-if="vm.isSurfingMode==true" ng-click="vm.insertImage(fl)"
+                           class="text-xs text-u-l m-r-xs actionIcon downIcon"
+                           title="Insert"><i class="fa" ng-class="vm.linkSelectionMode?'fa-link':'fa-plus-circle'"></i></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-md-12" ng-if="!vm.isSurfingMode">
+                    <div class="form-group">
+                        <label>File Name</label>
+                        <input type="text" class="form-control" ng-model="vm.fileInfo.fileName">
+                    </div>
+                    <div class="form-group">
+                        <label>File Description</label>
+                <textarea class="form-control" ng-model="vm.fileInfo.fileDescription"
+                          style="resize: none"></textarea>
+                        <span style="color:gray">* This text will be displayed as image alter text</span>
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label>File Url</label>
+                        <input type="text" class="form-control" ng-model="vm.fileInfo.Url" id="file_info" disabled
+                               style="width: 737px; display: inline-block;">
+                        <abbr style="cursor:pointer;border:0px solid; display: inline-block;" title="Copy to clipboard">
+                            <i class="fa fa-clipboard" ng-click="vm.copyToClipboard('#file_info')"
+                               style="margin-left: 10px;color: #337AB7;"></i>
+                        </abbr>
+                    </div>
+                    <div class="form-group">
+                        <label>Tags</label>
+                        <tags-input ng-model="vm.fileInfo.imageTags">
+                            <auto-complete source="vm.searchTag($query)"></auto-complete>
+                        </tags-input>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+            <div ng-show="vm.showFileUse">
+                <h4><b>File Used By Pages:</b></h4>
+                <hr>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            Page Name
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="fl in vm.fileUsedPages">
+                        <td><a ng-click="vm.goToPage(fl.Id)">{{fl.Name}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-show="vm.showMenuUse">
+                <h4><b>File Used By Menus:</b></h4>
+                <hr>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            Menu Name
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="fl in vm.fileUsedMenus">
+                        <td><a ng-click="vm.goToPage(fl.Id)">{{fl.Name}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" ng-if="!vm.isSurfingMode">
+                    <div class="ngdialog-buttons">
+                <span ensure-authorized="MEDIA_CANEDIT" just-disable="false">
+                <button type="button" class="btn btn-primary" ng-click="vm.updateFile()">Save</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="vm.isUsage">
+        <div class="row file-usage">
+            <div class="file-panel col-xs-12">
+                <div class="content">
+                    <div ng-if="vm.selectedFile.FileUsage=='loading'" class="file-unused">
+                        Loading File Usage ...
+                    </div>
+                    <div ng-if="!vm.selectedFile.FileUsage" class="file-unused">
+                        <span>File is not been used anywhere.</span>
+                    </div>
+                    <div ng-if="vm.selectedFile.FileUsage && vm.selectedFile.FileUsage!=='loading'" class="file-usage" style="padding:5px;">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th><b>Used At</b></th>
+                                <th><b>Used By</b></th>
+                                <th><b>Resolution</b></th>
+                                <th><b>File Used In</b></th>
+                                <th><b>View</b></th>
+                            </tr>
+                            <tr ng-repeat="usage in vm.selectedFile.FileUsage">
+                                <td>{{usage.UsedAt | date:'MM/dd/yyyy hh:mm a'}}</td>
+                                <td>{{usage.UsedBy.FirstName+' '+usage.UsedBy.LastName}}</td>
+                                <td>{{usage.Resolution}}</td>
+                                <td>{{usage.displayModel}}</td>
+                                <td class="text-center"><a href="{{usage.link}}" target="_blank"><i class="fa fa-eye"></i></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div ng-if="vm.type!=='inline'">
+    <input
+            id="{{ vm.name }}"
+            class="form-control"
+            style="width:{{vm.width}}"
+            type="{{vm.type?vm.type:'text'}}"
+            ng-src="{{vm.src}}"
+            ng-form name="{{ vm.name }}"
+            placeholder="{{ vm.placeHolder }}"
+            ng-model="vm.model"
+            ng-required="{{vm.validations.required==undefined?false:true}}"
+            ng-readonly="false"
+            data-date-format="{{vm.dateFormat}}"
+            ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }"
+            ng-pattern="vm.validations.pattern!=undefined?vm.validations.pattern.value:''"
+    />
+    <div ng-show="vm.form[vm.name].$dirty && vm.form[vm.name].$invalid || vm.form.$submitted">
+        <div ng-show="vm.form[vm.name].$error.required" class="has-error alert-danger">
+            {{vm.validations.required.message}}
+        </div>
+        <div ng-show="vm.form[vm.name].$error.pattern" class="has-error alert-danger">
+            {{vm.validations.pattern.message}}
+        </div>
+    </div>
+</div>
+<div ng-if="vm.type==='inline'">
+    <div id="{{vm.name}}"></div>
+</div>

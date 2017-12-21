@@ -1,0 +1,5 @@
+<div class="bg-light b-t b-l b-r wrapper-sm" style="height:50px;">
+	<span class="m-r-sm m-t-xs" ng-if="vm.multiSelectActions.length>0"><i class="fa fa-level-down fa-flip-horizontal"></i></span>
+	<button class="btn btn-default btn-sm m-r-sm" ensure-authorized="{{act.key}}" ng-repeat="act in vm.multiSelectActions" ng-click="vm.MultiActionClick(act, event)">{{act.displayName}}</button>
+</div>
+<div ag-grid="vm.gridOptions" class="ag-fresh" style="height:400px;width:100%"></div>

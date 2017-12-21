@@ -1,0 +1,19 @@
+[
+  {
+    "name":"full-banner",
+    "text":"Full Width Banner"
+  },
+  {
+    "name":"single",
+    "text":"single",
+    "isDefault":true
+  },
+  {
+    "name":"single-300",
+    "text":"Image with 300 Height"
+  },
+  {
+    "name":"single-500",
+    "text":"Image with 500 Height"
+  }
+]

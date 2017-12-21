@@ -1,0 +1,17 @@
+[
+  {
+    "name":"simple",
+    "text":"Simple paragraph",
+    "isDefault":true
+  },
+  {
+    "name":"image-left",
+    "text":"Paragraph with left image",
+    "isDefault":true
+  },
+  {
+    "name":"image-right",
+    "text":"Paragraph with right image",
+    "isDefault":true
+  }
+]

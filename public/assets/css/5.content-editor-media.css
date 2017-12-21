@@ -1,0 +1,102 @@
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+
+}
+
+img { max-width: 100%; height: auto; }
+
+/*=====================================================
+       Tablet View
+=======================================================*/
+@media only screen and (max-width:780px) {
+/* For this view 760 iphone 6 */
+.ROcontent_main{width: 100%;}
+.ROcontentEditor #ROdropZone{width:100%;}
+.ROtemplateContainer.ROfull_image_caption .ROimage_caption{top: 24%;}
+
+}
+
+@media only screen and (max-width:767px) {
+    /* For this view 667 iphone 6 */
+     .ROtemplateContainer h1{font-size: 25px;}
+     .ROtemplateContainer h2{font-size: 20px;}
+.ROleft_video_description .ROleft_video{ width: 100%; padding-right: 0;}
+.ROleft_video_description .ROright_description{ width: 100%; padding-left: 0;}
+.ROright_video_description .ROleft_description{ width: 100%; padding-right: 0;}
+.ROright_video_description .ROright_video{ width: 100%; padding-left: 0;}
+#_ht-container .ROtemplateContainer .ROhandlers{ left: -11px;}
+.ROimageHandler{ left: 26%;}
+.ROfull_image_caption .ROeditable p{ font-size: 12px;}
+.ROfull_image_caption .ROimage_caption{ top: 4%;}
+
+    .ROimage-content-50-50 .ROimage, .ROimage-content-50-50 .ROeditable,
+    .ROimage-content-70-30 .ROimage, .ROimage-content-70-30 .ROeditable,
+    .ROimage-content-30-70 .ROimage, .ROimage-content-30-70 .ROeditable,
+    .ROcontent-image-70-30 .ROeditable, .ROcontent-image-70-30 .ROimage,
+    .ROcontent-image-30-70 .ROeditable, .ROcontent-image-30-70 .ROimage,
+    .ROcontent-image-50-50 .ROeditable, .ROcontent-image-50-50 .ROimage,
+    .three-col-text .ROthreecol, .ROtwo_image .ROimage, .ROthree-image-main .ROimage {
+        width: 100%;
+    }
+
+    .ROimage-content-50-50 .ROeditable, .ROimage-content-70-30 .ROeditable,
+    .ROimage-content-30-70 .ROeditable, .ROcontent-image-70-30 .ROimage,
+    .ROcontent-image-30-70 .ROimage, .ROcontent-image-50-50 .ROimage{
+        margin-top: 15px;
+    }
+
+    .ROtwo_image .ROimage, .ROthree-image-main .ROimage {
+        margin-bottom: 10px;
+    }
+.ROfull-image-btn .ROimageHandler{left: 38%;}
+.ROtemplateContainer.ROfulltitleh2_description .col1{  width: 100%;}
+.ROtemplateContainer.ROfulltitleh2_description .col2{width: 100%;}
+.ROfulltitleh2_description .ROimageHandler{ left: 41%;}
+
+.ROtwoimage-sidecaption .ROimage{ width: 100%;} 
+.ROtwoimage-sidecaption .ROeditable{ width: 100%; margin-top: 10px;}
+.ROthreeimage-bottomcaption .ROthreecol, .three-col-text .ROthreecol{ width: 100%; margin-top: 20px;}
+.ROthreeimage-bottomcaption .col1, .ROthreeimage-bottomcaption .col2{ padding-right: 0;}
+
+.ROleft_testimonials .ROfleft{ width: 100%;}
+.ROleft_testimonials .ROfright{ width: 100%;}
+.ROright_testimonials .ROfleft{ width: 100%; margin-bottom: 20px;}
+.ROright_testimonials .ROfright{ width: 100%; position: relative;}
+.ROtwoimage-bottomcaption .ROimage .ROimageHandler, .ROthreeimage-bottomcaption .ROimage .ROimageHandler{ left: 43%;}
+.ROtemplateContainer.ROleft_image_description .ROimage .ROimageHandler{ left: 35%;}
+.ROtemplateContainer.ROright_image_description .ROimage .ROimageHandler{ left: 35%;}
+.ROtwoimage-bottomcaption .ROimage .ROimageHandler, .ROthreeimage-bottomcaption .ROimage .ROimageHandler{ left: 38%;}
+
+}
+@media only screen and (max-width:666px) {
+    /* For this view 568 ipod landscape */
+
+    
+}
+@media only screen and (max-width:567px) {
+    /* For this view 480 Iphone 4 landscape */
+  
+}
+@media only screen and (max-width:479px) {
+    /* For this view 375 ipnoe 6 potrait*/
+    .ROtemplateContainer.ROleft_image_description .ROimage{width: 100%; padding-right: 0; margin-bottom: 10px;}
+    .ROtemplateContainer.ROleft_image_description .ROeditable{ width: 100%; padding-left: 0;}
+    .ROimageHandler{ left: 31%;}
+    .ROtemplateContainer.ROright_image_description .ROeditable{width: 100%; padding-right: 0;}
+    .ROtemplateContainer.ROright_image_description .ROimage{width: 100%; padding-left: 0; margin-top: 10px;}
+    .ROtemplateContainer.ROleft_video_description .ROleft_video{ width: 100%;}
+    .ROtemplateContainer.ROleft_video_description .ROright_description{width: 100%;}
+    .ROtemplateContainer.ROright_video_description .ROleft_description{width: 100%;}
+    .ROtemplateContainer.ROright_video_description .ROright_video{ width: 100%;}
+    .ROtemplateContainer.ROtwo_column_content .ROcolumn_one{width: 100%; padding-right: 0;}
+    .ROtemplateContainer.ROtwo_column_content .ROcolumn_two{ width: 100%; padding-left: 0;}
+    .ROtemplateContainer{ padding: 0;}
+    .ROtemplateContainer.ROthree_column_content .ROcolumn_one,.ROtemplateContainer.ROthree_column_content .ROcolumn_two,.ROtemplateContainer.ROthree_column_content .ROcolumn_three{ width: 100%;}
+.ROfull-image-btn .ROimageHandler{left: 31%;}
+.ROfulltitleh2_description .ROimageHandler{left: 35%; top: 35%;}
+.ROtwoimage-sidecaption .ROfleft, .ROtwoimage-bottomcaption .ROfleft, .two-col-text .ROfleft{ width: 100%;}
+.ROtwoimage-sidecaption .ROfright, .ROtwoimage-bottomcaption .ROfright, .two-col-text .ROfright{ width: 100%; margin-top: 20px;}
+
+
+}

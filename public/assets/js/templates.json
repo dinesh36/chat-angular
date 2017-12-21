@@ -1,0 +1,173 @@
+[
+  {
+    "text": "Full Description Template",
+    "id": "0",
+    "image": "02.png",
+    "templateURL": "ROfull-description-template.html"
+  },
+  {
+    "text": "Full Title Description Template",
+    "id": "1",
+    "image": "01.png",
+    "templateURL": "ROfull-title-description-template.html"
+  },
+  {
+    "text": "Full Title H1 Description Template",
+    "id": "2",
+    "image": "03.png",
+    "templateURL": "ROfull-titleh1-description-template.html"
+  },
+  {
+    "text": "Full Title H2 Description Template",
+    "id": "3",
+    "image": "04.png",
+    "templateURL": "ROfull-titleh2-description-template.html"
+  },
+  {
+    "text": "Full Br Description Template",
+    "id": "4",
+    "image": "06.png",
+    "category":["separator","default"],
+    "templateURL": "separator/br.html"
+  },
+  {
+    "text": "Full Hr Description Template",
+    "id": "5",
+    "image": "05.png",
+    "category":["separator","default"],
+    "templateURL": "separator/hr.html"
+  },
+  {
+    "text": "Logo Header Template",
+    "id": "6",
+    "image": "25.png",
+    "templateURL": "ROLogo-text-template.html"
+  },
+  {
+    "text": "Left Image Description Template",
+    "id": "7",
+    "image": "07.png",
+    "templateURL": "ROleft-image-description-template.html"
+  },
+  {
+    "text": "Right Image Description Template",
+    "id": "8",
+    "image": "08.png",
+    "templateURL": "ROright-image-description-template.html"
+  },
+  {
+    "text": "Full Youtube Video Template",
+    "id": "9",
+    "image": "11.png",
+    "templateURL": "ROfull-youtube-video-template.html"
+  },
+  {
+    "text": "Left Youtube Video Description Template",
+    "id": "10",
+    "image": "12.png",
+    "templateURL": "ROleft-youtube-video-description-template.html"
+  },
+  {
+    "text": "Right Youtube Video Description Template",
+    "id": "11",
+    "image": "13.png",
+    "templateURL": "ROright-youtube-video-description-template.html"
+  },
+  {
+    "text": "Two Column Content Template",
+    "id": "12",
+    "image": "14.png",
+    "templateURL": "ROtwo-column-content-template.html"
+  },
+  {
+    "text": "Three Column Content Template",
+    "id": "13",
+    "image": "15.png",
+    "templateURL": "ROthree-column-content-template.html"
+  },
+  {
+    "text": "Full Testimonials Template",
+    "id": "14",
+    "image": "23.png",
+    "templateURL": "ROfull-testimonials-template.html"
+  },
+    {
+    "text": "Two Column Image With Caption Template",
+    "id": "15",
+    "image": "26.jpg",
+    "templateURL": "ROtwo-column-image-title-template.html"
+  },
+  {
+    "text": "Three Column Image With Caption Template",
+    "id": "16",
+    "image": "27.jpg",
+    "templateURL": "ROthree-column-image-title-template.html"
+  },
+    {
+    "text": "Searchbox With Title Template",
+    "id": "17",
+    "image": "28.jpg",
+    "templateURL": "ROsearchbox-title-template.html"
+  },
+  {
+    "text": "Full Title1 Template",
+    "id": "18",
+    "image": "29.png",
+    "templateURL": "ROfull-title1-template.html"
+  },  
+  {
+    "text": "Full Title2 Template",
+    "id": "19",
+    "image": "30.png",
+    "templateURL": "ROfull-title2-template.html"
+  },
+  {
+    "text": "Full Title3 Template",
+    "id": "20",
+    "image": "31.png",
+    "templateURL": "ROfull-title3-template.html"
+  },  
+  {
+    "text": "Full Title4 Template",
+    "id": "21",
+    "image": "32.png",
+    "templateURL": "ROfull-title4-template.html"
+  },
+  {
+    "text": "Full Title1 Content Template",
+    "id": "22",
+    "image": "33.png",
+    "templateURL": "ROfull-title1-content-template.html"
+  },
+    {
+    "text": "Full Title2 Content Template",
+    "id": "23",
+    "image": "34.png",
+    "templateURL": "ROfull-title2-content-template.html"
+  },
+  {
+    "text": "Full Title3 Content Template",
+    "id": "24",
+    "image": "35.png",
+    "templateURL": "ROfull-title3-content-template.html"
+  },
+   {
+    "text": "Full Title4 Content Template",
+    "id": "25",
+    "image": "36.png",
+    "templateURL": "ROfull-title4-content-template.html"
+  },
+  {
+    "text": "Two Column Image Content Template",
+    "id": "26",
+    "image": "38.png",
+    "templateURL": "ROtwo-column-image-content-template.html"
+  },
+    {
+    "text": "Three Column Image Content Template",
+    "id": "27",
+    "image": "39.png",
+    "templateURL": "ROthree-column-image-content-template.html"
+  }
+  
+]

@@ -1,0 +1,209 @@
+<!-- list -->
+<ul class="nav" ng-init="menuScript();">
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span translate="aside.nav.HEADER">{{$root.htVersion}}</span>
+    </li>
+
+    <li ng-class="{active:app.activeMenu=='dashboard'}" just-disable="false">
+        <a title="Dashboard" href class="auto" ui-sref="app.dashboard">
+            <i class="glyphicon glyphicon-dashboard icon text-primary"></i>
+            <span class="font-bold">Dashboard</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='pages'}" ensure-authorized="PAGES_CANVIEW">
+        <a title="Pages" href class="auto" ui-sref="app.pages.list">
+            <i class="glyphicon glyphicon-file icon text-primary"></i>
+            <span class="font-bold">Pages</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='media'}" ensure-authorized="MEDIA_CANVIEW">
+        <a title="Media" href class="auto" ui-sref="app.mediamanager.index">
+            <i class="glyphicon glyphicon-picture icon text-primary"></i>
+            <span class="font-bold">Media</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='menus'}" ensure-authorized="MENU_CANVIEW">
+        <a title="Menus" href class="auto" ui-sref="app.menus.list">
+            <i class="glyphicon glyphicon-menu-hamburger icon text-primary"></i>
+            <span class="font-bold">Menus</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='career'}" ensure-authorized="CAREER_CANVIEW">
+        <a title="Career" href class="auto" ui-sref="app.career.listarea">
+            <i class="glyphicon glyphicon-briefcase icon text-primary"></i>
+            <span class="font-bold">Career</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='FAQs'}" ensure-authorized="FAQ_MANAGEMENT_CANVIEW">
+        <a title="FAQs" href class="auto" ui-sref="app.faq.listfaqs">
+            <i class="fa fa-comments-o fa-lg icon text-primary" aria-hidden="true"></i>
+            <span class="font-bold">FAQs</span>
+        </a>
+    </li>
+    <!-- BOMB-1524 -->
+    <li ng-class="{active:app.activeMenu=='advertisement' }" ensure-authorized="ADVERTISEMENT_CANVIEW">
+        <a title="Advertisement" href class="auto" ui-sref="app.advertisement.list">
+            <i class="glyphicon glyphicon-bullhorn icon text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Advertisement</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='emailtemplate'}" ensure-authorized="EMAIL_TEMPLATE_CANVIEW">
+        <a title="Email Template" href class="auto" ui-sref="app.emailtemplate.list">
+            <i class="fa fa-file-code-o icon text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Email Template</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='contribution'}" ensure-authorized="CONTRIBUTION_CANVIEW">
+        <a title="Contribution Request" href class="auto" ui-sref="app.contribution.requestlist">
+            <i class="fa fa-usd text-primary"></i>
+            <span class="font-bold">Contribution</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='giftsubscription'}" ensure-authorized="GIFT_SUBSCRIPTION_CANVIEW">
+        <a title="Gift Subscription" class="auto" ui-sref="app.giftSubscription.list">
+            <i class="fa fa-gift text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Gift EL Subscription</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='mediaAlerts'}" ensure-authorized="MEDIA_ALERTS_CANVIEW">
+        <a title="Gift Subscription" class="auto" ui-sref="app.mediaAlerts.list">
+            <i class="fa fa-bell text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Media Alert</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='recipe'}" ensure-authorized="RECIPE_CANVIEW">
+        <a title="Gift Subscription" class="auto" ui-sref="app.recipe.list">
+            <i class="fa fa-cutlery text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Recipe</span>
+        </a>
+    </li>
+</ul>
+
+
+<!-- Promotions -->
+<ul class="nav" ensure-authorized="PROMOTION_CANVIEW">
+    <li class="line dk"></li>
+    <li class="titleWrap">
+        <a title="Solicitation" class="auto">
+            <i class="fa fa-bullhorn text-primary"></i>
+            <span class="title font-bold">Promotion</span>
+        </a>
+    </li>
+</ul>
+
+<ul class="nav subNav">
+    <!-- BOMB-1484 -->
+    <li ng-class="{active:app.activeMenu=='forms'}" ensure-authorized="FORM_BUILDER_CANVIEW">
+        <a title="Form Builder" href class="auto" ui-sref="app.forms.list">
+            <i class="fa fa-wpforms icon text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Form Builder</span>
+        </a>
+    </li>
+</ul>
+<!-- Promotion -->
+
+<!-- Solicitation -->
+<ul class="nav" ensure-authorized="SOLICITATIONS_CANVIEW">
+    <li class="line dk"></li>
+    <li class="titleWrap">
+        <a title="Solicitation" class="auto">
+            <i class="fa fa-money text-primary"></i>
+            <span class="title font-bold">Solicitation</span>
+        </a>
+    </li>
+</ul>
+
+
+<ul class="nav subNav">
+    <li ng-class="{active:app.activeMenu=='requestDetail'}" ensure-authorized="SOLICITATIONS_CANVIEW">
+        <a title="Requests" href class="auto" ui-sref="app.solicitation.requestlist">
+            <i class="fa fa-gift text-primary"></i>
+            <span class="font-bold">Requests</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='storeAvailability'}" ensure-authorized="SOLICITATIONS_CANVIEW">
+        <a title="Store Availability" href class="auto" ui-sref="app.solicitation.storeAvailability.list">
+            <i class="fa fa-calendar-times-o text-primary"></i>
+            <span class="font-bold">Store Availability</span>
+        </a>
+    </li>
+</ul>
+<!-- Solicitation -->
+<!-- Supplier -->
+<ul class="nav">
+    <li class="line dk"></li>
+    <li class="titleWrap">
+        <a title="Supplier" class="auto">
+            <i class="fa fa-truck text-primary"></i>
+            <span class="title font-bold">Supplier</span>
+        </a>
+    </li>
+</ul>
+
+
+<ul class="nav subNav">
+    <li ng-class="{active:app.activeMenu=='foreignList'}" ensure-authorized="FOREIGN_SUPPLIER_CANVIEW">
+        <a title="ForeignList" href class="auto" ui-sref="app.foreign.list">
+            <i class="fa fa-plane text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Foreign List</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='vendorList'}" ensure-authorized="VENDOR_SUPPLIER_CANVIEW">
+        <a title="Vendor List" href class="auto" ui-sref="app.vendor.list">
+            <i class="fa fa-bus text-primary" aria-hidden="true"></i>
+            <span class="font-bold">Vendor List</span>
+        </a>
+    </li>
+	<li ng-class="{active:app.activeMenu=='ourVendor'}" ensure-authorized="OUR_VENDOR_CANVIEW">
+		<a title="Our Vendor" href class="auto" ui-sref="app.ourvendor.list">
+			<i class="fa fa-group text-primary"></i>
+			<span class="font-bold">Our Vendor</span>
+		</a>
+	</li>
+</ul>
+<!-- Supplier -->
+<!-- settings -->
+<ul class="nav">
+    <li class="line dk"></li>
+    <li class="titleWrap">
+        <a title="Settings" class="auto">
+            <i aria-hidden="true" class="fa fa-cog text-primary"></i>
+            <span class="title font-bold">Settings</span>
+        </a>
+    </li>
+</ul>
+<ul class="nav subNav">
+    <li ng-class="{active:app.activeMenu=='homePageManagement'}" ensure-authorized="HOMEPAGE_MANAGEMENT_CANVIEW">
+        <a title="Home Page Management" href class="auto" ui-sref="app.homePageManagement.bannerSettings">
+            <i class="glyphicon glyphicon-home icon text-primary"></i>
+            <span class="font-bold">Home Page</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='settings'}" ensure-authorized="SETTINGS_CANVIEW">
+        <a title="General Settings" href class="auto" ui-sref="app.settings.siteSettings">
+            <i class="glyphicon glyphicon-wrench icon text-primary"></i>
+            <span class="font-bold">General</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='TIE'}" ensure-authorized="TIE_CANVIEW">
+        <a title="TIE Management" href class="auto" ui-sref="app.tie.searchschool">
+            <i class="fa fa-graduation-cap text-primary" aria-hidden="true"></i>
+            <span class="font-bold">TIE Management</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='users'}" ensure-authorized="USER_CANVIEW">
+        <a title="Users" href class="auto" ui-sref="app.users.list">
+            <i class="glyphicon glyphicon-user icon text-primary"></i>
+            <span class="font-bold">Users</span>
+        </a>
+    </li>
+    <li ng-class="{active:app.activeMenu=='roles'}" ensure-authorized="ROLE_CANVIEW">
+        <a title="Roles" href class="auto" ui-sref="app.roles.list">
+            <i class="glyphicon glyphicon-lock icon text-primary"></i>
+            <span class="font-bold">Roles</span>
+        </a>
+    </li>
+</ul>
+<!-- settings -->
+<!-- / list -->
+

@@ -1,0 +1,181 @@
+<div>
+    <div class="app-content-body fade-in-up">
+
+        <div class="mediaheader bg-light lter b-b wrapper-md clearfix ng-scope">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <h3 class="m-n h4 text-black pull-left">Media Manager</h3>
+                      <ul class="breadcrumb">
+                        <li ng-repeat="breadcrumb in vm.breadcrumbs">
+                            <a  ng-click="vm.changeBreadcrumb($index)">{{breadcrumb.Name}}</a>
+                        </li>
+                    </ul>
+                </div>
+         
+
+       
+                <div class="col-sm-6 col-md-6 col-lg-6 text-right">
+                   <div class="form-group search-box-media search-box-media-main">
+            <form>
+                <div class="form-group search-box-media">
+                    <div class="icon-addon addon-md">
+                        <input type="text" id="email" class="form-control " placeholder="Search Files"
+                               ng-model="vm.searchQuery">
+                        <a class="closeicon-search-box" ng-click="vm.clearSearchBox();"><i aria-hidden="true"
+                                                                                           class="fa fa-times-circle-o"></i>
+                        </a>
+
+                        <label title="search" class="fa fa-search"></label>
+                    </div>
+                </div>
+                <button class="btn btn-success pull-right" type="submit" ng-click="vm.searchFile()">Go</button>
+            </form>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- /.row -->
+    <div class="wrapper-md ng-scope">
+        <div class="row">
+            <div class="col-sm-5 col-md-4">
+                <div class="clearfix panel panel-primary folder-manager">
+                    <div class="panel-heading">
+                        <span class="panel-title"><i aria-hidden="true" class="fa fa-folder-open-o"></i> Folders </span>
+						<span ensure-authorized="MEDIA_CANADD" just-disable="false">
+							<button class="btn btn-xs  btn-info pull-right btn-edit" type="button"
+                                    ng-click="vm.addNewFolder();"><i
+                                    class="fa fa-plus-circle pad5right"></i>Add Folder
+                            </button>
+						</span>
+                    </div>
+                    <div class="text panel-body">
+                        <div class="icon-addon addon-md mar10bottom clearfix">
+                            <input type="text" id="folder" class="form-control" placeholder="Search Folder"
+                                   ng-model="vm.searchFolderQuery" ng-keydown="vm.searchFolder($event)">
+                            <a class="closeicon-search-box" ng-click="vm.clearFolderSearchBox();">
+                                <i aria-hidden="true" class="fa fa-times-circle-o"></i>
+                            </a>
+                            <label title="search" class="fa fa-search"></label>
+                        </div>
+
+                        <p ng-if="vm.folders.length==0">No Folders found </p>
+                        <ul class="folder-name-list clearfix">
+                            <li class="clearfix" ng-repeat="folder in vm.folders">
+                                <div class="folder-det">
+									<span class="folder-name pad10right ">
+										<span class="folder-icon"><i class="fa fa-folder-o pad10right"></i></span>
+                                                                                <a class="folderNameText"
+                                                                                   ng-click="vm.selectDirectory(folder)">{{folder.Name}}</a>
+									</span>
+                                </div>
+
+                                <div class="media-menu-icon clearfix">
+                                    <div class="pull-right" ensure-authorized="MEDIA_CANDELETE" just-disable="false">
+                                        <a ng-click="vm.deleteFolder(folder)"
+                                           class="link-delete" tooltip="delete" title="Click to Delete Folder">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="pull-right" ensure-authorized="MEDIA_CANEDIT" just-disable="false">
+                                        <a ng-click="vm.editFolder(folder)" class="link-edit"
+                                           tooltip="edit" title="Click to Edit Folder">
+                                            <i class="fa fa-edit pad10right"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="pull-right" ensure-authorized="MEDIA_CANEDIT" just-disable="false">
+                                        <a ng-click="vm.moveFolder(folder)" class="link-move"
+                                           tooltip="move" title="Click to Move Folder">
+                                            <i class="fa fa-arrows pad10right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clearfix panel panel-primary">
+                    <div class="panel-heading">
+                        <span class="panel-title"><i aria-hidden="true" class="fa fa-tags"></i> Tags </span>
+                    </div>
+                    <div class="text panel-body">
+                        <p ng-if="vm.tags.length==0">No Tags found</p>
+                        <jqcloud ng-if="vm.tags" words="vm.tags" style="margin:0px auto;" width="200" height="350"
+                                 steps="7"></jqcloud>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-8">
+                <div class="panel panel-default clearfix">
+                    <div class=" panel-heading">
+                        <span class="panel-title"><i aria-hidden="true" class="fa fa-files-o"></i> Files</span>
+						<span ensure-authorized="MEDIA_CANADD" just-disable="false">
+							<button class="btn btn-xs btn-info pull-right btn-edit" type="button" ng-click="vm.addNewFile()">
+                                <i
+                                        class="fa fa-plus-circle pad5right"></i>Add
+                                Files
+                            </button>
+						</span>
+                    </div>
+                    <div class="text panel-body image-list-container">
+                        <div class="dropzone clearfix bg-white m-b" ng-if="vm.dropzoneConfig.options!=undefined">
+                            <button class="alert bg-white wrapper-lg btn-block" dropzone
+                                    dropzone-options="vm.dropzoneConfig" dropzone-object="vm.myDropzone">
+                                <h4 class="dz-message">Drag and drop files here or click to <input type="button"
+                                                                                                   class="btn btn-success"
+                                                                                                   style="text-transform: none"
+                                                                                                   value="Upload"></h4>
+                            </button>
+                        </div>
+                        <div>
+                            <div class="row" ng-if="vm.files.length>0">
+                                <div class="col-sm-6 col-md-4 col-lg-3 portfolio-item" ng-repeat="file in vm.files">
+                                    <div class="file-details text-center">
+                                        <div class="hovereffect">
+                                            <a ng-if="file.IsImage==true" class="file-icon text-center">
+                                                <img width="150px"
+                                                     ng-src="{{file.OtherResolution.length>0?file.OtherResolution[0].Url:file.Url}}">
+                                            </a>
+
+                                            <a ng-if="file.IsImage==false" class="file-icon text-center">
+                                                <i class="fa {{file.MimeType | fileTypeFAClass }}"></i>
+                                            </a>
+
+                                            <div class="overlay">
+												<span ensure-authorized="MEDIA_CANDELETE" just-disable="false">
+												<a ng-click="vm.deleteFile(file._id)"
+                                                   class="link-info link-delete"><i
+                                                        class="fa fa-trash-o"></i></a>
+												</span>
+												<span>
+													<a class="link-info"
+                                                       ng-click="vm.editFile(file);"><i
+                                                            class="fa fa-info-circle"></i></a>
+												</span>
+												<span ensure-authorized="MEDIA_CANEDIT" just-disable="false">
+													<a ng-click="vm.moveFolder(file)"
+                                                       class="link-info link-move"><i
+                                                            class="fa fa-arrows"></i></a>
+												</span>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="link-download text-ellipsis">{{file.FileName}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="text-align: center" ng-if="vm.files.length==0"><h3>No files found in this
+                                folder</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

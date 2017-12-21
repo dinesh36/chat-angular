@@ -1,0 +1,98 @@
+            .input-group .icon-addon .form-control { border-radius: 0; }
+            .icon-addon { position: relative; color: #555; display: block;}
+            .icon-addon:after,
+            .icon-addon:before { display: table; content: " "; }
+            .icon-addon:after { clear: both; }
+            .icon-addon.addon-md .glyphicon,
+            .icon-addon .glyphicon, 
+            .icon-addon.addon-md .fa,
+            .icon-addon .fa { position: absolute; z-index: 2; left: 10px; font-size: 14px; width: 20px;  margin-left: -2.5px; text-align: center; padding: 10px 0; top: 1px }
+            .icon-addon.addon-lg .form-control { line-height: 1.33; height: 46px; font-size: 18px; padding: 10px 16px 10px 40px; }
+            .icon-addon.addon-sm .form-control { height: 30px; padding: 5px 10px 5px 28px; font-size: 12px; line-height: 1.5;  }
+            .icon-addon.addon-lg .fa,
+            .icon-addon.addon-lg .glyphicon { font-size: 18px;  margin-left: 0;  left: 11px; top: 4px;  }
+            .icon-addon.addon-md .form-control,
+            .icon-addon .form-control {  padding-left: 30px;  float: left;  font-weight: normal;  }
+            .icon-addon.addon-sm .fa,
+            .icon-addon.addon-sm .glyphicon { margin-left: 0;  font-size: 12px;  left: 5px; top: -1px     }
+            .icon-addon .form-control:focus + .glyphicon,
+            .icon-addon:hover .glyphicon,
+            .icon-addon .form-control:focus + .fa,
+            .icon-addon:hover .fa {  color: #2580db;    }
+            
+            .clearfix:before, .clearfix:after, .container:before, .container:after, .row:before, .row:after, .nav:before, .nav:after { display:table; content:" "; }
+            .clearfix:after, .container:after, .row:after, .nav:after { clear:both; }
+            
+            .app-content-body h3.title{margin: 0 0 10px 0;}
+            .text-blue{color: #018aca;}            
+            .app-content-body .breadcrumb{padding: 8px 0 0 0; margin: 0; background-color: #f9f6f1; display: block; width: 100%; float: left;}
+            .app-content-body .breadcrumb ul li{color: #000;}
+            .app-content-body .breadcrumb a{color: #018aca;}
+            .app-content-body .form-group{margin-bottom: 0;}
+                       
+            .folder-box{border: 1px solid #ddd; border-radius: 5px; padding: 0; margin: 0;}
+            .folder-box .bg-blue{padding: 7px 15px; background-color:#018aca; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+            .folder-box span.title, .file-box span{color: #fff; font-size: 18px; display: inline-block; padding: 6px 12px; line-height: normal; }
+            .file-box{border: 1px solid #ddd; padding: 0; margin: 0; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+            .file-box span{color: #333333;}
+            .folder-box .text{color: #2c2c2c; padding: 15px 15px 5px;}
+                        
+            .btn-success { background-color: #6bc16e; border-color: #27c24c; color: #ffffff !important; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+            .pad5right{padding-right: 5px;}
+            .pad10right{padding-right: 10px;}
+                         
+             .file-box .bg-m-lignt{padding: 7px 15px; background-color:#f6f6f6; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+             
+             .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{background-color: #018aca;}
+             .pagination > li > a, .pagination > li > span{color: #018aca;}
+             
+             .file-details{position: relative; border: 1px solid #ddd; text-align: center; margin-bottom: 20px;}
+             .files-changes{border: 1px solid #ddd; padding: 20px 20px 0;}
+             .file-details.text-center .file-icon {display: block;font-size: 100px; border-bottom: 1px solid #ddd; padding: 10px 0;}
+             .link-download{background: #ddd; color: #000; font-size: 14px; font-weight: 500; display: block; padding: 5px 0;}
+             .file-icon{position: relative;}
+             /*.hover-details{position: absolute; top: 0; left: 0; background:#ddd; width: 100%; height: 100%; display: none; }
+             .hover:hover .hover-details{display: block;}
+             .hover-details a{position: relative; top: 42%;}
+             .hover-details a i{font-size: 20px; color: #fff;}
+             .hover-details .link-edit, .hover-details .link-info{background: #e26961; border: 1px solid #de564a; border-radius: 5px; padding: 8px 14px; color: #fff; display: inline-block;}
+             .hover-details .link-edit{margin-right: 10px;}
+             .hover-details .link-info{background: #6acae4; border: 1px solid #54bdd9; }*/
+             
+             .folder-name-list{margin: 0; padding: 0; list-style: none;}
+             .folder-name-list span {vertical-align: top; display: inline-block;}
+             .folder-name-list li{color: #2c2c2c; padding-bottom: 5px;}
+             .folder-name-list i{font-size: 20px;}
+             .folder-name-list span{font-size: 14px;}
+             .folder-name {display: inline-block; font-size: 14px; width: 140px;}
+             .folder-icon i{color: #018aca;}
+             .link-edit i{color:#6bc16e;}
+             .link-delete i{color: #e26961;}
+
+				.mar10bottom {
+					margin-bottom: 10px !important;
+				}
+             
+
+/* =============== Large Desktop Version 1023 =============== */
+@media screen and (max-width:1280px){
+    .folder-name{width: 95px;}
+}             
+             
+/* =============== Desktop Version 768 =============== */
+@media screen and (max-width:1023px){
+.folder-box span.title, .file-box span{padding: 6px 2px;}   
+}
+
+/* =============== Tablet Version 480 =============== */
+@media screen and (max-width:767px){
+
+      
+}
+
+/* =============== mobile Version 320 =============== */
+@media screen and (max-width:479px){
+      
+}             
+
+

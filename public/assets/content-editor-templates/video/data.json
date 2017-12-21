@@ -1,0 +1,33 @@
+[
+  {
+    "text": "Full video",
+    "name":"full",
+    "isDefault":true
+  },
+  {
+    "text": "Left video",
+    "name":"left",
+    "isDefault": true,
+    "otherCategories": [
+      "paragraph"
+    ]
+  },
+  {
+    "text": "Right video",
+    "name":"right",
+    "isDefault": true,
+    "otherCategories": [
+      "paragraph"
+    ]
+  },
+  {
+    "text": "Two videos",
+    "name":"two-video",
+    "isDefault": false
+  },
+  {
+    "text": "Two videos with caption",
+    "name":"two-video-caption",
+    "isDefault": false
+  }
+]

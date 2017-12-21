@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Image content with  50:50",
+    "name":"image-content-50-50"
+  },
+  {
+    "text": "Image content with  70:30",
+    "name": "image-content-70-30"
+  },
+  {
+    "text": "Image content with  30:70",
+    "name": "image-content-30-70"
+  },
+  {
+    "text": "Content with image 70:30",
+    "name": "content-image-70-30"
+  },
+  {
+    "text": "Content with image 30:70",
+    "name": "content-image-30-70"
+  },
+  {
+    "text": "Content with image 50:50",
+    "name": "content-image-50-50"
+  },
+  {
+    "text": "Image with button",
+    "name": "image"
+  },
+  {
+    "text": "Content with button",
+    "name": "content"
+  }
+]

@@ -1,0 +1,29 @@
+<div class="bg-light lter b-b wrapper-md clearfix">
+	<h3 class="m-n h4 text-black pull-left">{{app.pageHeader}}</h3>
+
+	<div class="pull-right m-b-n m-t-n-xs" ensure-authorized="USER_CANADD" just-disable="false">
+	    <a class="btn btn-sm btn-info"   ui-sref="app.users.new" ><i class="fa fa-plus"></i> Add New User</a>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="row" ng-show="vm.isInfo===true">
+		<div class="col-lg-12">
+			<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close" ng-click="vm.isInfo=false;">&times;</button>{{vm.infoMessage}}
+			</div>
+		</div>
+	</div>
+	<div class="row" ng-show="vm.isError===true">
+		<div class="col-lg-12">
+			<div class="alert alert-danger alert-dismissable">
+				<button type="button" class="close" ng-click="vm.isError=false;">&times;</button>
+				{{vm.errorMessage}}
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<rapid-grid grid-options="vm.gridOptions" multi-select-actions="vm.gridActions" grid-height="auto"  id="userGrid"></rapid-grid>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+[
+  {
+    "name":"h1",
+    "text":"Heading with paragraph - h1",
+    "isDefault":true
+  },
+  {
+    "name":"h2",
+    "text":"Heading with paragraph - h2",
+    "isDefault":true
+  },
+  {
+    "name": "p-with-img",
+    "text": "Heading with paragraph and image"
+  },
+    {
+    "name": "p-with-img2",
+    "text": "Public Relation Template"
+  }
+]

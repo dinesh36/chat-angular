@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Full Map",
+    "name": "full"
+  },
+  {
+    "text": "Map with text on right",
+    "name": "left"
+  },
+  {
+    "text": "Map with text on left",
+    "name": "right"
+  }
+]

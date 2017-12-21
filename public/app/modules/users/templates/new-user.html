@@ -1,0 +1,126 @@
+<div class="bg-light lter b-b wrapper-md clearfix">
+    <h3 class="m-n h4 text-black pull-left">{{app.pageHeader}}</h3>
+    <a class="btn btn-sm btn-info pull-right m-b-n m-t-n-xs" ui-sref="app.users.list">
+        <i class="fa fa-angle-left" aria-hidden="true"></i> Back to List
+    </a>
+</div>
+<div class="wrapper">
+
+    <div class="row" ng-show="vm.isInfo===true">
+        <div class="col-lg-12">
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" ng-click="vm.isInfo=false;">&times;</button>
+                {{vm.infoMessage}}
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-show="vm.isError===true">
+        <div class="col-lg-12">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" ng-click="vm.isError=false;">&times;</button>
+                {{vm.errorMessage}}
+            </div>
+        </div>
+    </div>
+    <form name="newUserForm" id="newUserForm" class="form-horizontal" novalidate>
+        <div class="form-inline">
+            <label class="col-sm-2 control-label">First Name&nbsp;<sup style="color:red;">*</sup></label>
+            <div class="form-group col-sm-5">
+                <input type="text" class="form-control" name="firstName" ng-model="vm.firstName"
+                       placeholder="First Name" required/>
+                <div class="alert-danger"
+                     ng-show="newUserForm.firstName.$error.required && newUserForm.$submitted || newUserForm.firstName.$touched && newUserForm.firstName.$error.required">
+                    Please enter first name.
+                </div>
+            </div>
+        </div>
+        <div class="form-inline">
+            <label class="col-sm-2 control-label">Last Name&nbsp;<sup style="color:red;">*</sup></label>
+            <div class="form-group col-sm-5">
+                <input type="text" class="form-control" name="lastName" id="lastName" ng-model="vm.lastName"
+                       placeholder="Last Name" required/>
+                <div class="has-error alert-danger"
+                     ng-show="newUserForm.lastName.$error.required && newUserForm.$submitted || newUserForm.lastName.$touched && newUserForm.lastName.$error.required">
+                    Please enter last name.
+                </div>
+            </div>
+        </div>
+        <div class="form-inline">
+            <label class="col-sm-2 control-label">Email&nbsp;<sup style="color:red;">*</sup></label>
+            <div class="form-group col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" ng-model="vm.email" placeholder="Email"
+                       required/>
+                <div ng-show="newUserForm.$submitted || newUserForm.email.$touched">
+					<span class="alert-danger" ng-show="newUserForm.email.$error.required">
+						Please enter valid email address.
+					</span>
+					<span class="alert-danger" ng-show="newUserForm.email.$error.email">
+						Please enter valid email address.
+					</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-inline">
+            <label class="col-sm-2 control-label">Role&nbsp;<sup style="color:red;">*</sup></label>
+            <div class="form-group col-sm-5">
+                <select class="form-control" ng-model="vm.roles"
+                        ng-options="specificRole.RoleName for specificRole in vm.roleList" name="roles" id="roles"
+                        ng-change="vm.DeselectStore();" required>
+                    <option value="" selected>Select</option>
+                </select>
+                <div class="has-error alert-danger"
+                     ng-show="newUserForm.roles.$error.required && newUserForm.$submitted || (newUserForm.roles.$touched && newUserForm.roles.$error.required)">
+                    Please select the role.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-inline" ng-if="$root.userProfile.Roles[0].IsSuperAdmin && vm.isEdit">
+            <label class="col-sm-2 control-label">Lock Status</label>
+            <div class="form-group col-sm-5">
+                <input type="text" disabled class="form-control" name="locked-status" ng-model="vm.lockStatus" placeholder="Locked Status"/>
+                <button class="btn btn-xs btn-primary" ng-click="vm.unlockUser()"
+                        ng-class="vm.lockLoading?'disabled':''"
+                        type="button"
+                        ng-if="vm.lockStatus==='Locked'">Unlock</button>
+            </div>
+        </div>
+
+        <div class="clearfix">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>Category name</th>
+                    <th ng-repeat="permission in vm.permissions" ng-hide="permission.label=='Edit'">
+                        {{permission.label}}
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="category in vm.pageCategoies">
+                    <td>{{category.Name}}</td>
+                    <td ng-repeat="applicableToken in category.applicablePermissions" ng-hide="applicableToken=='Edit'">
+                        <label class="i-switch">
+                            <input type="checkbox" ng-model="vm.modulePermission[category._id][applicableToken]"
+                                   ng-change="vm.ToggleRelatedPermission(category._id,applicableToken);"/>
+                            <i></i>
+                        </label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-inline">
+            <div class="col-sm-2"></div>
+            <div class="form-group col-sm-5">
+                <button type="submit" class="btn btn-info m-r-xs" ng-if="!vm.isEdit"
+                        ng-click="vm.SaveUser(newUserForm, true);">Save & Add New
+                </button>
+                <button type="submit" class="btn btn-primary m-r-xs" ng-click="vm.SaveUser(newUserForm, false);">Save
+                </button>
+                <a ui-sref="app.users.list" class="btn btn-default m-r-xs">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>	
