@@ -18,11 +18,15 @@
     }
     function Controller($state,_,$rootScope,$scope){
         var vm = this;
+        var listeners = [];
+        vm.userFeeds = [];
         activate();
 
         function activate() {
-            console.log('hisadfasdfasd');
-            vm.name = 'sagar';
+            $rootScope.$on('FEEDS',function(event, data){
+                vm.userFeeds.push(data.data);
+                $scope.$apply();
+            });
         }
     }
 })();

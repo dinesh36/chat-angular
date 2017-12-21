@@ -6,7 +6,7 @@
     angular
         .module('ChatMain', [])
         .directive('chatMain',directive);
-    Controller.$inject = ['$state','lodash','$rootScope','$scope'];
+    Controller.$inject = ['$state','lodash','$rootScope','$scope', 'ChatService'];
 
 
     function directive() {
@@ -19,13 +19,13 @@
             controllerAs:'vm'
         };
     }
-    function Controller($state,_,$rootScope,$scope){
+    function Controller($state,_,$rootScope,$scope, ChatService){
         var vm = this;
         activate();
 
         function activate() {
-            console.log('hisadfasdfasd');
             vm.name = 'sagar';
+            ChatService.init();
         }
     }
 })();
