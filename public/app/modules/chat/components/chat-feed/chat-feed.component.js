@@ -1,11 +1,8 @@
-/**
- * Created by dinesh on 21/12/17.
- */
 'use strict';
 (function(){
     angular
-        .module('ChatMain', [])
-        .directive('chatMain',directive);
+        .module('ChatFeed', [])
+        .directive('chatFeed',directive);
     Controller.$inject = ['$state','lodash','$rootScope','$scope'];
 
 
@@ -13,7 +10,7 @@
         return {
             restrict:'E',
             replace:true,
-            templateUrl:'/app/modules/chat/components/chat-main/chat-main.component.html',
+            templateUrl:'/app/modules/chat/components/chat-feed/chat-feed.component.html',
             bindToController:true,
             controller:Controller,
             controllerAs:'vm'
