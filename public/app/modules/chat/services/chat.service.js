@@ -12,7 +12,7 @@
 
 		function init() {
             setInterval(function () {
-                var data = {id:1,name:'sagar', module:'deal'};
+                var data = {moduleId:1,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Contact'};
                 $rootScope.$broadcast('FEEDS', {action:'feeds', data:data});
             },1000);
         }
