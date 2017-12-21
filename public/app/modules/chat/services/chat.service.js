@@ -47,10 +47,8 @@
         }
 
 		function getMessages(){
-			//$http.get('api/chats?msgFrom=')
-			//	.then(function(){
-            //
-			//	})
+			return $http.get('api/chats');
+
 		}
 	}
 })();

@@ -41,6 +41,10 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
+            ChatService.getMessages().then(function(data){
+                debugger;
+                console.log(data);
+            })
             $rootScope.$on('SEND_MESSAGE',function(event,data){
                 if(data.data){
                     if(data.data.msgFrom == $location.search().id){
