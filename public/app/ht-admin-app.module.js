@@ -28,6 +28,7 @@
 		'ui.sortable', //BOMB-1484
 		'isteven-multi-select', //BOMB-1484
 		'Chat',
+        'ChatMain',
         'ChatFeed'
 	]);
 })();

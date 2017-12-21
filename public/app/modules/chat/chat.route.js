@@ -7,7 +7,7 @@
 		$stateProvider
 			.state('app.chat', {
 				url:'/chat',
-				template:'<div>dinesh </div><chat-feed></chat-feed>'
+				template:'<div>dinesh </div><chat-main></chat-main>'
 			})
 	}
 })();
