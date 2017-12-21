@@ -22,9 +22,6 @@
     function Controller($state,_,$rootScope,$scope){
         var vm = this;
         activate();
-
-        function activate() {
-            console.log('Window');
-        }
+        function activate() {}
     }
 })();

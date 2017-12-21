@@ -41,7 +41,6 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
-            alert(123);
             vm.userList = ChatService.userList();
             console.log(vm.userList);
         }
