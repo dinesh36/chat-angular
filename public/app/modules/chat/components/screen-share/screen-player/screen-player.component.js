@@ -4,8 +4,8 @@
 'use strict';
 (function(){
     angular
-        .module('ChatWindow', [])
-        .directive('chatWindow',directive);
+        .module('ScreenPlayer', [])
+        .directive('screenPlayer',directive);
     Controller.$inject = ['$state','lodash','$rootScope','$scope'];
 
 
@@ -13,22 +13,15 @@
         return {
             restrict:'E',
             replace:true,
-            templateUrl:'/app/modules/chat/components/chat-window/chat-window.component.html',
+            templateUrl:'/app/modules/chat/components/screen-share/screen-player/screen-player.component.html',
             bindToController:true,
             controller:Controller,
-            controllerAs:'vw'
+            controllerAs:'vm'
         };
     }
     function Controller($state,_,$rootScope,$scope){
         var vm = this;
         activate();
-
-        function activate() {
-            $rootScope.$on('userChange',function(event, data){
-                console.log(data);
-                vm.userName = data.name;
-                //$scope.$apply();
-            });
-        }
+        function activate() {}
     }
 })();

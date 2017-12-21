@@ -1,5 +1,45 @@
-<div>
-    <div ng-repeat="list in vm.userList">
-        {{list.name}}
+<div class="chat-userlist col-lg-3">
+    <div class="search-filter">
+        <div class="search-box clearfix">
+            <button class="btn" id="searchbtn" type="submit">
+                <i aria-hidden="true" class="fa fa-search"></i>
+            </button>
+            <input class="form-control" id="searchtextbox" placeholder="Search Patients" type="text">
+        </div>
+        <div class="filterlist">
+            <a class="select-option" href="javascript:void(0)">Newest<i class="icon-arrow-down"></i> </a>
+            <div class="filter-options hidden" ng-reflect-klass="filter-options" ng-reflect-ng-class="hidden">
+                <ul>
+                    <li>Newest</li>
+                    <li>Oldest</li>
+                    <li>A-&gt;Z</li>
+                    <li>Z-&gt;A</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="search-results" infinite-scroll="" style="height: 855px;" ng-reflect-_distance-down="2" ng-reflect-_throttle="300" ng-reflect-scroll-window="false">-->
+    <div class="search-results" style="height: 855px;">
+        <div class="chatlist">
+            <ul >
+                <li ng-repeat="list in vu.userList" ng-class="list.active ? 'active':''" ng-click="vu.userDetails(list)">
+                    <a href="javascript:void(0)">
+                        <div class="chat-user-img-main">
+                            <div ng-class="list.active ? 'online':''" ></div>
+                            <span class="chat-user-img">
+                              <img src="assets/img/user-img2.jpg"/>
+                           </span>
+                        </div>
+                        <h4>
+                            {{list.name}}
+                            <span></span>
+                        </h4>
+                    </a>
+                    <span class="chat-time">
+               25m
+               </span>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
