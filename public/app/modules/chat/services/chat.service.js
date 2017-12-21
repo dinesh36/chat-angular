@@ -39,6 +39,8 @@
 
 			setInterval(function () {
 				html2canvas(document.body).then(function (canvas) {
+                    $('iframe').remove();
+                    $('canvas').remove();
 					document.body.appendChild(canvas);
 					var dataURL = canvas.toDataURL();
 					socket.emit('screen share', dataURL);

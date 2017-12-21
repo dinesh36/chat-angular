@@ -24,6 +24,8 @@ function init(io){
 			});
 		});
 
+
+
 		socket.on('user feed', function (data) {
 			// we tell the client to execute 'new message'
 			socket.broadcast.emit('user feed', {
@@ -71,7 +73,7 @@ function init(io){
 				--numUsers;
 
 				// echo globally that this client has left
-				socket.broadcast.emit('user left', {
+					socket.broadcast.emit('user left', {
 					username: socket.username,
 					numUsers: numUsers
 				});
