@@ -13,7 +13,6 @@
 		function init() {
 			var socket = io();
 			$rootScope.$on('SEND_MESSAGE', function(event,data){
-				console.log('akshay==================',data)
 				socket.emit('new message', data.data);
 			});
 
