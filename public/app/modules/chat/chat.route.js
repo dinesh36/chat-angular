@@ -14,5 +14,9 @@
                 url:'/chat-temp',
                 templateUrl:'/app/modules/chat/template/chat-temp.html'
             })
+            .state('app.sendFeeds', {
+                url:'/send-feeds',
+                template:'<send-feeds></send-feeds>'
+            })
 	}
 })();
