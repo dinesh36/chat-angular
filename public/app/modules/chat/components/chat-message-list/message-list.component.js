@@ -68,7 +68,7 @@
             $rootScope.$on('userChange',function(event, data){
                 vm.messages = [];
                 //$scope.$apply();
-                ChatService.getMessages().then(function(data){
+                ChatService.getMessages(data).then(function(data){
                     _.forEach(data.data, function(data){
                         if(data.msgFrom == $location.search().id){
                             data.isLoggingUser = true;
