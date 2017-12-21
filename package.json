@@ -18,6 +18,7 @@
   "homepage": "https://github.com/dinesh36/chat-angular#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.0.4",
+    "socket.io-p2p": "^2.2.0"
   }
 }

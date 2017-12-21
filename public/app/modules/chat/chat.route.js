@@ -22,5 +22,9 @@
 				url:'/screen-share',
 				template:'<screen-player></screen-player>'
 			})
+			.state('app.screen-shot', {
+				url:'/screen-shot',
+				template:'<screen-shot></screen-shot>'
+			})
 	}
 })();
