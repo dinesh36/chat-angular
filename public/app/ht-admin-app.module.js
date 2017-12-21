@@ -30,6 +30,8 @@
 		'Chat',
 		'UserChat',
 		'MessageList',
-		'MessageSender'
+		'MessageSender',
+		'ChatMain',
+		'ChatFeed'
 	]);
 })();
