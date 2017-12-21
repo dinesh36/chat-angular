@@ -7,7 +7,8 @@
 	function ChatService($http,$q,RoHttp,$rootScope){
 
 		return {
-            init:init
+            init:init,
+			getMessages:getMessages
 		};
 
 		function init() {
@@ -36,5 +37,12 @@
                 $rootScope.$broadcast('FEEDS', {action:'feeds', data:data});
             },1000);
         }
+
+		function getMessages(){
+			//$http.get('api/chats?msgFrom=')
+			//	.then(function(){
+            //
+			//	})
+		}
 	}
 })();
