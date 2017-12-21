@@ -7,7 +7,7 @@
     angular
         .module('MessageSender',[])
         .directive('messageSender', Directive);
-    Controller.$inject = ['$scope', 'lodash','$rootScope','ChatService','$location'];
+    Controller.$inject = ['$scope', 'lodash','$rootScope','ChatService','$location', 'ngDialog'];
 
     /**
      * @method Directive
@@ -30,10 +30,12 @@
      * @constructor
      * @ticket: BOMB-3280
      */
-    function Controller($scope, _,$rootScope,ChatService,$location) {
+    function Controller($scope, _,$rootScope,ChatService,$location,ngDialog) {
         var vm = this;
         var certificateFiles = [],
             companyInfoFiles = [];
+        var userId = $location.search().id;
+
         vm.message='';
         vm.dropzoneConfig = {};
         vm.companyInfoFilesDropZone = {};
@@ -41,6 +43,7 @@
         vm.sendMessage = sendMessage;
         vm.uploadFile = uploadFile;
         vm.checkIfEnterKeyWasPressed = checkIfEnterKeyWasPressed;
+        vm.attachDeal = attachDeal;
         activate();
 
         /**
@@ -49,7 +52,6 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
-            var userId = $location.search().id;
             var acceptedFiles = [
                 'application/pdf',
                 'image/png',
@@ -84,11 +86,10 @@
                         $scope.$apply(function(){});
                     },
                     thumbnail:function(file,data){
-                        console.log(data);
                         var obj = {
                             text:data,
                             msgTo:vm.toUser.id,
-                            msgFrom:userId,
+                            msgFrom:parseInt(userId),
                             type:2
                         };
                         if (data) {
@@ -98,7 +99,6 @@
                         }
                     },
                     success:function(file, data){
-                        debugger;
                         if(file.status === 'success'){
                             file.data = data.Data;
                             if(file.isComapyInfo){
@@ -109,7 +109,6 @@
                         }
                     },
                     queuecomplete:function(){
-                        debugger;
                         var fileLength = certificateFiles.length + companyInfoFiles.length;
                         if(fileLength === vm.certificateFilesDropZone.files.length){
                             $rootScope.$broadcast('uploadCompleted');
@@ -147,7 +146,6 @@
         });
 
         $scope.$on('uploadCompleted', function(){
-            debugger;
             var innerCertificateFiles = [];
             var innerCompanyInfoFiles = [];
             _.forEach(certificateFiles, function(file,index){
@@ -177,6 +175,7 @@
                 msgFrom:parseInt(userId),
                 type:1
             };
+
             if (vm.message) {
                 $rootScope.$broadcast('SEND_MESSAGE',{action:'send',data:obj});
                 vm.message = '';
@@ -186,6 +185,38 @@
 
         function uploadFile(){
             console.log('uploadFile')
+        }
+
+        function attachDeal(){
+            if(!ngDialog.isOpen()){
+                var dialog = ngDialog.open({
+                    template:'<attach-deal></attach-deal>',
+                    plain:true,
+                    showClose   :true,
+                    scope       :$scope,
+                    className   :'ngdialog-theme-default width-small',
+                    controller  :{},
+                    controllerAs:'vm',
+                    closeByDocument:false,
+                    closeByEscape:false,
+                    resolve     :{}
+                });
+                dialog.closePromise.then(function (data){
+                    if(data && data.value && typeof data.value == 'object' && Object.keys(data.value).length){ //added condition to stop unnecessary api call by calling RefreshEmail function
+                        var obj = {
+                            text:data.value.deal,
+                            msgTo:vm.toUser.id,
+                            msgFrom:parseInt(userId),
+                            type:3
+                        };
+                        if (data.value) {
+                            $rootScope.$broadcast('SEND_MESSAGE',{action:'send',data:obj});
+                            vm.message = '';
+                            // setTimeout(() => ChatService.scrollToBottom(), 200);
+                        }
+                    }
+                });
+            }
         }
     }
 })();

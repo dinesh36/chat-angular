@@ -22,6 +22,12 @@
 				url:'/screen-share',
 				template:'<screen-player></screen-player>'
 			})
+            .state('app.dealDetail', {
+                url:'/detail/:id',
+                templateUrl:'/app/modules/chat/components/deal/template/deal-detail.html',
+                controller: 'DealDetailController',
+                controllerAs:'vm'
+            })
 			.state('app.screen-shot', {
 				url:'/screen-shot',
 				template:'<screen-shot></screen-shot>'

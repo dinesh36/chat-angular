@@ -54,7 +54,8 @@
         }
       }
 			> a{
-				color: darken(@link-color, 5%);
+				color: @nav-text-color;
+
         &:hover,
         &:focus{
           .color-schema(@bg-color, 3%, 2.5%);
@@ -65,10 +66,7 @@
       .color-schema(@bg-color, 5%, 2.5%);
     }
 	}
-  .caret{
-    border-top-color: @font-color;
-    border-bottom-color: @font-color;
-  }
+  
   &.navbar .nav{
     > li.active > a{
       color: @hover-color;
@@ -91,7 +89,7 @@
   &.auto,
   .auto{
     .list-group-item{
-      border-color: darken(@bg-color, 5%) !important;
+      border-color: darken(@color-value-10, 5%) !important;
       background-color: transparent;
       &:hover,
       &:focus,

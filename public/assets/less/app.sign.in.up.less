@@ -1,0 +1,268 @@
+.asideright {
+    background: @brand-primary-dark;
+    .logo {
+        width: 200px;
+        float: right;
+        margin: 0 0 120px;
+    }
+    aside {
+        margin: 40px;
+        img {
+            max-width: 100%;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        p {
+            color: #859fc0;
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        display: none !important;
+    }
+}
+.signin {
+    background: #f0f5f7;
+    min-width:768px;
+    overflow: auto;
+    .signin-content {
+        width: 440px;
+        margin: 30px auto 0 auto;
+        font-weight: 400;
+        border:1px solid #e8eef2;
+        background: #fff;
+        border-radius: 3px;
+        h1 {
+            font-size: 20px;
+            color: @brand-primary-dark;
+            margin: 0 0 15px 0;
+        }
+        p {
+            font-size: @font-size-md;
+            color: #9ba3ae;
+        }
+        .gplus {
+            margin: 0 auto;
+            width: 230px;
+            font-size: @font-size-md;
+            background: #de5246;
+            border-color: #de5246;
+            span{
+              font-size: @font-size-md;
+            }
+        }
+        .logo {
+            width: 100%;
+            text-align: center;
+            top: -60px;
+            left: 0;
+            z-index: 1;
+            img {
+                max-width: 240px;
+            }
+        }
+        @media (max-width: 1023px) {
+            .logo {
+                display: block;
+            }
+        }
+    }
+
+
+    .ag-filter input[type="text"],
+    soul .chosen-container-multi .chosen-choices,
+    soul .no-borders .btn.dropdown-toggle,
+    soul div.chosen-container.chosen-container-single,
+    soul input.text,
+    soul input[type="email"],
+    soul input[type="number"],
+    soul input[type="password"],
+    soul input[type="text"],
+    soul select,
+    soul textarea {
+        font-size: 14px;
+        padding: 12px!important;
+    }
+    soul slabel,
+    soul-edit slabel {
+        color: @color-value-70;
+        font-weight: 400;
+        font-family: @font-family-primary;
+    }
+    soul input::placeholder {
+      color:@secondary-text;
+    }
+
+    .subCaption {
+        font-size: @font-size-base;
+        background: #fff;
+        position: relative;
+        margin: 39px -30px 30px -30px;
+        &:before {
+            border-bottom: 1px solid #f0f5f7;
+            position: absolute;
+            content: '';
+            width: 100%;
+            left: 0;
+            height: 10px;
+        }
+        span {
+            background: #f0f5f7;
+            padding:10px;
+            position: relative;
+            color: #90a4ae;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: -15px;
+            width: 36px;
+            height: 36px;
+        }
+    }
+    ul.bottomlink {
+        margin: 30px 0 10px -15px;
+        padding: 0;
+        li {
+            list-style: none;
+            color: @color-value-60;
+            font-size: 13px;
+            font-weight: 400;
+            display: inline-block;
+            padding-left: 10px;
+            a {
+                color: @color-value-60;
+                font-size: 13px;
+                font-weight: 400;
+                padding-right: 10px;
+                &:hover {
+                    color: @brand-primary;
+                }
+            }
+        }
+    }
+    &.up {
+        .signup-term {
+            font-size: @font-size-sm;
+            color: #9ba3ae;
+        }
+    }
+    &.registrationMsg {
+        .signin-content {
+            margin: 50px auto 0 auto;
+            .icon {
+                color: @brand-primary;
+                font-size: 60px;
+            }
+            .a {
+                color: #9ba3ae;
+                &:hover {
+                    color: @brand-primary-dark;
+                }
+            }
+        }
+    }
+    &.profileProcess {
+        .wrapper {
+            margin: 7% auto 0;
+        }
+        .required {
+            position: relative;
+            &::before {
+                content: "*";
+                color: red;
+                position: absolute;
+                left: 0;
+                top: 15px;
+            }
+            input {
+                padding: 8px 0 8px 10px !important;
+            }
+            .filter-option {
+                padding-left: 10px;
+            }
+            &.domian {
+                input {
+                    padding: 8px 96px 8px 10px !important;
+                }
+                &::after {
+                    content: ".salesmate.io";
+                    color: @brand-primary-dark;
+                    position: absolute;
+                    right: 0;
+                    top: 15px;
+                }
+            }
+        }
+        .companySize {
+            .companyLabel {
+                color: #9ba3ae;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .radio-inline {
+                border: 1px solid #e0e6e8;
+                border-radius: 3px;
+                padding: 12px 15px 10px;
+                color: #9ba3ae;
+                input {
+                    visibility: hidden;
+                }
+                &.checked {
+                    border: 1px solid #00c0f3;
+                    color: #00c0f3;
+                }
+            }
+        }
+        .progressBar {
+            li {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background: #e0e6e8;
+                border-radius: 12px;
+                margin-right: 10px;
+                &.active {
+                    background: #00c0f3;
+                }
+            }
+        }
+    }
+    .btn {
+      font-size: @font-size-md;
+      padding: 10px 15px;
+    }
+   .hbox{
+     .col{ vertical-align:middle !important;}
+   }
+   a{
+     &:hover{ color: @brand-primary}
+   }
+}
+.centralized-login{
+  h4{ font-size: 22px;  color: @brand-primary-dark; margin: 0 0 15px 0}
+  p{ font-size: @font-size-sm !important; color: @secondary-text !important;}
+
+
+.domain-list-container{ padding: 0;
+  li{ list-style: none;
+     border: 1px solid @border-color-secondary;
+     border-radius: @border-radius-base;
+     text-align: left;
+     margin-bottom: 20px;
+     a{ color: @color-value-80;
+       font-size: @font-size-md;
+       display: block;
+       padding: 15px;
+       i{ float: right; color: @color-value-60; font-size: @font-size-lg;}
+     }
+     &:hover{
+       border: 1px solid @brand-primary;
+       a{ color: @brand-primary;
+        i{ color: @brand-primary;}
+       }
+     }
+     }
+}
+}

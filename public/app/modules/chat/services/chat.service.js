@@ -13,7 +13,6 @@
 		function init() {
 			var socket = io();
 			$rootScope.$on('SEND_MESSAGE', function(event,data){
-				debugger;
 				socket.emit('new message', data.data);
 			});
 

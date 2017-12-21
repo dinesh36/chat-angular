@@ -1,7 +1,10 @@
 .butterbar{
-  position: relative;
+  position: fixed;
   margin-bottom: -@butterbar-height;
   height: @butterbar-height;
+  z-index:1100;
+  width: 100%;
+  top: 0; //@app-header-height;
   .bar{
     position: absolute;
     height: 0;
@@ -56,27 +59,27 @@
 /* change bar */
 @-webkit-keyframes changebar{ 
   0%      { background-color: @brand-info }
-  33.3%   { background-color: @brand-info }
+  33.3%   { background-color: @brand-alter }
   33.33%  { background-color: @brand-warning } 
   66.6%   { background-color: @brand-warning } 
   66.66%  { background-color: @brand-primary } 
-  99.9%    { background-color: @brand-primary } 
+  99.9%    { background-color: @brand-success } 
 }
 
 @-moz-keyframes changebar{ 
   0%      { background-color: @brand-info }
-  33.3%   { background-color: @brand-info }
+  33.3%   { background-color: @brand-alter }
   33.33%  { background-color: @brand-warning } 
   66.6%   { background-color: @brand-warning } 
   66.66%  { background-color: @brand-primary } 
-  99.9%    { background-color: @brand-primary } 
+  99.9%    { background-color: @brand-success } 
 }
 
 @keyframes changebar{ 
   0%      { background-color: @brand-info }
-  33.3%   { background-color: @brand-info }
+  33.3%   { background-color: @brand-alter }
   33.33%  { background-color: @brand-warning } 
   66.6%   { background-color: @brand-warning } 
   66.66%  { background-color: @brand-primary } 
-  99.9%    { background-color: @brand-primary } 
+  99.9%    { background-color: @brand-success } 
 }

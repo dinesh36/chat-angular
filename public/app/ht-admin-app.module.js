@@ -37,6 +37,7 @@
 		'ChatIO',
         'SendFeeds',
         'ScreenPlayer',
+        'AttachDeal',
 		'ScreenShot'
 	]);
 })();

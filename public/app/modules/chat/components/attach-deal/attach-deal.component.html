@@ -1,0 +1,8 @@
+<div>
+    <div ng-if="vf.dealList.length" ng-repeat="deal in vf.dealList">
+        <a ng-click="vf.selectDeal(deal)">{{deal.title}} {{deal.value}}</a>
+    </div>
+    <div ng-if="!vf.dealList.length">
+
+    </div>
+</div>

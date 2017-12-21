@@ -4,12 +4,11 @@
             <div role="tabpanel" class="tab-pane active" id="home">
                 <textarea class="form-control msg_sender_"
                   name="message"
-                  ng-model="vs.message"
+                  ng-model="vz.message"
                   placeholder="Enter Message"
-                  style="resize: none;" ng-keypress="vs.checkIfEnterKeyWasPressed($event)" ></textarea>
+                  style="resize: none;" ng-keypress="vz.checkIfEnterKeyWasPressed($event)" ></textarea>
                 <div class="tabpanel-footer clearfix">
-                    <a href="javascript:void(0)" class="click1"></a>
-                    <a href="javascript:void(0)" class="click2"></a>
+                    <a ng-click="vz.attachDeal()" href="javascript:void(0)" class="click1"></a>
                     <button type="button" class="btn uploadbtn" dropzone style="" id="companyInfoUploadBtn"
                             dropzone-options="vz.dropzoneConfig" dropzone-object="vz.companyInfoFilesDropZone">
                         <span class="icon"></span>
