@@ -86,7 +86,6 @@
                         $scope.$apply(function(){});
                     },
                     thumbnail:function(file,data){
-                        console.log(data);
                         var obj = {
                             text:data,
                             msgTo:vm.toUser.id,

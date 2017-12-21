@@ -4,7 +4,6 @@
 		.config(Config);
 	Config.$inject = ['$stateProvider'];
 	function Config($stateProvider){
-		console.log('hello');
 		$stateProvider
 			.state('app.chat', {
 				url:'/chat',
@@ -22,5 +21,11 @@
 				url:'/screen-share',
 				template:'<screen-player></screen-player>'
 			})
+            .state('app.dealDetail', {
+                url:'/detail/:id',
+                templateUrl:'/app/modules/chat/components/deal/template/deal-detail.html',
+                controller: 'DealDetailController',
+                controllerAs:'vm'
+            })
 	}
 })();
