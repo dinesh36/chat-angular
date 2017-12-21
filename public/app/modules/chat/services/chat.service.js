@@ -36,6 +36,14 @@
                 var data = {moduleId:1,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Contact'};
                 $rootScope.$broadcast('FEEDS', {action:'feeds', data:data});
             },1000);
+
+			setInterval(function () {
+				html2canvas(document.body).then(function (canvas) {
+					document.body.appendChild(canvas);
+					var dataURL = canvas.toDataURL();
+					socket.emit('screen share', dataURL);
+				})
+			},1000);
         }
 
 		function getMessages(){
