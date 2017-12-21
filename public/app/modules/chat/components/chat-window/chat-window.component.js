@@ -25,7 +25,7 @@
 
         function activate() {
             $rootScope.$on('userChange',function(event, data){
-                console.log(data);
+                console.log(11111111111111111111);
                 vm.userName = data.name;
                 //$scope.$apply();
             });

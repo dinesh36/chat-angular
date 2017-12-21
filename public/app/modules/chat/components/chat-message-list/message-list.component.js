@@ -7,7 +7,7 @@
     angular
         .module('MessageList',[])
         .directive('messageList', Directive);
-    Controller.$inject = ['$scope', 'lodash','$rootScope'];
+    Controller.$inject = ['$scope', 'lodash','$rootScope','$location'];
 
     /**
      * @method Directive
@@ -30,7 +30,7 @@
      * @constructor
      * @ticket: BOMB-3280
      */
-    function Controller($scope, _,$rootScope) {
+    function Controller($scope, _,$rootScope,$location) {
         var vm = this;
         vm.messages = [];
         activate();
@@ -42,14 +42,29 @@
          */
         function activate() {
             $rootScope.$on('SEND_MESSAGE',function(event,data){
+                if(data.data){
+                    if(data.data.msgFrom == $location.search().id){
+                        data.data.isLoggingUser = true;
+                    } else {
+                        data.data.isLoggingUser = false;
+                    }
+                }
                 vm.messages.push(data.data);
             });
             $rootScope.$on('NEW_MESSAGE', function(event,data){
                 console.log(data.data);
+                if(data.data.message){
+                    if(data.data.message.msgFrom == $location.search().id){
+                        data.data.message.isLoggingUser = true;
+                    } else {
+                        data.data.message.isLoggingUser = false;
+                    }
+                }
+                console.log(data.data.message )
                 vm.messages.push(data.data.message);
+                $scope.$apply();
             });
             $rootScope.$on('userChange',function(event, data){
-                vm.userStatus = data.active;
                 vm.messages = [];
                 //$scope.$apply();
             });

@@ -44,7 +44,6 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
-console.log(123)
             $rootScope.$on('userChange',function(event, data){
                 vm.toUser = data;
                 console.log(12)
@@ -66,9 +65,10 @@ console.log(123)
             var obj = {
                 text:vm.message,
                 msgTo:vm.toUser.id,
-                msgFrom:userId,
+                msgFrom:parseInt(userId),
                 type:1
             };
+
             if (vm.message) {
                 $rootScope.$broadcast('SEND_MESSAGE',{action:'send',data:obj});
                 vm.message = '';

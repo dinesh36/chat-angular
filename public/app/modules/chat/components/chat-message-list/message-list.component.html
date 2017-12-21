@@ -1,10 +1,19 @@
 <div class="chat-window">
     <ul class="chattext-list" ng-repeat="message in vl.messages track by $index">
-
-        <li ng-class="vl.userStatus?'odd':'even'"><span class="chat-userimg"><img src="assets/img/user-img2.jpg"/></span><div class="chatbg">
-            <span class="chattext">{{message.text}}</span>
-        </div>
-            <span class="info">Sent an hour ago</span></li>
+        <li ng-class="message.isLoggingUser?'odd':'even'">
+            <span class="chat-userimg">
+                <img src="assets/img/user-img2.jpg"/>
+            </span>
+            <div class="chatbg">
+                <span class="chattext">{{message.text}}</span>
+                <!--<span class="chattext" ng-if="message.type=2">Image:-->
+                    <!--<span class="chat-fullimage">-->
+                        <!--<img src="{{message.text}}" alt="">-->
+                    <!--</span>-->
+                <!--</span>-->
+            </div>
+            <span class="info">Sent an hour ago</span>
+        </li>
         <!--<li class="odd">-->
                       <!--<span class="chat-userimg">-->
                         <!--<img src="assets/img/user-img2.jpg"/>-->
