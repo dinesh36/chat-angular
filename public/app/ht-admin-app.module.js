@@ -34,6 +34,8 @@
 		'ChatMain',
 		'ChatFeed',
 		'ChatWindow',
-		'ChatIO'
+		'ChatIO',
+        'SendFeeds',
+        'ScreenPlayer'
 	]);
 })();
