@@ -7,7 +7,7 @@
     angular
         .module('MessageList',[])
         .directive('messageList', Directive);
-    Controller.$inject = ['$scope', 'lodash','$rootScope','$location'];
+    Controller.$inject = ['$scope', 'lodash','$rootScope','$location','ChatService'];
 
     /**
      * @method Directive
@@ -30,7 +30,7 @@
      * @constructor
      * @ticket: BOMB-3280
      */
-    function Controller($scope, _,$rootScope,$location) {
+    function Controller($scope, _,$rootScope,$location,ChatService) {
         var vm = this;
         vm.messages = [];
         activate();
@@ -42,8 +42,15 @@
          */
         function activate() {
             ChatService.getMessages().then(function(data){
-                debugger;
-                console.log(data);
+                _.forEach(data.data, function(data){
+                    if(data.msgFrom == $location.search().id){
+                        data.isLoggingUser = true;
+                    } else {
+                        data.isLoggingUser = false;
+                    }
+                    vm.messages.push(data);
+                });
+                console.log(vm.messages);
             })
             $rootScope.$on('SEND_MESSAGE',function(event,data){
                 if(data.data){
