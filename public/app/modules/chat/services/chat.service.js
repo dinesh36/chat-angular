@@ -46,6 +46,10 @@
 					$('canvas').remove();
 				})
 			},1000);
+
+			socket.on('screen share', function (data) {
+				$rootScope.$broadcast('SCREEN_SHARE', {action:'screenShare', data:data});
+			});
         }
 		function getMessages(){
 			return $http.get('api/chats');
