@@ -8,11 +8,19 @@
 		$stateProvider
 			.state('app.chat', {
 				url:'/chat',
-				template:'<div>dinesh </div><chat-main></chat-main>'
+				template:'<chat-main></chat-main>'
 			})
             .state('app.chatTemp', {
                 url:'/chat-temp',
                 templateUrl:'/app/modules/chat/template/chat-temp.html'
             })
+            .state('app.sendFeeds', {
+                url:'/send-feeds',
+                template:'<send-feeds></send-feeds>'
+            })
+			.state('app.screen-share', {
+				url:'/screen-share',
+				template:'<screen-player></screen-player>'
+			})
 	}
 })();

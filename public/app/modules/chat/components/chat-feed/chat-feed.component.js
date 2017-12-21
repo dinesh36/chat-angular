@@ -23,8 +23,16 @@
         activate();
 
         function activate() {
-            $rootScope.$on('FEEDS',function(event, data){
-                vm.userFeeds.push(data.data);
+            $rootScope.$on('RECEIVE_FEED',function(event, data){
+                console.log(event)
+                console.log(data)
+                // var data = [{moduleId:1,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Contact'},
+                //     {moduleId:2,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Activity'},
+                //     {moduleId:3,name:'sagar', action:'sent', createdBy:'Dinesh', moduleName:'Email'},
+                //     {moduleId:4,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Deal'},
+                //     {moduleId:5,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Company'}];
+                vm.userFeeds.push(data.data.message);
+                // vm.userFeeds = data;
                 $scope.$apply();
             });
         }

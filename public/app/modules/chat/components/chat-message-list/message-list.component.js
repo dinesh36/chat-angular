@@ -7,7 +7,7 @@
     angular
         .module('MessageList',[])
         .directive('messageList', Directive);
-    Controller.$inject = ['$scope', 'lodash'];
+    Controller.$inject = ['$scope', 'lodash','$rootScope'];
 
     /**
      * @method Directive
@@ -20,7 +20,7 @@
             replace:true,
             templateUrl:'/app/modules/chat/components/chat-message-list/message-list.component.html',
             controller:Controller,
-            controllerAs:'vs',
+            controllerAs:'vl',
             bindToController:true
         };
     }
@@ -30,9 +30,9 @@
      * @constructor
      * @ticket: BOMB-3280
      */
-    function Controller($scope, _) {
+    function Controller($scope, _,$rootScope) {
         var vm = this;
-
+        vm.messages = [];
         activate();
 
         /**
@@ -41,6 +41,12 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
+            $rootScope.$on('SEND_MESSAGE',function(event,data){
+                vm.messages.push(data.data);
+            });
+            $rootScope.$on('NEW_MESSAGE', function(event,data){
+                vm.messages.push(data.data.message);
+            });
         }
     }
 })();

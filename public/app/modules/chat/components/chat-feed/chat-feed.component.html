@@ -1,5 +1,8 @@
 <div>
-    <div ng-if="vm.userFeeds.length" ng-repeat="feeds in vm.userFeeds">
-        {{feeds.name}}
+    <div ng-if="vm.userFeeds.length" ng-repeat="feed in vm.userFeeds">
+        <span>{{feed.createdBy}} {{feed.action}} {{feed.moduleName}} {{feed.name}}</span>
+    </div>
+    <div ng-if="!vm.userFeeds.length">
+        No feeds available.
     </div>
 </div>

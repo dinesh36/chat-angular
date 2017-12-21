@@ -7,7 +7,7 @@
     angular
         .module('MessageSender',[])
         .directive('messageSender', Directive);
-    Controller.$inject = ['$scope', 'lodash'];
+    Controller.$inject = ['$scope', 'lodash','$rootScope','ChatService'];
 
     /**
      * @method Directive
@@ -30,9 +30,11 @@
      * @constructor
      * @ticket: BOMB-3280
      */
-    function Controller($scope, _) {
+    function Controller($scope, _,$rootScope,ChatService) {
         var vm = this;
-
+        vm.message='';
+        vm.sendMessage = sendMessage;
+        vm.uploadFile = uploadFile;
         activate();
 
         /**
@@ -41,6 +43,20 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
+
+        }
+
+        function sendMessage(){
+            console.log('hi');
+            if (vm.message) {
+                $rootScope.$broadcast('SEND_MESSAGE',{action:'send',data:vm.message});
+                vm.message = '';
+                // setTimeout(() => ChatService.scrollToBottom(), 200);
+            }
+        }
+
+        function uploadFile(){
+            console.log('uploadFile')
         }
     }
 })();

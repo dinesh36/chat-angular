@@ -16,6 +16,14 @@ function init(io){
 			});
 		});
 
+		socket.on('user feed', function (data) {
+			// we tell the client to execute 'new message'
+			socket.broadcast.emit('user feed', {
+				username: socket.username,
+				message: data
+			});
+		});
+
 		// when the client emits 'add user', this listens and executes
 		socket.on('add user', function (username) {
 			sockets[username] = socket;
