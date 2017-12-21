@@ -192,7 +192,7 @@
                 var dialog = ngDialog.open({
                     template:'<attach-deal></attach-deal>',
                     plain:true,
-                    showClose   :true,
+                    showClose   :false,
                     scope       :$scope,
                     className   :'ngdialog-theme-default width-small',
                     controller  :{},

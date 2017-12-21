@@ -21,6 +21,7 @@
         var listeners = [];
         vm.dealList = [];
         vm.selectDeal = selectDeal;
+        vm.closeDialog = closeDialog;
         activate();
 
         function activate() {
@@ -31,6 +32,10 @@
 
         function selectDeal(deal){
             $scope.closeThisDialog({deal:deal});
+        }
+
+        function closeDialog(){
+            $scope.closeThisDialog(0);
         }
     }
 })();
