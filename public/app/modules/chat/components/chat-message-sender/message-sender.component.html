@@ -8,18 +8,15 @@
                   placeholder="Enter Message"
                   style="resize: none;" ng-keypress="vz.checkIfEnterKeyWasPressed($event)" ></textarea>
                 <div class="tabpanel-footer clearfix">
+                    <a  href="javascript:void(0)" class="click0"  class="btn uploadbtn" dropzone style="" id="companyInfoUploadBtn"
+                        dropzone-options="vz.dropzoneConfig" dropzone-object="vz.companyInfoFilesDropZone"><input type="hidden"
+                                                                                                                  title="files"
+                                                                                                                  class="btn btn-success hidden"
+                                                                                                                  value="upload"
+                                                                                                                  id="files_for_contribution"
+                                                                                                                  name="files"></a>
                     <a ng-click="vz.attachDeal()" href="javascript:void(0)" class="click1"></a>
-                    <button type="button" class="btn uploadbtn" dropzone style="" id="companyInfoUploadBtn"
-                            dropzone-options="vz.dropzoneConfig" dropzone-object="vz.companyInfoFilesDropZone">
-                        <span class="icon"></span>
-                        Attach ...
-                        <input type="hidden"
-                               title="files"
-                               class="btn btn-success hidden"
-                               value="upload"
-                               id="files_for_contribution"
-                               name="files">
-                    </button>
+
                     <a href="javascript:void(0)" ng-click="vm.uploadFile()"></a>
                     <button class="btn btn-secondary" ng-click="vz.sendMessage()">Send</button>
                 </div>

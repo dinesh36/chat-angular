@@ -14,7 +14,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     /*width: 23%;*/
     background: #fff;
     border-right: solid 1px #e9eef2;
-    height: 100vh;
+
 }
 .chat-page .chat-userlist .filterlist {
     float: right;
@@ -87,7 +87,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 }
 .chat-page .chat-userlist .search-results {
     overflow-y: auto;
-    height: 300px;
+    height: 622px;
 }
 .chat-page .chat-userlist .search-results ul li {
     border-left: solid 3px transparent;
@@ -189,7 +189,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     border-radius: 50%;
     overflow: hidden;
     width: 32px;
-    height: 32px;
+    height: 31px;
     vertical-align: middle;
     margin-right: 10px;
 }
@@ -228,7 +228,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 }
 .chat-page .chatlist ul li.active {
     background: #edf5f8;
-    border-left: solid 3px #28bebd;
+    border-left: solid 3px #1e93bf;
 }
 .chat-page .chatlist h4 {
     font-size: 15px;
@@ -251,11 +251,12 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 }
 .chat-page .chat-user-detail {
 
-    height: 100vh;
+    height: 600px;
 }
 .chat-page .chat-user-detail .user-info {
     border-bottom: solid 1px #edeff5;
-    padding: 20px 18px;
+    padding: 18px 18px;
+    background-color: #fff;
 }
 .chat-page .chat-user-detail .user-info .user-info-img {
     display: inline-block;
@@ -360,7 +361,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 }
 .chat-page .chat-window .chattitle {
     width: 100%;
-    padding: 15px 10px;
+    padding: 16px 10px 15px 10px;
     text-align: center;
     background-color: #fff;
     border-bottom: solid 1px #edeff5;
@@ -378,7 +379,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     padding: 0px 10px;
     margin: 0px !important;
     overflow-y: auto;
-    min-height: 450px;
+    height: 450px;
 
 }
 .chat-page .chat-window .chattext-list li {
@@ -568,6 +569,11 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     display: inline-block;
     vertical-align: middle;
     margin-top: 5px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click0 {
+    background: url(/assets/img/attach-icon.png) left top no-repeat;
+    width: 15px;
+    height: 15px;
 }
 .chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1 {
     background: url(/assets/img/physio-sprite-img.png) -841px -50px no-repeat;
@@ -2210,7 +2216,7 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 }
 
 
-.chat-feed{ background-color: #edf5f8; height: 100vh;}
+.chat-feed{ background-color: #edf5f8; height:680px;}
 .chat-feed .time{ display: block; font-size: 12px;color:#91aec0;}
 .chat-feed .activity-list-main{ padding: 10px 18px;}
 .chat-feed .activity-list-main .activity-list{ margin-bottom: 20px; position: relative; padding-left: 20px;}
@@ -2228,7 +2234,7 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 
 .livechat-main{  z-index: 99;}
 .chat-icon{  background: url(/assets/img/chat-icon.png) top left no-repeat; position: absolute;  right: 10px;  bottom: 60px;}
-.livechat-list-main{ position: absolute; right: 0; bottom: 150px; width: 370px; z-index: 99; background-color: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+.livechat-list-main{ display: none; position: absolute; right: 0; bottom: 150px; width: 370px; z-index: 99; background-color: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75); border-radius: 10px; right: 20px; }
 .livechat-text{ color: #000;}
@@ -2254,3 +2260,5 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 .modal-header .close-icon{ width: 10px; display: inline-block;}
 .model-body { padding: 15px;}
 .model-body .deal-list{ padding: 5px;}
+
+.dz-preview { display: none;}
