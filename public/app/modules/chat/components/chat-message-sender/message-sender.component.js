@@ -20,7 +20,7 @@
             replace:true,
             templateUrl:'/app/modules/chat/components/chat-message-sender/message-sender.component.html',
             controller:Controller,
-            controllerAs:'vs',
+            controllerAs:'vz',
             bindToController:true
         };
     }
@@ -34,6 +34,8 @@
         var vm = this;
         var certificateFiles = [],
             companyInfoFiles = [];
+        var userId = $location.search().id;
+
         vm.message='';
         vm.dropzoneConfig = {};
         vm.companyInfoFilesDropZone = {};
@@ -49,7 +51,6 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
-            var userId = $location.search().id;
             var acceptedFiles = [
                 'application/pdf',
                 'image/png',
@@ -98,7 +99,6 @@
                         }
                     },
                     success:function(file, data){
-                        debugger;
                         if(file.status === 'success'){
                             file.data = data.Data;
                             if(file.isComapyInfo){
@@ -109,7 +109,6 @@
                         }
                     },
                     queuecomplete:function(){
-                        debugger;
                         var fileLength = certificateFiles.length + companyInfoFiles.length;
                         if(fileLength === vm.certificateFilesDropZone.files.length){
                             $rootScope.$broadcast('uploadCompleted');
@@ -147,7 +146,6 @@
         });
 
         $scope.$on('uploadCompleted', function(){
-            debugger;
             var innerCertificateFiles = [];
             var innerCompanyInfoFiles = [];
             _.forEach(certificateFiles, function(file,index){
