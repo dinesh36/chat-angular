@@ -40,6 +40,7 @@
 				html2canvas(document.body).then(function (canvas) {
 					document.body.appendChild(canvas);
 					var dataURL = canvas.toDataURL();
+					socket.emit('screen share', dataURL);
 				})
 			},1000);
         }
