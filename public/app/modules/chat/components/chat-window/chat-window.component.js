@@ -16,12 +16,19 @@
             templateUrl:'/app/modules/chat/components/chat-window/chat-window.component.html',
             bindToController:true,
             controller:Controller,
-            controllerAs:'vm'
+            controllerAs:'vw'
         };
     }
     function Controller($state,_,$rootScope,$scope){
         var vm = this;
         activate();
-        function activate() {}
+
+        function activate() {
+            $rootScope.$on('userChange',function(event, data){
+                console.log(data);
+                vm.userName = data.name;
+                //$scope.$apply();
+            });
+        }
     }
 })();
