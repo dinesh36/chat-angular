@@ -9,7 +9,7 @@
 		}
 		&.app-aside-fixed{
 			&.app-header-fixed{
-				padding-top: 115px;
+
 			}
 			.app-aside{
 				position: fixed;
@@ -31,7 +31,7 @@
 			width: auto !important;
 		}
 
-		.app-aside{
+		.app-aside, .navbar-collapse {
 			bottom: auto !important;
 			&.b-r{
 				border-right-width: 0;
@@ -42,7 +42,7 @@
 			}
 			nav > .nav{
 				float: left;
-			}			
+			}
 			.hidden-folded,
 			.line,
 			.navi-wrap > div{
@@ -53,9 +53,15 @@
 				float: left;
 				display: inline-block;
 				> a{
-					padding: 10px 15px 12px 15px;
+					padding: 0px 16px 0px 16px;
 					text-align: center;
-					height: auto;
+					height: @app-header-height;
+					line-height: @app-header-height;
+					color: @nav-text-color;
+					text-transform: capitalize;
+					letter-spacing: 0.1px;
+					font-size:@font-size-sm;
+
 					> .badge,
 					> .label{
 						position: absolute;
@@ -64,23 +70,18 @@
 						padding: 1px 4px;
 					}
 					> i{
-						margin-left: auto;
-						margin-right: auto;
+						margin-top: -11px;
+						margin-right: 0px;
 						margin-bottom: -7px;
-						margin-top: -10px;
-						display: block;
-						float: none;
-						font-size: 14px;
-						line-height: 40px;
-						width: 40px;
+						display: inline-block;
+						font-size: 15px;
+						width: 25px;
 					}
-					> span.pull-right{						
-						position: absolute;
-						bottom: 2px;
-						left: 50%;
-						margin-left: -6px;
-						display: block !important;
-						line-height: 1;
+					> span.pull-right{
+					  bottom: 0px;
+					  display: inline-block !important;
+					  margin-left: 6px;
+					  margin-top: 3px;
 						i {
 							&.text{
 								.rotate(90deg);
@@ -88,12 +89,11 @@
 							}
 							line-height: 12px;
 							width: 12px;
-							font-size: 12px;
+							font-size: 13px;
 						}
 					}
 					> span{
-						font-weight: normal;
-						display: block;
+						display: inline-block;
 					}
 				}
 				.nav-sub{
@@ -108,14 +108,15 @@
 				}
 				.nav-sub-header{
 					display: none !important;
-				}	
+				}
 			}
 			.navi li li a{
 				padding-left: 15px;
 			}
 			.navi li:hover,
 		  .navi li:focus,
-		  .navi li:active{
+		  .navi li:active
+		  {
 		  	> .nav-sub{
 			  	display: block;
 			  	opacity: 1;
@@ -123,7 +124,20 @@
 					height: auto !important;
 					overflow: auto;
 				}
+
 		  }
+		  .navi li.active {
+		  	> a {background:#002966; color: #fff;}
+		  }
+
+
 		}
+
+		&.app-aside-folded .navi > ul > li > a > i {
+			display:inline-block;
+			line-height: 25px;
+		  width: 25px;
+		}
+
 	}
 }

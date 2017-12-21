@@ -1,0 +1,18 @@
+.custom-view-options{
+
+	.custom-view-actions{
+		display:none;
+		a.inactive {
+			color: @text-muted;
+			pointer-events: none;
+			&:hover {
+				cursor: pointer !important;
+			}
+		}
+	}
+
+	&:hover > .custom-view-actions {
+		display:inline-block;
+	}
+
+}

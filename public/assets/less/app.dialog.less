@@ -1,0 +1,585 @@
+.ngdialog-overlay {
+  background: rgba(21, 46, 67, 0.75);
+}
+.ngdialog-content {
+
+  -webkit-animation-name: fadeScale !important;
+  animation-name: fadeScale !important;
+  -webkit-animation-duration: 0.3s !important;
+  animation-duration: 0.3s !important;
+  -webkit-animation-fill-mode: both !important;
+  animation-fill-mode: both !important;
+  background: @color-value-0;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+
+  .dialog-header {
+	background: @brand-info;
+	border-radius: 2px 2px 0 0;
+	padding: 17px !important;
+
+	h3 {
+	  font-size: 15px;
+	  color: @white-bg;
+	  margin: 0;
+		padding-right: 35px;
+	}
+
+  }
+  .dialog-footer {
+	background: @white-bg;
+	border-top: 1px solid #e0e6e8;
+	padding: 15px;
+	border-radius: 0 0 2px 2px;
+  }
+
+  .dialog-header-font-size {
+	h3{
+	  font-size: 18px;
+	  span{
+		font-size: 14px;
+	  }
+	}
+  }
+}
+
+&.ngdialog-closing {
+
+  .ngdialog-content {
+
+	-webkit-animation-name: fadeScaleBack !important;
+	animation-name: fadeScaleBack !important;
+	-webkit-animation-duration: 0.3s !important;
+	animation-duration: 0.3s !important;
+	-webkit-animation-fill-mode: both !important;
+	animation-fill-mode: both !important;
+
+  }
+
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-close {
+  top: 14px;
+  background: transparent;
+  border: 0;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  right: 15px;
+  text-align: center;
+  transition: all 0.5s ease-out;
+  border-radius: 3px;
+  &:hover {
+	background: #1e88e5;
+	&::before {
+	  color: @white-bg;
+	}
+  }
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-close:before {
+  content: "\e925" !important;
+  font-family: 'SalesmateIcons';
+  font-size: @font-size-xxs;
+  color: #fff;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  top: 1px;
+  padding: 0;
+  display: initial;
+
+}
+
+.link {
+  color: @brand-primary;
+  font-size: @font-size-xs;
+}
+
+.sub-header {
+  background: @brand-secondary;
+
+  .b-r {
+	border-right: 1px solid #e5eaeb;
+  }
+
+  .mailtracking {
+	padding: 5px;
+  }
+
+  .insert-tmp {
+	padding: 5px;
+	max-height: 40px;
+
+	.btn {
+	  font-weight: 400;
+	}
+  }
+}
+
+.simple-check-box {
+  input[type=checkbox] {
+	display: none;
+  }
+  /* to hide the checkbox itself */
+  input[type=checkbox] + label:before {
+	font-family: 'SalesmateIcons';
+	display: inline-block;
+  }
+
+  input[type=checkbox] + label:before {
+	content: "\e920";
+	color: #d5dddf;
+  }
+  /* unchecked icon */
+  input[type=checkbox] + label:before {
+	letter-spacing: 10px;
+  }
+  /* space between checkbox and label */
+  input[type=checkbox]:checked + label:before {
+	content: "\e920";
+	color: @brand-success;
+  }
+  /* checked icon */
+  input[type=checkbox]:checked + label:before {
+	letter-spacing: 10px;
+  }
+  /* allow space for check mark */
+}
+
+.ngdialog {
+  &.ngdialog-theme-default {
+	&.attachCallLogDialog {
+	  padding-top: 120px !important;
+	  z-index: 1028;
+	}
+	&.width-big {
+	  .ngdialog-content {
+		width: 800px;
+	  }
+	}
+  }
+}
+
+.fullScreenPopup {
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+
+  .ngdialog-content {
+
+	width: 980px !important;
+	max-height: 100% !important;
+	background: @color-value-0 !important;
+
+	.popup-scroll {
+	  max-height: ~"calc(100vh - 180px)";
+	  max-height: ~"webkit-calc(100vh - 180px)";
+	  overflow: auto;
+
+	}
+  }
+
+}
+
+.dialog-close {
+  color: #fff;
+  font-size: @font-size-sm;
+
+  &:hover {
+	color: #000;
+  }
+}
+
+.quickManageNoteDialog {
+  .fr-wrapper {
+	overflow: auto;
+	height: 120px;
+  }
+
+  .fr-element {
+	min-height: 115px !important;
+  }
+}
+
+.fr-popup {
+  z-index: 9999999 !important;
+
+  .fr-dropdown::after {
+	border-top: 4px solid transparent !important;
+  }
+}
+
+.subheader {
+  border-bottom: 1px solid #e0e6e8;
+
+  .searchBlock {
+	width: 428px;
+	border-right: 1px solid #e5e9e8;
+	padding: 8px 20px;
+	position: relative;
+
+	.icon-magnifier-1 {
+	  position: absolute;
+	  left: 30px;
+	  top: 18px;
+	}
+
+	input[type=text] {
+	  margin-bottom: 0 !important;
+	  padding-left: 30px !important;
+	}
+  }
+  .customFieldBlock {
+	text-align: center;
+	padding: 14px 0;
+	width: 230px;
+  }
+
+}
+
+.fieldsBlock {
+  padding: 30px;
+
+  &.left, &.right{
+    li {
+  	  background: url("/assets/images/move-icon.svg") 7px 10px no-repeat;
+  	  padding: 10px 10px 10px 18px;
+  	  position: relative;
+  	}
+  }
+
+  &.left {
+	width: 427px;
+	height: calc(~"100vh - 360px");
+	overflow-y: auto;
+  background: @color-value-0;
+  }
+
+  &.right {
+	width: 253px;
+	border-left: 1px solid #e0e6e8;
+	height: calc(~"100vh - 360px");
+	overflow-y: auto;
+	background: #ffffff;
+	position: relative;
+  }
+
+  ul {
+	margin: 0 0 15px;
+	padding: 0;
+	overflow: auto;
+
+	li {
+	  display: block;
+	  list-style: none;
+	  padding: 10px;
+	  color: #636d7a;
+	  border: 1px solid transparent;
+	  cursor: move;
+
+	  &:hover {
+		border: 1px solid #d5dddf;
+
+		a {
+		  display: block;
+		}
+	  }
+
+	  a {
+		color: #9ba3ae;
+		font-size: 16px;
+		float: right;
+		display: none;
+	  }
+	  &.disabled {
+		.icon-check {
+		  display: block !important;
+		}
+		  .add {
+			display: none !important;
+		  }
+	  }
+	}
+  }
+}
+
+.modal-header {
+  background: @brand-primary;
+
+  h4 {
+	font-size: @font-size-sm;
+	color: #fff;
+  }
+  .close {
+	opacity: 1;
+	color: #fff;
+	text-shadow: 0 0px 0 #fff;
+	font-weight: normal;
+	&:hover {
+	  color: #bbb;
+	}
+  }
+}
+
+.fr-popup {
+  .fr-input-line {
+	input[type=text] {
+	  font-size: @font-size-base;
+	  height: 30px;
+	}
+  }
+  .fr-colors-tabs {
+	margin-bottom: 0 !important
+  }
+}
+
+.model-footer {
+  padding: 10px;
+  border: 1px solid #e0e6e8;
+  background: #f6f7f9;
+}
+
+.boardingTourDialog {
+  text-align: center;
+  .ngdialog-content{ background: @white-bg !important;}
+  h2 {
+	font-size: 30px;
+	color: #152e43;
+	font-weight: 500;
+  }
+  p {
+	margin-bottom: 30px;
+	font-weight: 400;
+	color: #8da2b5;
+  }
+  .ngdialog-close:before {
+	color: #8da2b5 !important;
+  }
+
+  .onboarding-icons {
+	text-align: center;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	li {
+	  list-style: none;
+	  padding: 20px 30px;
+	  .icon-block {
+		border: 1px solid #d5dee5;
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		padding: 25px;
+		margin: 0 auto 20px auto;
+		.board-icon {
+		  background: url('/assets/images/on-boarding-icons.png') no-repeat;
+		  display: inline-block;
+		  width: 44px;
+		  height: 44px;
+		  background-size: cover;
+
+		  &.importfile {
+			background-position: 0px 0;
+		  }
+
+		  &.newcompany {
+			background-position: -44px 0;
+		  }
+		  &.importgooglefile {
+			background-position: -88px 0;
+		  }
+		  &.usericon {
+			background-position: -132px 0;
+		  }
+		  &.dealicon {
+			background-position: -176px 0;
+		  }
+
+		}
+	  }
+	  a {
+		color: #62778c;
+	  }
+
+	  &:hover {
+		.icon-block {
+		  background: #f8fafb;
+		}
+		a {
+		  color: #2196f3;
+		}
+	  }
+	}
+  }
+  .dashboard-onboarding-icons {
+	padding: 0;
+	li {
+	  float: left;
+	  width: 33.33333333%;
+	  list-style: none;
+	  text-align: left;
+	  padding: 20px 20px 40px 20px;
+	  font-size: @font-size-md;
+	  .icon-block {
+		float: left;
+		margin-right: 20px;
+	  }
+	  .board-icon {
+		background: url('/assets/images/onboarding-dashboard-img.png') no-repeat;
+		float: left;
+		width: 40px;
+		height: 40px;
+		background-size: cover;
+		&.one {
+		  background-position: 0px 0;
+		}
+		&.two {
+		  background-position: -40px 0;
+		}
+		&.three {
+		  background-position: -80px 0;
+		}
+		&.four {
+		  background-position: -120px 0;
+		}
+		&.five {
+		  background-position: -160px 0;
+		}
+		&.six {
+		  background-position: -200px 0;
+		}
+		&.seven {
+		  background-position: -240px 0;
+		}
+		&.eight {
+		  background-position: -280px 0;
+		}
+		&.nine {
+		  background-position: -320px 0;
+		}
+
+	  }
+	  &.vc {
+		line-height: 40px;
+	  }
+	}
+  }
+}
+
+.adjust-col-height {
+  display: table;
+  height: 100%;
+  width: 100%;
+  .adjust-col {
+	display: table-cell;
+	height: 100%;
+	float: none;
+	vertical-align: top;
+  }
+}
+
+.keyboard-shortcut {
+  .ngdialog-close:before {
+	color: #000 !important;
+  }
+  .ngdialog-content{
+    max-height: ~"calc(100% - 112px)";
+    overflow: auto;
+  }
+}
+
+.customsmtp{
+   .ngdialog-content{
+     width: 700px !important;
+     height: 100%;
+   }
+}
+
+.QuickAddCustomFieldPopup{
+  .popup-scroll{ max-height: calc(~"100vh - 400px");
+	overflow-y: auto;}
+}
+
+
+.modal-dialog{ margin: 15% auto !important;
+   .modal-header{ background: transparent; border: 0; padding: 25px 25px 15px 25px;
+    .close{ display: none;}
+      h4{
+      &.modal-title{ font-size: @font-size-md;}
+      }
+   }
+   .modal-content{ background: @brand-danger;  border: 0; overflow: hidden;
+        p{ color: @white-bg;}
+        .modal-body{ padding: 0 25px 25px 25px;}
+        &::before{ content:"\e9e7"; font-family: @salesmateicons; position: absolute; right: -20px; font-size: 88px; color: #e6454a;}
+    }
+   .modal-footer{ background: @white-bg ; border-radius: 0 0px 6px 6px;
+      .btn-primary{ background: @brand-danger; border:1px solid  @brand-danger}
+   }
+}
+
+.invite-popup{
+  .ngdialog-content{ width: 700px !important;
+    .dialog-header{ background: #5c6bc0;}
+    .ngdialog-close{
+      &:hover{
+        background: #515ead;
+      }
+    }
+  }
+  ul{ padding: 0; margin: 0; border: 1px solid @border-color; border-radius: 3px; max-height: 250px; overflow: auto;
+    li{ list-style: none; display: flex; flex-direction: row; padding: 20px; background: @white-bg; border-bottom:1px solid @border-color;
+      .description{ flex: 2;}
+    }
+  }
+  .popup-scroll{ max-height: calc(~"100vh - 300px");
+	  overflow-y: auto;
+  }
+  .btn-primary{
+    background: #5c6bc0;
+    border-color: #5c6bc0;
+  }
+  label{ color: @color-value-60;}
+
+}
+.enable-scroll {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dialog-scroll{
+  max-height: ~"calc(100vh - 112px)";
+  max-height: ~"webkit-calc(100vh - 112px)";
+  overflow: auto;
+  }
+
+.Won{
+  .dialog-header{  background:@brand-success;}
+  .btn-primary{ background: @brand-success; border-color:  @brand-success;}
+  .ngdialog-close{
+    &:hover{ background: darken(@brand-success, 6%) !important;}
+  }
+}
+
+.Lost{
+  .dialog-header{ background: @brand-danger;}
+  .btn-primary{ background: @brand-danger; border-color:  @brand-danger;}
+  .ngdialog-close{
+    &:hover{ background: darken(@brand-danger, 8%) !important;}
+  }
+}
+
+@media screen and ( max-height: 700px ){
+    .ngdialog{
+      &.ngdialog-theme-default{
+        padding:2% 0 !important;
+      }
+    }
+}

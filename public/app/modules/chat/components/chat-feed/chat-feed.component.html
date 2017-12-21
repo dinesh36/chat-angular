@@ -1,8 +1,17 @@
-<div>
-    <div ng-if="vm.userFeeds.length" ng-repeat="feed in vm.userFeeds">
-        <span>{{feed.createdBy}} {{feed.action}} {{feed.moduleName}} {{feed.name}}</span>
+
+    <div class="user-detail col-lg-3">
+        <div class="chat-feed">
+        <div class="chat-user-detail">
+<div class="user-info"> <h4>Latest Activity</h4></div>
+            <div class="activity-list-main">
+    <div ng-if="vm.userFeeds.length" ng-repeat="feed in vm.userFeeds" class="activity-list">
+        <span class="time">Just Now</span>
+        <span class="name">{{feed.createdBy}} {{feed.action}} {{feed.moduleName}} {{feed.name}}</span>
     </div>
     <div ng-if="!vm.userFeeds.length">
         No feeds available.
+    </div>
+            </div>
+</div>
     </div>
 </div>

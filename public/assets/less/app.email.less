@@ -1,0 +1,590 @@
+.suggested-deal-popup {
+	position: absolute;
+	right: 20px;
+	top: 56px;
+	z-index: 99;
+	background: #fff;
+	border: 1px solid #d5dddf;
+	width: 460px;
+
+	h3 {
+		background: #f0f2f3;
+		font-size: @font-size-md;
+		padding: 15px;
+		color: @brand-dark;
+		margin: 0;
+	}
+
+	ul {
+		li {
+			padding: 15px;
+			list-style: none;
+			position: relative;
+
+			.add-btn {
+				display: none;
+				position: absolute;
+				right: 15px;
+				top: 18px;
+			}
+
+			&:hover {
+				.add-btn {
+					display: block;
+				}
+			}
+
+			&:hover {
+				background: @brand-secondary;
+			}
+
+			.label {
+				display: inline-block;
+				line-height: 18px;
+				padding: 0 5px;
+				font-size: @font-size-xs;
+			}
+		}
+	}
+
+	.suggested-deal-scroll {
+		max-height: 210px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	&:before {
+		content: "";
+		border-bottom: 9px solid #d5dddf;
+		border-right: 7px solid transparent;
+		border-left: 7px solid transparent;
+		position: absolute;
+		top: -9px;
+		right: 14px;
+		z-index: 10;
+	}
+
+	&:after {
+		content: "";
+		border-bottom: 7px solid #fff;
+		border-right: 7px solid transparent;
+		border-left: 7px solid transparent;
+		position: absolute;
+		top: -6px;
+		right: 14px;
+		z-index: 10;
+	}
+
+	.search-block {
+		input {
+			width: 100%;
+			background: transparent;
+			border: 0;
+			padding: 15px 10px;
+			height: 50px;
+		}
+
+		.input-group-addon {
+			background: transparent;
+			border: 0;
+			padding: 5px 0 0 15px;
+		}
+	}
+}
+
+.deal-other-detail {
+	span {
+		white-space: nowrap;
+		float: left;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 140px;
+
+		&::before {
+			content: "•";
+			color: #90a4ae;
+			padding: 2px 5px 2px 6px;
+		}
+
+		&:first-child {
+			&::before {
+				content: "";
+				padding: 0;
+			}
+		}
+	}
+}
+
+.detach-deal-block {
+	.icon-USD-circle {
+		font-size: 20px;
+		display: inline-block;
+		padding-top: 2px;
+	}
+
+	.label-sales {
+		background: #f0f3f7;
+		padding: 2px 5px;
+		border-radius: 3px;
+	}
+
+	.close-btn {
+		top: 36px;
+		right: 25px;
+	}
+}
+
+.salesmate-email-body {
+	word-break: break-word;
+	color: #0F1721;
+
+	img {
+		height: auto;
+	}
+
+	span {
+		a {
+			color: inherit;
+		}
+	}
+
+	b,
+	strong {
+		font-weight: 700;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	pre {
+		white-space: pre-wrap;
+	}
+
+	table{
+  td{
+   overflow-wrap: break-word;
+   word-wrap: break-word;
+
+   -ms-word-break: break-all;
+   word-break: break-word;
+   -ms-hyphens: auto;
+   -moz-hyphens: auto;
+   -webkit-hyphens: auto;
+   hyphens: auto;
+  }
+ }
+ *{ box-sizing: content-box;}
+
+}
+
+&.only-preview{
+	p{ margin: 0 0 10px 0}
+}
+
+.email-body {
+	color: @default-text;
+	font-size: @font-size-sm;
+	line-height: 1.5;
+
+	blockquote {
+		font-size: inherit;
+		line-height: inherit;
+	}
+}
+
+.email-preview {
+	width: 100%;
+	height: ~"calc(100% - 56px)";
+	height: ~"-webkit-calc(100% - 56px)";
+	overflow: auto;
+}
+
+.email-popup-scroll {
+	width: 100%;
+	height: ~"calc(100% - 124px)";
+	height: ~"-webkit-calc(100% - 124px)";
+	overflow: auto;
+}
+
+.email-popup-scroll.insert {
+	height: ~"calc(100% - 160px)";
+	height: ~"-webkit-calc(100% - 160px)";
+	top: 160px;
+}
+
+.templateBodyPreview {
+	height: ~"calc(100% - 121px)";
+	height: ~"-webkit-calc(100% - 121px)";
+	overflow: auto;
+	padding: 15px;
+}
+
+.templateBodyPreview.insert {
+	height: ~"calc(100% - 167px)";
+	height: ~"-webkit-calc(100% - 167px)";
+}
+
+.email-deal-block {
+	.dealclose {
+		right: 15px;
+		top: 50%;
+		margin-top: -9px;
+	}
+
+	.btn-bordered {
+		border: 1px solid #eaeaea;
+		background: #fff;
+	}
+}
+
+.email-reader {
+	.emailbody {
+		height: calc(~"100vh - 309px");
+	}
+}
+
+.attach-files {
+	right: 0;
+	top: 0;
+}
+
+.email-tracking-info {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	width: 280px;
+	padding: 5px 10px;
+	font-size: 13px;
+	border: 1px solid #00c0f3;
+	background: #fff;
+	border-radius: 5px;
+	z-index: 100;
+}
+
+.email-space {
+	color: #5d799c;
+	line-height: 18px;
+}
+
+.email-head {
+	height: 65px;
+	padding: 15px;
+}
+
+.unread {
+	background: #2196f3;
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
+	position: absolute;
+	left: 19px;
+	top: 60px;
+}
+
+.no-mail-icon {
+	font-size: 50px;
+}
+
+.ComposeEmailBox {
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: ~"calc(100% - 160px)";
+	.fr-element{ min-height: ~"calc(100vh - 370px)" !important;}
+	textarea.fr-code{ min-height: ~"calc(100vh - 370px)" !important;}
+}
+	.compose-input-block {
+	  slabel {
+	    /*    content: "To :";*/
+	    position: absolute;
+	    left: 20px;
+	    top: 12px;
+	    z-index: 3;
+			background: #fff;
+			width: 30px !important;
+	  }
+
+	  soul.soulTagsInput {
+	    margin-bottom: 0px;
+	  }
+
+	  .cclabel {
+	    position: absolute;
+	    right: 15px;
+	    top: 15px;
+	    z-index: 10;
+	    color: @brand-primary;
+	    font-size: @font-size-xs;
+	  }
+
+	  tags-input {
+			.tags{ padding: 9px 110px 6px 50px;
+			border: 0;
+			border-bottom: 1px solid #e0e6e8;
+				&.focused{
+					 border-bottom: 1px solid @brand-primary;
+				}
+			}
+	  }
+
+	  .onlyToinput {
+	    input[type="text"] {
+	      padding: 15px 110px 14px 50px;
+	      margin: 0;
+	    }
+	  }
+
+	  .autocomplete-holder input {
+	    padding: 16px 110px 10px 50px;
+
+	  }
+
+	  &.subject {
+	    soul input[type=text] {
+	      padding: 13px 110px 13px 80px;
+	      margin-bottom: 0 !important;
+				border: 0;
+				border-bottom: 1px solid #e0e6e8;
+				&:focus {
+					 border-bottom: 1px solid @brand-primary;
+				}
+	    }
+
+	    slabel {
+	      top: 10px;
+	      width: 60px;
+	    }
+	  }
+
+	  .dropdown-toggle {
+	    padding: 13px 65px !important;
+	    margin-bottom: 0 !important;
+	  }
+
+	  .bootstrap-select.btn-group .dropdown-toggle .caret {
+	    right: 25px !important;
+	  }
+		soul{ margin-bottom: 0;}
+	}
+
+.composeEmailDialog {
+	.dialog-footer {
+		.dropdown-menu {
+			top: initial!important;
+			bottom: 100%!important;
+		}
+	}
+	.ngdialog-content{ border-radius: 0 !important}
+}
+
+.email-template-table {
+	tr {
+		td {
+			vertical-align: middle!important;
+		}
+	}
+}
+
+#emailsettings_form {
+	.tab-content {
+		overflow: visible!important;
+	}
+}
+
+#folderList {
+	height: calc(~"100vh - 209px");
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+
+	li {
+		margin-top: 0;
+	}
+}
+
+.emailbody {
+	height: calc(~"100vh - 116px");
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	.subject{ color: @color-value-90;}
+}
+
+.email-column {
+	height: calc(~"100vh - 116px");
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+
+		.list-group-lg{
+			.list-group-item {
+				font-size: @font-size-base;
+				border-left: 0;
+				border-right: 0;
+				background: @white-bg;
+				border-color: @color-value-20 !important;
+				line-height: 20px;
+				padding: 20px;
+
+				&.email-item {
+					border-bottom: 1px solid #e8eef2 !important;
+					border-right: 0 !important;
+
+					&.selected {
+						background: #ebf5ff;
+					}
+
+					body {
+						word-break: break-all;
+					}
+				}
+			}
+	}
+
+	.no-email {
+		position: absolute;
+		top: 50%;
+		margin-top: -40px;
+		text-align: center;
+		padding: 0;
+		width: 100%;
+	}
+}
+
+#emailList {
+	overflow-x: hidden;
+}
+
+
+
+.dealChangeStatus,
+.emailSelectMulti {
+	position: fixed;
+	top: 50px;
+	left: 180px;
+	width: 100%;
+	z-index: 4;
+	background: @color-value-0;
+	animation-name: fadeIn;
+	animation-duration: 0.3s;
+	-webkit-animation-duration: 0.3s !important;
+	animation-fill-mode: both !important;
+	-webkit-animation-fill-mode: both !important;
+	border-bottom: 1px solid @border-color;
+	display: none;
+	padding:15px 15px 16px 15px ;
+
+
+	&.open {
+		display: block;
+	}
+}
+
+.email-settings-switch{
+	label{
+	  vertical-align: top;
+	  margin-left: 10px;
+	  padding-top: 2px;
+	}
+}
+
+.emailBulk{
+	top: 12px;
+	left: 10px;
+}
+
+.client-email-wrapper{
+	 display: flex;
+	 height: calc(~"100vh - 50px");
+	 .emailoptions{
+		 width: 180px;
+		 background:@color-value-0;
+	 }
+	 .emaillisting{
+		 		flex: 1;
+				 background:@white-bg;
+				 width: 480px;
+
+
+				 .email-item{
+					 display: flex;
+					 flex-direction: row;
+					 cursor:pointer;
+					 .subject{
+						 color: @color-value-80;
+						 font-weight: 500;
+						 font-size: @font-size-base;
+					 }
+					 .datetime{ color: @color-value-60}
+					 .email-title{ color: @color-value-90 ; font-weight: 700; font-size: @font-size-sm;}
+				 }
+
+				 .col-1{ width: 40px;}
+				 .col-11{ flex: 1; max-width: 380px;}
+				 .email-search{
+					 background: @color-value-0;
+					 .input-group{ border: 1px solid @border-color-secondary;
+						 border-radius: 3px;
+						 background: @white-bg;
+						 .input-sm{ width: 100%;}
+					 }
+				 }
+	 }
+	 .emailBodyContainer{
+				 flex: 3;
+				 background:@white-bg;
+				 width: calc(~"100% - 660px");
+	 }
+
+}
+
+.no-email-found {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: calc(~"100vh - 50px");
+
+    .icon-email {
+        font-size: 60px;
+        color: #e5eaeb;
+        margin-top: -15px;
+    }
+}
+
+.email-thumbs{ position: relative;
+	.checkbox{ display: none;
+		position: absolute;
+		top: 3px;
+		left: 0px;
+		margin: 0;
+		padding: 1px;
+		line-height: 16px;
+		label { line-height: normal !important;}
+		}
+	&:hover{
+		thumbview{ opacity: 0;}
+		.checkbox{ display: block;}
+	}
+}
+
+
+.folder-listing{
+	li{
+		.options{ display: none; position: absolute; right: 28px; top: 5px; background: @white-bg;  z-index: 1;}
+		&:hover{
+			.options{ display: block;}
+		}
+
+	}
+}
+.fr-view table td, .fr-view table th { border: 0px;}
+.fr-view table.default-border, .default-border {
+	border: 1px solid #eeeeee;
+	border-collapse: collapse;
+	td{
+		border: 1px solid #eeeeee;
+	}
+}
+
+.email-template-preview{ height: 100%;}
