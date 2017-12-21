@@ -20,7 +20,7 @@
             replace:true,
             templateUrl:'/app/modules/chat/components/chat-message-sender/message-sender.component.html',
             controller:Controller,
-            controllerAs:'vz',
+            controllerAs:'vs',
             bindToController:true
         };
     }
