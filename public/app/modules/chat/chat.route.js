@@ -4,6 +4,7 @@
 		.config(Config);
 	Config.$inject = ['$stateProvider'];
 	function Config($stateProvider){
+		console.log('hello');
 		$stateProvider
 			.state('app.chat', {
 				url:'/chat',
