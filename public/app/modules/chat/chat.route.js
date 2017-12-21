@@ -8,7 +8,7 @@
 		$stateProvider
 			.state('app.chat', {
 				url:'/chat',
-				template:'<div>dinesh </div><chat-main></chat-main>'
+				template:'<chat-main></chat-main>'
 			})
             .state('app.chatTemp', {
                 url:'/chat-temp',

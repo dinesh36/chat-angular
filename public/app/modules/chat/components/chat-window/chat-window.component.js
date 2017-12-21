@@ -16,7 +16,7 @@
             templateUrl:'/app/modules/chat/components/chat-window/chat-window.component.html',
             bindToController:true,
             controller:Controller,
-            controllerAs:'vm'
+            controllerAs:'vw'
         };
     }
     function Controller($state,_,$rootScope,$scope){
@@ -24,7 +24,11 @@
         activate();
 
         function activate() {
-            console.log('Window');
+            $rootScope.$on('userChange',function(event, data){
+                console.log(data);
+                vm.userName = data.name;
+                //$scope.$apply();
+            });
         }
     }
 })();
