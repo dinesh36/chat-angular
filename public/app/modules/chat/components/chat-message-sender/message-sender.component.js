@@ -49,7 +49,7 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
-console.log(123)
+            var userId = $location.search().id;
             var acceptedFiles = [
                 'application/pdf',
                 'image/png',
@@ -71,7 +71,6 @@ console.log(123)
                 },
                 eventHandlers:{
                     addedfile:function(file, dataUri){
-                        debugger;
                         if(acceptedFiles.indexOf(file.type) === -1){
                             // $rootScope.ShowErrorNotification('File is not allowed');
                             alert('File is not allowed');
@@ -88,9 +87,15 @@ console.log(123)
                         console.log(data);
                         var obj = {
                             text:data,
+                            msgTo:vm.toUser.id,
                             msgFrom:userId,
                             type:2
                         };
+                        if (data) {
+                            $rootScope.$broadcast('SEND_MESSAGE',{action:'send',data:obj});
+                            vm.message = '';
+                            // setTimeout(() => ChatService.scrollToBottom(), 200);
+                        }
                     },
                     success:function(file, data){
                         debugger;
@@ -165,12 +170,11 @@ console.log(123)
         });
 
         function sendMessage(){
-            var userId = $location.search().id;
 
             var obj = {
                 text:vm.message,
                 msgTo:vm.toUser.id,
-                msgFrom:userId,
+                msgFrom:parseInt(userId),
                 type:1
             };
             if (vm.message) {
