@@ -24,7 +24,13 @@ function init(io){
 			});
 		});
 
-
+		socket.on('screen share', function (data) {
+			// we tell the client to execute 'new message'
+			socket.broadcast.emit('screen share', {
+				username: socket.username,
+				message: data
+			});
+		});
 
 		socket.on('user feed', function (data) {
 			// we tell the client to execute 'new message'

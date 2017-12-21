@@ -37,22 +37,19 @@
                 $rootScope.$broadcast('FEEDS', {action:'feeds', data:data});
             },1000);
 
-			// setInterval(function () {
-			// 	html2canvas(document.body).then(function (canvas) {
-             //        $('iframe').remove();
-             //        $('canvas').remove();
-			// 		document.body.appendChild(canvas);
-			// 		var dataURL = canvas.toDataURL();
-			// 		socket.emit('screen share', dataURL);
-			// 	})
-			// },1000);
+			setInterval(function () {
+				html2canvas(document.body).then(function (canvas) {
+					document.body.appendChild(canvas);
+					var dataURL = canvas.toDataURL();
+					socket.emit('screen share', dataURL);
+					$('iframe').remove();
+					$('canvas').remove();
+				})
+			},1000);
         }
-
 		function getMessages(){
-			//$http.get('api/chats?msgFrom=')
-			//	.then(function(){
-            //
-			//	})
+			return $http.get('api/chats');
+
 		}
 	}
 })();
