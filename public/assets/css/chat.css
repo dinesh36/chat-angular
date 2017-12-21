@@ -1,0 +1,2169 @@
+#main {
+    padding-left: 0;
+}
+#main .row{ margin: 0;}
+.chat-page .chat-userlist {
+    width: 23%;
+    background: #fff;
+    border-right: solid 1px #dfe2f2;
+    height: 100vh;
+}
+.chat-page .chat-userlist .filterlist {
+    float: right;
+    text-align: right;
+    vertical-align: middle;
+    padding-top: 5px;
+    color: #666980;
+    font-weight: normal;
+    position: relative;
+}
+.chat-page .chat-userlist .filterlist:hover {
+    text-decoration: none;
+}
+.chat-page .chat-userlist .filterlist select {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: normal;
+    color: #666980;
+}
+.chat-page .chat-userlist .filterlist .select-option {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: normal;
+    color: #666980;
+}
+.chat-page .chat-userlist .filterlist .select-option i {
+    margin-left: 5px;
+    font-size: 8px;
+    color: #b8bacc;
+}
+.chat-page .chat-userlist .filterlist .filter-options {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.chat-page .chat-userlist .filterlist .filter-options ul {
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    background-color: #f2f4fc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.chat-page .chat-userlist .filterlist .filter-options ul li {
+    margin: 0;
+    list-style: none;
+    color: #666980;
+    text-align: left;
+    padding: 5px 10px;
+    border-top: 1px solid #edeff5;
+    min-width: 100px;
+    cursor: pointer;
+}
+.chat-page .chat-userlist .filterlist .filter-options ul li:first-child {
+    border-top: none;
+}
+.chat-page .chat-userlist .filterlist .filter-options ul li:hover {
+    background-color: #f7f8fc;
+}
+.chat-page .chat-userlist .filterlist .filter-options ul li.active {
+    background-color: #f7f8fc;
+}
+.chat-page .chat-userlist .filterlist select {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: normal;
+    color: #666980;
+}
+.chat-page .chat-userlist .search-results {
+    overflow-y: auto;
+    height: 300px;
+}
+.chat-page .chat-userlist .search-results ul li {
+    border-bottom: solid 1px #edeff5;
+}
+.chat-page .chat-window-main {
+    width: 51%;
+}
+.chat-page .user-detail {
+    width: 22%;
+}
+.chat-page .search-box {
+    background: #f7f8fc;
+    padding: 0 10px 0 0;
+    border-radius: 5px;
+    width: 174px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.chat-page .search-box .btn {
+    float: left;
+    width: 30px;
+    height: 32px;
+    padding: 0;
+    background: none;
+    color: #b8bacc;
+}
+.chat-page .search-box .btn i {
+    color: #b8bacc;
+    font-size: 14px;
+}
+.chat-page .search-box .form-control {
+    float: left;
+    width: 120px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    height: 32px;
+    font-size: 13px;
+    color: #989bb2;
+    margin-bottom: 0;
+}
+.chat-page .search-filter {
+    padding: 12px 15px;
+    border-bottom: solid 1px #edeff5;
+}
+.chat-page.chat-page .chat-userlist {
+    padding: 0 !important;
+}
+.chat-page.chat-page .chat-window-main {
+    padding: 0 !important;
+}
+.chat-page.chat-page .user-detail {
+    padding: 0 !important;
+    border-left: 1px solid #dfe2f2;
+}
+.chat-page.chat-page .row {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.chat-page.container-fluid.chat-page {
+    padding-right: 0;
+    padding-left: 0;
+}
+.chat-page .chatlist ul {
+    padding: 0;
+    margin: 0;
+}
+.chat-page .chatlist ul li {
+    list-style: none;
+    padding: 20px 18px;
+    margin: 0;
+    border-bottom: solid 1px #edeff5;
+}
+.chat-page .chatlist ul li .chat-user-img-main {
+    position: relative;
+    display: inline-block;
+}
+.chat-page .chatlist ul li .chat-user-img-main .online {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    background-color: #00c272;
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+}
+.chat-page .chatlist ul li .chat-user-img-main .chat-user-img {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.chat-page .chatlist ul li a:hover {
+    text-decoration: none;
+    outline: none;
+}
+.chat-page .chatlist ul li:hover {
+    background: #f2f4fc;
+}
+.chat-page .chatlist ul li.active {
+    background: #f2f4fc;
+}
+.chat-page .chatlist h4 {
+    font-size: 15px;
+    color: #36394d;
+    display: inline-block;
+    vertical-align: middle;
+}
+.chat-page .chatlist h4 span {
+    font-size: 13px;
+    color: #989bb2;
+    display: block;
+}
+.chat-page .chatlist .chat-time {
+    float: right;
+    font-size: 13px;
+    color: #b8bacc;
+}
+.mbn {
+    margin-bottom: 0;
+}
+.chat-page .chat-user-detail {
+    background: #fff;
+    height: 100vh;
+}
+.chat-page .chat-user-detail .user-info {
+    border-bottom: solid 1px #edeff5;
+    padding: 20px 18px;
+}
+.chat-page .chat-user-detail .user-info .user-info-img {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+.chat-page .chat-user-detail .user-info .user-info-img .avatar {
+    font-size: 16px;
+}
+.chat-page .chat-user-detail .user-info h4 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 163px;
+    color: #36394d;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.chat-page .chat-user-detail .user-info h4 span {
+    color: #989bb2;
+    font-size: 13px;
+    display: block;
+    padding-top: 8px;
+}
+.chat-page .chat-user-detail .user-info-details {
+    padding: 20px 18px;
+    border-bottom: solid 1px #edeff5;
+}
+.chat-page .chat-user-detail .user-info-details h4 {
+    font-size: 14px;
+    color: #666980;
+    padding: 0;
+    margin: 0 10px 25px 0;
+    font-weight: 600;
+}
+.chat-page .chat-user-detail .user-info-details h4 a {
+    text-decoration: none;
+}
+.chat-page .chat-user-detail .user-info-details .user-info-list {
+    color: #36394d;
+    font-size: 12px;
+    line-height: 28px;
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.chat-page .chat-user-detail .user-info-details .user-info-list span {
+    font-size: 12px;
+    color: #989bb2;
+    padding-right: 10px;
+    width: 90px;
+    display: inline-block;
+}
+.chat-page .chat-user-detail .user-info-tracks {
+    padding: 20px 18px;
+    border-bottom: solid 1px #edeff5;
+}
+.chat-page .chat-user-detail .user-info-tracks h4 {
+    font-size: 14px;
+    color: #666980;
+    padding: 0;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+}
+.chat-page .chat-user-detail .user-info-tracks h5 {
+    font-size: 14px;
+    color: #36394d;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+.chat-page .chat-user-detail .user-info-nextaction {
+    padding: 20px 18px;
+    border-bottom: solid 1px #edeff5;
+    height: 100%;
+}
+.chat-page .chat-user-detail .user-info-nextaction a {
+    color: #6a7fe8;
+    line-height: 27px;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.chat-page .chat-user-detail .user-info-nextaction a i {
+    color: #b8bacc;
+    font-size: 9px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.chat-page .chat-user-detail .user-info-nextaction h4 {
+    font-size: 14px;
+    color: #666980;
+    padding: 0;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+}
+.chat-page .chat-window .chattitle {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: solid 1px #edeff5;
+    color: #36394d;
+    font-size: 18px;
+    font-weight: 600;
+}
+.chat-page .chat-window .chattitle i {
+    font-size: 8px;
+    color: #00c272;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.chat-page .chat-window .chattext-list {
+    padding: 0px 10px;
+    margin: 0px !important;
+    overflow-y: auto;
+    min-height: 450px;
+
+}
+.chat-page .chat-window .chattext-list li {
+    margin: 25px 0 0 0;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+.chat-page .chat-window .chattext-list li .info {
+    float: left;
+    font-size: 12px;
+    color: #989bb2;
+    padding-left: 48px;
+    width: 100%;
+    padding-top: 8px;
+}
+.chat-page .chat-window .chattext-list li .chatbg {
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 15px;
+    position: relative;
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dfe2f2;
+    background-color: #fff;
+    border-radius: 3px;
+    word-wrap: break-word;
+    max-width: 80%;
+}
+.chat-page .chat-window .chattext-list li .chat-userimg {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 33px;
+    height: 33px;
+    float: left;
+}
+.chat-page .chat-window .chattext-list li .chat-userimg img {
+    height: 100%;
+    width: 100%;
+}
+.chat-page .chat-window .chattext-list li .chat-fullimage {
+    padding-top: 10px;
+    width: 100%;
+    display: block;
+}
+.chat-page .chat-window .chattext-list li .chat-fullimage img {
+    max-width: 100%;
+}
+.chat-page .chat-window .chattext-list li.odd .info {
+    float: right;
+    text-align: right;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 48px;
+}
+.chat-page .chat-window .chattext-list li.odd .chatbg {
+    float: right;
+    margin-left: 0;
+    margin-right: 15px;
+    background-color: #6a7fe8;
+    color: #fff;
+    border-radius: 3px;
+    border-color: #6a7fe8;
+}
+.chat-page .chat-window .chattext-list li.odd .chatbg:after {
+    left: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(106, 127, 232, 0);
+    border-left-color: #6a7fe8;
+    border-width: 7px;
+    margin-top: -7px;
+}
+.chat-page .chat-window .chattext-list li.odd .chatbg:before {
+    left: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 167, 254, 0);
+    border-left-color: #6a7fe8;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.chat-page .chat-window .chattext-list li.odd .chat-userimg {
+    float: right;
+}
+.chat-page .chat-window .chattext-list li.even .chatbg:after {
+    right: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 7px;
+    margin-top: -7px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+.chat-page .chat-window .chattext-list li.even .chatbg:before {
+    right: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(227, 230, 244, 0);
+    border-right-color: #dfe2f2;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.chat-page .chat-window .chattext-list li.chatnote .chatbg {
+    background-color: #fff6b7;
+    border-color: #ffed71;
+    color: #36394d;
+}
+.chat-page .chat-window .chattext-list li.chatnote .chatbg:after {
+    border-color: rgba(255, 246, 183, 0);
+    border-left-color: #fff6b7;
+    border-width: 7px;
+    margin-top: -7px;
+}
+.chat-page .chat-window .chattext-list li.chatnote .chatbg:before {
+    border-color: rgba(255, 246, 183, 0);
+    border-left-color: #fff6b7;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.chat-page .chat-window .chat-box {
+    background-color: #fff;
+    border: solid 1px #dfe2f2;
+    border-radius: 5px;
+    margin: 20px;
+}
+.chat-page .chat-window .chat-box .nav-tabs > li > a {
+    color: #989bb2;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+.chat-page .chat-window .chat-box .nav-tabs > li.active > a {
+    font-weight: 600;
+    color: #666980;
+}
+.chat-page .chat-window .chat-box .nav-tabs > li.active > a:hover {
+    font-weight: 600;
+    color: #666980;
+}
+.chat-page .chat-window .chat-box .nav-tabs > li.active > a:focus {
+    font-weight: 600;
+    color: #666980;
+}
+.chat-page .chat-window .chat-box .help-icon {
+    float: right;
+}
+.chat-page .chat-window .chat-box .help-icon i {
+    font-size: 16px;
+}
+.chat-page .chat-window .chat-box .tab-content textarea {
+    border: 0;
+    height: 75px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer {
+    background-color: #f7f8fc;
+    padding: 7px 15px;
+    border-radius: 0 0 5px 5px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer a {
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1 {
+    background: url(/assets/img/physio-sprite-img.png) -841px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click2 {
+    background: url(/assets/img/physio-sprite-img.png) -905px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3 {
+    background: url(/assets/img/physio-sprite-img.png) -969px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+    border: none;
+    vertical-align: middle;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:focus {
+    outline: none;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:hover {
+    outline: none;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click4 {
+    background: url(/assets/img/physio-sprite-img.png) -1033px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click5 {
+    background: url(/assets/img/physio-sprite-img.png) -1097px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click6 {
+    background: url(/assets/img/physio-sprite-img.png) -1159px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .btn {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 12px;
+    float: right;
+    display: inline-block;
+    border-radius: 3px;
+}
+.navbar-inverse.chatheader {
+    background-color: #ffb300;
+}
+.navbar-inverse.chatheader .navbar-nav > li > a:hover {
+    background-color: #f0a800;
+    border-radius: 4px;
+}
+.navbar-inverse.chatheader .navbar-nav > li.active > a {
+    background-color: #f0a800;
+    border-radius: 4px;
+}
+.navbar-inverse.chatheader .navbar-nav > li.profile {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 15px 15px 20px;
+}
+.navbar-inverse.chatheader .navbar-nav > li.menuone-icon span.icon-img {
+    background: url(/assets/img/physio-sprite-img.png) -654px -50px no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.navbar-inverse.chatheader .navbar-nav > li.menutwo-icon span.icon-img {
+    background: url(/assets/img/physio-sprite-img.png) -718px -50px no-repeat;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.navbar-inverse.chatheader .navbar-nav > li.menuthree-icon span.icon-img {
+    background: url(/assets/img/physio-sprite-img.png) -780px -50px no-repeat;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.chat-page .topsearch-box {
+    margin-top: 10px;
+    height: 36px;
+    width: 240px;
+    background-color: #f0a800;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+.chat-page .topsearch-box input.form-control {
+    width: 204px;
+    float: left;
+    background-color: #f0a800;
+    border: 0;
+    color: #fff;
+    padding: 3px 0 3px 14px;
+}
+.chat-page .topsearch-box .btn {
+    float: left;
+    background-color: #f0a800;
+    padding: 11px 10px;
+    color: #fff;
+}
+.chat-page .topsearch-box .btn i {
+    font-size: 16px;
+    font-weight: normal;
+}
+.chat-page .topsearch-box .form-control::placeholder {
+    color: #fff;
+}
+.searchbar {
+    float: right;
+}
+.searchbar .plus-icon {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #f0a800;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-right: 10px;
+}
+.searchbar .plus-icon:hover {
+    background-color: #ffb300;
+}
+.searchbar .search-icon {
+    background: url(/assets/img/search-icon.png) top left no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.topplus-icon {
+    background: url(/assets/img/physio-sprite-img.png) -50px -121px no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.modal-backdrop.fade {
+    opacity: 0.7;
+}
+.avatar {
+    height: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 12px;
+    font-weight: normal;
+}
+.avatar img {
+    width: 100%;
+}
+.modal-open #ui-datepicker-div {
+    z-index: 9999 !important;
+}
+.modal-open .ui-datepicker .ui-datepicker-prev {
+    margin-top: 2px;
+}
+.modal-open .ui-datepicker .ui-datepicker-prev::before {
+    left: 9px;
+}
+.modal-open .ui-datepicker .ui-datepicker-next {
+    margin-top: 2px;
+}
+.modal-open .ui-datepicker .ui-datepicker-next .ui-icon {
+    display: block;
+}
+.modal-open .ui-datepicker .ui-datepicker-next::before {
+    right: 10px;
+}
+.modal-open .ui-datepicker a:hover::before {
+    opacity: 1;
+}
+.chat-page .ui-datepicker {
+    width: 255px !important;
+}
+.chat-page .ui-datepicker .ui-datepicker-calendar td {
+    padding: 5px;
+}
+.chat-page .ui-datepicker .ui-datepicker-calendar td:hover > a {
+    background-color: #357ebd;
+    border-color: transparent;
+    color: #fff;
+    border-radius: 3px;
+}
+.chat-page .ui-datepicker .ui-datepicker-calendar th {
+    padding: 5px;
+}
+.chat-page .ui-datepicker .ui-datepicker-calendar td.ui-datepicker-current-day > a {
+    background-color: #357ebd;
+    border-color: transparent;
+    color: #fff;
+    border-radius: 3px;
+}
+.chat-page #ui-datepicker-div {
+    border-radius: 5px;
+    padding: 5px;
+}
+.chat-page .chat-image-uploader .dz-preview {
+    display: none;
+}
+#main {
+    padding-left: 0;
+}
+.patient-chat-page .chat-userlist {
+    width: 23%;
+    background: #fff;
+    height: 100vh;
+}
+.patient-chat-page .chat-userlist .filterlist {
+    float: right;
+    text-align: right;
+    vertical-align: middle;
+    padding-top: 5px;
+    color: #666980;
+    font-weight: normal;
+}
+.patient-chat-page .chat-userlist .filterlist:hover {
+    text-decoration: none;
+}
+.patient-chat-page .chat-userlist .filterlist i {
+    margin-left: 5px;
+    font-size: 8px;
+    color: #b8bacc;
+}
+.patient-chat-page .search-box {
+    background: #f7f8fc;
+    padding: 0 10px 0 0;
+    border-radius: 5px;
+    width: 174px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.patient-chat-page .search-box .btn {
+    float: left;
+    width: 30px;
+    height: 32px;
+    padding: 0;
+    background: none;
+    color: #b8bacc;
+}
+.patient-chat-page .search-box .btn i {
+    color: #b8bacc;
+    font-size: 14px;
+}
+.patient-chat-page .search-box .form-control {
+    float: left;
+    width: 120px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    height: 32px;
+    font-size: 13px;
+    color: #989bb2;
+}
+.patient-chat-page .search-filter {
+    padding: 15px;
+    border-bottom: solid 1px #edeff5;
+    border-right: solid 1px #edeff5;
+}
+.chat-page.patient-chat-page .chat-userlist {
+    padding: 0 !important;
+}
+.chat-page.patient-chat-page .chat-window-main {
+    padding: 0 !important;
+}
+.chat-page.patient-chat-page .user-detail {
+    padding: 0 !important;
+}
+.chat-page.patient-chat-page .row {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.container-fluid.chat-page.patient-chat-page {
+    padding-right: 0;
+    padding-left: 0;
+}
+.patient-chat-page .chatlist ul {
+    padding: 0;
+    margin: 0;
+}
+.patient-chat-page .chatlist ul li {
+    list-style: none;
+    padding: 20px 18px;
+    margin: 0;
+    border-bottom: solid 1px #edeff5;
+}
+.patient-chat-page .chatlist ul li .chat-user-img {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.patient-chat-page .chatlist ul li a:hover {
+    text-decoration: none;
+    outline: none;
+}
+.patient-chat-page .chatlist ul li:hover {
+    background: #f2f4fc;
+}
+.patient-chat-page .chatlist ul li.active {
+    background: #f2f4fc;
+}
+.patient-chat-page .chatlist h4 {
+    font-size: 15px;
+    color: #36394d;
+    display: inline-block;
+    vertical-align: middle;
+}
+.patient-chat-page .chatlist h4 span {
+    font-size: 13px;
+    color: #989bb2;
+    display: block;
+}
+.patient-chat-page .chatlist .chat-time {
+    float: right;
+    font-size: 13px;
+    color: #b8bacc;
+}
+.mbn {
+    margin-bottom: 0;
+}
+.patient-chat-page .chat-user-detail {
+    background: #fff;
+    height: 100vh;
+    border-left: 1px solid #dfe2f2;
+    border-top: 1px solid #dfe2f2;
+}
+.patient-chat-page .chat-user-detail .user-info {
+    border-bottom: solid 1px #edeff5;
+    padding: 20px 18px;
+}
+.patient-chat-page .chat-user-detail .user-info .user-info-img {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+.patient-chat-page .chat-user-detail .user-info h4 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 128px;
+    color: #36394d;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.patient-chat-page .chat-user-detail .user-info h4 span {
+    color: #989bb2;
+    font-size: 13px;
+    display: block;
+    padding-top: 8px;
+}
+.patient-chat-page .chat-user-detail .user-info-details {
+    padding: 20px 18px;
+    border-bottom: solid 1px #edeff5;
+}
+.patient-chat-page .chat-user-detail .user-info-details h4 {
+    font-size: 14px;
+    color: #666980;
+    padding: 0;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+}
+.patient-chat-page .chat-user-detail .user-info-details .user-info-list {
+    color: #36394d;
+    font-size: 12px;
+    line-height: 28px;
+    display: block;
+    text-align: left;
+}
+.patient-chat-page .chat-user-detail .user-info-details .user-info-list span {
+    font-size: 12px;
+    color: #989bb2;
+    padding-right: 10px;
+    width: 105px;
+    display: inline-block;
+}
+.patient-chat-page .chat-user-detail .user-info-tracks {
+    padding: 20px 18px;
+    border-bottom: solid 1px #edeff5;
+}
+.patient-chat-page .chat-user-detail .user-info-tracks h4 {
+    font-size: 14px;
+    color: #666980;
+    padding: 0;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+}
+.patient-chat-page .chat-user-detail .user-info-tracks h5 {
+    font-size: 14px;
+    color: #36394d;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+.patient-chat-page .chat-user-detail .user-info-nextaction {
+    padding: 20px 18px;
+    border-bottom: solid 1px #edeff5;
+    height: 100%;
+}
+.patient-chat-page .chat-user-detail .user-info-nextaction a {
+    color: #6a7fe8;
+    line-height: 27px;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.patient-chat-page .chat-user-detail .user-info-nextaction a i {
+    color: #b8bacc;
+    font-size: 9px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.patient-chat-page .chat-user-detail .user-info-nextaction h4 {
+    font-size: 14px;
+    color: #666980;
+    padding: 0;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+}
+.patient-chat-page .chat-user-detail .nav-tabs li a {
+    padding: 20px 17px;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    color: #989bb2;
+    font-weight: normal;
+}
+.patient-chat-page .chat-user-detail .nav-tabs li a .chat-number {
+    background-color: #f44336;
+    color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    height: 16px;
+    line-height: normal;
+    font-size: 12px;
+    padding: 0px 5px;
+    right: 5px;
+    top: 10px;
+}
+.patient-chat-page .chat-user-detail .tab-content {
+    padding: 0;
+}
+.patient-chat-page .chat-user-detail .tab-content .tab-pane {
+    padding: 20px;
+}
+.patient-chat-page .chat-user-detail .tab-content .tab-pane .yourcare-team {
+    padding: 20px;
+}
+.patient-chat-page .chat-user-detail .tab-content .tab-pane:first-child {
+    padding: 0;
+}
+.patient-chat-page .chat-user-detail .tab-content p {
+    color: #989bb2;
+}
+.patient-chat-page .chat-user-detail .tab-content .checklist1 {
+    padding: 0;
+    margin: 0;
+}
+.patient-chat-page .chat-user-detail .tab-content .checklist1 li {
+    padding: 0;
+    margin: 30px 0 0 0;
+    list-style: none;
+}
+.patient-chat-page .chat-user-detail .tab-content .checklist1 li label {
+    color: #36394d;
+    font-size: 16px;
+    font-weight: normal;
+    vertical-align: top;
+    padding-left: 15px;
+}
+.patient-chat-page .chat-user-detail .tab-content .checklist1 li label span {
+    color: #989bb2;
+    font-size: 13px;
+    display: block;
+}
+.patient-chat-page .chat-user-detail .tab-content .checklist1 li .icheckbox_flat-green, .patient-chat-page .chat-user-detail .tab-content .checklist1 li .iradio_flat-green {
+    margin-top: 5px;
+}
+.patient-chat-page .chat-user-detail .tab-content ul {
+    padding: 0;
+    margin: 0;
+}
+.patient-chat-page .chat-user-detail .tab-content ul li {
+    padding: 0;
+    margin: 30px 0 0 0;
+    list-style: none;
+}
+.patient-chat-page .chat-user-detail .tab-content ul li .download-icon {
+    float: right;
+}
+.patient-chat-page .chat-user-detail .tab-content ul li a {
+    text-decoration: none;
+    color: #36394d;
+    font-weight: normal;
+    font-size: 14px;
+}
+.patient-chat-page .chat-user-detail .tab-content ul li a img {
+    margin-right: 10px;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .company-logo {
+    width: 65px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .company-logo img {
+    max-width: 100%;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right {
+    display: inline-block;
+    width: 238px;
+    vertical-align: top;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right h4 {
+    padding: 0;
+    margin: 0;
+    color: #36394d;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right p {
+    color: #666980;
+    font-size: 14px;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number {
+    color: #666980;
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    margin-top: 20px;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number i {
+    color: #b8bacc;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number a {
+    color: #666980;
+    text-decoration: none;
+    font-weight: normal;
+}
+.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number a.webline {
+    color: #6a7fe8;
+    float: right;
+}
+.patient-chat-page .chat-user-detail .tab-content .dr-list {
+    margin-top: 40px;
+}
+.patient-chat-page .chat-user-detail .tab-content .dr-list h4 {
+    color: #666980;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+}
+.patient-chat-page .chat-user-detail .tab-content .chatlist li {
+    padding: 20px 18px;
+    margin: 0;
+}
+.patient-chat-page .chat-user-detail .tab-content .chatlist li a h4 {
+    margin: 0;
+    padding: 0;
+}
+.patient-chat-page .chat-user-detail .tab-content .chatlist li a h4 span {
+    margin-top: 10px;
+}
+.patient-chat-page .chat-window .chattitle {
+    width: 100%;
+    padding: 11px 20px 10px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-top: solid 1px #edeff5;
+    border-bottom: solid 1px #edeff5;
+    color: #36394d;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.patient-chat-page .chat-window .chattitle i {
+    font-size: 8px;
+    color: #00c272;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.patient-chat-page .chat-window .chattitle .dr-name {
+    text-align: left;
+    float: left;
+    width: 20%;
+}
+.patient-chat-page .chat-window .chattitle .dr-name .dr-img {
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 17px;
+}
+.patient-chat-page .chat-window .chattitle .chat-top-tab {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+.patient-chat-page .chat-window .chattitle .chat-top-tab a {
+    color: #666980;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px 13px;
+    display: inline-block;
+    margin: 0 5px;
+}
+.patient-chat-page .chat-window .chattitle .chat-top-tab a:hover {
+    background-color: #ffb300;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.patient-chat-page .chat-window .chattitle .chat-top-tab a:focus {
+    text-decoration: none;
+}
+.patient-chat-page .chat-window .chattitle .chat-top-tab a.active {
+    background-color: #ffb300;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.patient-chat-page .chat-window .chattitle .chat-date {
+    float: right;
+    width: 20%;
+    color: #666980;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+.patient-chat-page .chat-window .chattitle .chat-date span {
+    color: #989bb2;
+    display: block;
+}
+.patient-chat-page .chat-window .chattext-list {
+    padding: 0px 10px;
+    margin: 0px !important;
+    overflow-y: auto;
+}
+.patient-chat-page .chat-window .chattext-list li {
+    margin: 25px 0 0 0;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+.patient-chat-page .chat-window .chattext-list li .info {
+    float: left;
+    font-size: 12px;
+    color: #989bb2;
+    padding-left: 48px;
+    width: 100%;
+    padding-top: 8px;
+}
+.patient-chat-page .chat-window .chattext-list li .chatbg {
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 15px;
+    position: relative;
+    padding: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dfe2f2;
+    background-color: #fff;
+    border-radius: 3px;
+    word-wrap: break-word;
+    max-width: 80%;
+}
+.patient-chat-page .chat-window .chattext-list li .chatbg .chattext {
+    padding: 15px;
+    display: block;
+}
+.patient-chat-page .chat-window .chattext-list li .chat-userimg {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 33px;
+    height: 33px;
+    float: left;
+}
+.patient-chat-page .chat-window .chattext-list li .chat-userimg img {
+    height: 100%;
+    width: 100%;
+}
+.patient-chat-page .chat-window .chattext-list li .chat-fullimage {
+    padding-top: 10px;
+    width: 100%;
+    display: block;
+}
+.patient-chat-page .chat-window .chattext-list li .chat-fullimage img {
+    max-width: 100%;
+}
+.patient-chat-page .chat-window .chattext-list li.odd .info {
+    float: right;
+    text-align: right;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 48px;
+}
+.patient-chat-page .chat-window .chattext-list li.odd .chatbg {
+    float: right;
+    margin-left: 0;
+    margin-right: 15px;
+    background-color: #6a7fe8;
+    color: #fff;
+    border-radius: 3px;
+    border-color: #6a7fe8;
+}
+.patient-chat-page .chat-window .chattext-list li.odd .chatbg:after {
+    left: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(106, 127, 232, 0);
+    border-left-color: #6a7fe8;
+    border-width: 7px;
+    margin-top: -7px;
+}
+.patient-chat-page .chat-window .chattext-list li.odd .chatbg:before {
+    left: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 167, 254, 0);
+    border-left-color: #6a7fe8;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.patient-chat-page .chat-window .chattext-list li.odd .chat-userimg {
+    float: right;
+}
+.patient-chat-page .chat-window .chattext-list li.even .chatbg:after {
+    right: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 7px;
+    margin-top: -7px;
+}
+.patient-chat-page .chat-window .chattext-list li.even .chatbg:before {
+    right: 100%;
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(227, 230, 244, 0);
+    border-right-color: #dfe2f2;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.patient-chat-page .chat-window .chattext-list li.chatnote .chatbg {
+    background-color: #fff6b7;
+    border-color: #ffed71;
+    color: #36394d;
+}
+.patient-chat-page .chat-window .chattext-list li.chatnote .chatbg:after {
+    border-color: rgba(255, 246, 183, 0);
+    border-left-color: #fff6b7;
+    border-width: 7px;
+    margin-top: -7px;
+}
+.patient-chat-page .chat-window .chattext-list li.chatnote .chatbg:before {
+    border-color: rgba(255, 246, 183, 0);
+    border-left-color: #fff6b7;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.patient-chat-page .chat-window .chat-box {
+    background-color: #fff;
+    border: solid 1px #dfe2f2;
+    border-radius: 5px;
+    margin: 20px;
+}
+.patient-chat-page .chat-window .chat-box .nav-tabs > li > a {
+    color: #989bb2;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 12px 15px;
+}
+.patient-chat-page .chat-window .chat-box .nav-tabs > li.active > a {
+    font-weight: 600;
+    color: #666980;
+}
+.patient-chat-page .chat-window .chat-box .nav-tabs > li.active > a:hover {
+    font-weight: 600;
+    color: #666980;
+}
+.patient-chat-page .chat-window .chat-box .nav-tabs > li.active > a:focus {
+    font-weight: 600;
+    color: #666980;
+}
+.patient-chat-page .chat-window .chat-box .help-icon {
+    float: right;
+}
+.patient-chat-page .chat-window .chat-box .help-icon i {
+    font-size: 16px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content textarea {
+    border: 0;
+    height: 75px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer {
+    background-color: #f7f8fc;
+    padding: 7px 15px;
+    border-radius: 0 0 5px 5px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer a {
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1 {
+    background: url(/assets/img/physio-sprite-img.png) -841px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click2 {
+    background: url(/assets/img/physio-sprite-img.png) -905px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3 {
+    background: url(/assets/img/physio-sprite-img.png) -969px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+    border: none;
+    vertical-align: middle;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:focus {
+    outline: none;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:hover {
+    outline: none;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click4 {
+    background: url(/assets/img/physio-sprite-img.png) -1033px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click5 {
+    background: url(/assets/img/physio-sprite-img.png) -1097px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click6 {
+    background: url(/assets/img/physio-sprite-img.png) -1159px -50px no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .btn {
+    background-color: #ffae00;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 12px;
+    float: right;
+    display: inline-block;
+    border-radius: 3px;
+}
+.patient-chat-page .progress {
+    border-radius: 5px;
+    height: 7px;
+    background-color: #edeff5 !important;
+}
+.patient-chat-page .progress .progress-bar {
+    background-color: #00c272;
+}
+.patient-chat-page .nav-tabs > li.active > a {
+    border: none;
+    border-bottom: solid 2px #ffc107;
+    font-weight: 600;
+}
+.patient-chat-page .nav-tabs > li.active > a:hover {
+    border: none;
+    border-bottom: solid 2px #ffc107;
+    font-weight: 600;
+}
+.patient-chat-page .nav-tabs > li.active > a:focus {
+    border: none;
+    border-bottom: solid 2px #ffc107;
+    font-weight: 600;
+}
+.patient-chat-page .avatar {
+    height: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 12px;
+    font-weight: normal;
+}
+.patient-chat-page .avatar img {
+    width: 100%;
+}
+.patient-chat-page .chat-window-main {
+    background: url(/assets/img/physio-patient-chat-bg.jpg) top left repeat;
+}
+.icheckbox_flat-green {
+    background: url(/assets/img/green.png) top left no-repeat;
+}
+.iradio_flat-green {
+    background: url(/assets/img/green.png) top left no-repeat;
+}
+.patient-chat-page .chat-image-uploader .dz-preview {
+    display: none;
+}
+.patient-popup.send-image-popup .modal-dialog {
+    width: 750px;
+}
+.folders-manager {
+    display: inline-block;
+    width: 238px;
+    margin: 30px;
+    vertical-align: top;
+}
+.file-manager {
+    display: inline-block;
+    width: 418px;
+    vertical-align: top;
+}
+.folder-title {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f6fa;
+}
+.folder-title h3 {
+    font-size: 16px;
+    color: #3d5266;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.folder-title h3 a.link {
+    float: right;
+    color: #a8acbf;
+    font-size: 12px;
+    font-weight: 600;
+}
+.folder-title h3 a.link:hover {
+    color: #6a7fe8;
+    text-decoration: none;
+}
+.folders-manager .treeview-left {
+    width: 238px;
+    border: 1px solid #dfe2f2;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.patient-popup.send-image-popup .search-bar {
+    margin-bottom: 10px;
+    float: none;
+}
+.patient-popup.send-image-popup .search-bar .search-box {
+    padding: 10px;
+}
+.patient-popup.send-image-popup .search-bar .search-box .form-control {
+    width: 184px;
+    float: left;
+    border: solid 1px #dfe2f2;
+    border-right: none;
+}
+.patient-popup.send-image-popup .search-bar .search-box .btn {
+    float: left;
+    background-color: #fff;
+    padding: 9px 8px;
+    border-right: solid 1px #dfe2f2;
+    border-top: solid 1px #dfe2f2;
+    border-bottom: solid 1px #dfe2f2;
+    border-radius: 0 5px 5px 0;
+}
+.patient-popup.send-image-popup .search-bar .search-icon {
+    background: url(/assets/img/search-icon2.png) top left no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.patient-popup.send-image-popup .search-bar .topplus-icon {
+    background: url(/assets/img/physio-sprite-img.png) -50px -121px no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.send-image-popup .nav-tabs {
+    padding-top: 10px;
+}
+.send-image-popup .nav-tabs > li.active > a, .send-image-popup .nav-tabs > li.active > a:hover, .send-image-popup .nav-tabs > li.active > a:focus {
+    background-color: transparent;
+}
+.uploadimage-list {
+    display: inline-block;
+    margin-top: 30px;
+}
+.video-manager .uploadimage-list {
+    margin-top: 0;
+}
+.video-manager .uploadimage-list ul {
+    margin: 0 -10px;
+}
+.uploadimage-list ul {
+    padding: 0;
+    margin: 0;
+}
+.uploadimage-list ul li {
+    padding: 0;
+    margin: 0 10px 20px 10px;
+    list-style: none;
+    display: inline-block;
+    width: 80px;
+}
+.uploadimage-list ul li a {
+    border-radius: 3px;
+    display: block;
+    overflow: hidden;
+    border: solid 2px transparent;
+    position: relative;
+}
+.uploadimage-list ul li a img {
+    max-width: 100%;
+}
+.uploadimage-list ul li a:hover, .uploadimage-list ul li.active a {
+    border: solid 2px #00c976;
+}
+.uploadimage-list ul li.active a:before {
+    width: 32px;
+    height: 32px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(/assets/img/image-select-icon.png) top left no-repeat;
+    opacity: 1;
+}
+.uploadimage-listing {
+    display: block;
+    margin-top: 30px;
+}
+.uploadimage-listing ul.image-list {
+    padding: 0;
+    margin: 0 -10px;
+}
+.uploadimage-listing ul.image-list li {
+    padding: 0;
+    margin: 0 10px 20px 9px;
+    list-style: none;
+    display: inline-block;
+    width: 80px;
+    vertical-align: top;
+}
+.uploadimage-listing ul.image-list li a {
+    border-radius: 3px;
+    display: block;
+    overflow: hidden;
+    border: solid 2px #b8bbcc;
+    position: relative;
+    height: 80px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.uploadimage-listing ul.image-list li a img {
+    max-width: 100%;
+}
+.uploadimage-listing ul.image-list li a:hover, .uploadimage-listing ul.image-list li.active a {
+    border: solid 2px #00c976;
+}
+.uploadimage-listing ul.image-list li.active a:before {
+    opacity: 1;
+    width: 32px;
+    height: 32px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(/assets/img/image-select-icon.png) top left no-repeat;
+}
+.uploadimage-listing ul.image-list li.upload-btn {
+    vertical-align: top;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+.uploadimage-listing ul.image-list li.upload-btn a {
+    vertical-align: top;
+    text-align: center;
+}
+.uploadimage-listing ul.image-list li.upload-btn button {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background: url(/assets/img/plus-icon.png) center center no-repeat #e6e8f0;
+}
+.dz-image-preview {
+    display: none;
+}
+.uploadimage-listing ul.image-list li.upload-btn a button {
+    background: none;
+    border: none;
+}
+.chat-loader {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.treeview-main .tree, .tree ul {
+    margin: 0 0 0 1em;
+    padding: 0;
+    /* indentation */
+    list-style: none;
+    color: #606580;
+    position: relative;
+}
+.treeview-main .tree {
+    margin: 10px;
+}
+.treeview-main .tree ul {
+    margin-left: 0.5em;
+}
+/* (indentation/2) */
+.treeview-main .tree:before, .treeview-main .tree ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.treeview-main .tree li {
+    margin: 0;
+    padding: 0 1.5em;
+    line-height: 2em;
+    /* indentation + .5em */
+    font-weight: normal;
+    /* default list item's `line-height` */
+    font-size: 14px;
+    position: relative;
+}
+.treeview-main .tree li a {
+    color: #606580;
+    font-weight: normal;
+    font-size: 14px;
+}
+.treeview-main .tree li a:hover {
+    text-decoration: none;
+    color: #6a7fe8;
+}
+.treeview-main .tree li:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 0;
+    /* same with indentation */
+    border-top: 1px solid;
+    margin-top: -1px;
+    position: absolute;
+    /* border top width */
+    top: 1em;
+    left: 0;
+    /* (line-height/2) */
+    border-color: #d5dee5;
+}
+.treeview-main .tree li:last-child:before {
+    background: white;
+    height: auto;
+    /* same with body background */
+    top: 1em;
+    bottom: 0;
+    /* (line-height/2) */
+    border-color: #d5dee5;
+}
+.file-manager-main {
+    padding: 20px;
+    max-height: 349px;
+    overflow-y: auto;
+}
+.file-manager-main .drag-drop-area span {
+    color: #82869e;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+.file-manager-main .drag-drop-area-inner {
+    text-align: center;
+}
+.file-manager {
+    border: 1px solid #dfe2f2;
+    margin: 30px 30px 30px 0;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.file-manager .drag-drop-area {
+    width: 100%;
+    height: 154px;
+    border: dashed 1px #dfe2f2;
+    display: -ms-flexbox;
+    margin-bottom: 30px;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f8fd;
+    border-radius: 3px;
+    padding: 20px;
+}
+.file-manager .drag-drop-area .btn {
+    margin-top: 20px;
+}
+.file-title {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f6fa;
+}
+.file-title h3 {
+    font-size: 16px;
+    color: #3d5266;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.file-title h3 a.link {
+    float: right;
+    color: #a8acbf;
+    font-size: 12px;
+    font-weight: 600;
+}
+.file-title h3 a.link:hover {
+    color: #6a7fe8;
+    text-decoration: none;
+}
+.patient-popup.send-image-popup .modal-dialog .form-control {
+    border-radius: 3px 0 0 3px !important;
+    overflow: hidden;
+}
+/* breadcrumbs */
+ul.breadcrumbs {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: #333;
+}
+.breadcrumbs li {
+    display: inline-block;
+    position: relative;
+    padding-right: 11px;
+    margin: 0;
+}
+.breadcrumbs li:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    width: 10px;
+    text-align: center;
+    font-family: FontAwesome;
+    top: 1px;
+}
+.breadcrumbs li:last-child {
+    font-weight: normal;
+}
+.breadcrumbs li:last-child:after {
+    content: '';
+}
+.breadcrumbs span, .for-image .breadcrumbs a {
+    text-decoration: none;
+    display: inline-block;
+    color: #606580;
+    white-space: nowrap;
+    font-weight: 600;
+}
+.breadcrumbs li {
+    overflow: hidden;
+    color: #82869e;
+    font-size: 13px;
+}
+.breadcrumbs a {
+    font-weight: 600;
+    font-size: 13px;
+    color: #606580;
+}
+.breadcrumbs li:hover:after {
+    padding-left: 0em;
+    background: transparent;
+}
+/* breadcrumbs end*/
+.pro-checklist-main {
+    padding: 30px 30px 20px 30px;
+}
+.pro-check-list {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+}
+.pro-check-list .checkbox-list {
+    display: inline-block;
+}
+.pro-check-list label {
+    display: inline-block;
+    padding-left: 10px;
+    color: #36394d;
+    font-size: 16px;
+    font-weight: normal;
+}
+.patient-popup .modal-footer-main .btn.btn-default {
+    color: #3e4359;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #fff;
+    border: solid 1px #c7cad9;
+    padding: 5px 15px;
+    margin-left: 7px;
+    margin-right: 0;
+}
+.patient-popup2 .progress {
+    border-radius: 5px;
+    height: 14px;
+    background-color: #5869bf !important;
+    width: 100%;
+    margin-bottom: 0;
+}
+.patient-popup2 .progress .progress-bar {
+    background-color: #ffc400;
+    border-radius: 0 5px 5px 0;
+}
+.patient-popup.patient-popup2 .modal-dialog {
+    width: 600px;
+}
+.progress-title {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 0 10px 0;
+    display: block;
+}
+.patient-popup.patient-popup2 .modal-title.full-title {
+    width: 100%;
+}
+.patient-popup.patient-popup2 .modal-header.header-progressbar {
+    padding: 30px;
+}
+.patient-popup.patient-popup2 .modal-body-main {
+    padding: 0 30px;
+}
+.patient-popup.patient-popup2 .modal-body-main h3 {
+    font-size: 22px;
+    color: #36394d;
+    font-weight: 600;
+    padding: 30px 0 0 0;
+    margin: 0;
+    line-height: 32px;
+}
+.uploadimage-list {
+    display: inline-block;
+    width: 421px;
+    margin-top: 30px;
+}
+.uploadimage-list ul {
+    padding: 0;
+    margin: 0;
+}
+.uploadimage-list ul li {
+    padding: 0;
+    margin: 0 10px 20px 10px;
+    list-style: none;
+    display: inline-block;
+    width: 80px;
+}
+.uploadimage-list ul li a {
+    border-radius: 3px;
+    display: block;
+    overflow: hidden;
+    border: solid 2px transparent;
+    position: relative;
+}
+.uploadimage-list ul li a img {
+    max-width: 100%;
+}
+.uploadimage-list ul li a:hover, .uploadimage-list ul li.active a {
+    border: solid 2px #00c976;
+}
+.uploadimage-list ul li.active a:before {
+    width: 32px;
+    height: 32px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(/assets/img/image-select-icon.png) top left no-repeat;
+}
+.uploadimage-listing {
+    display: block;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.uploadimage-listing ul {
+    padding: 0;
+    margin: 0;
+}
+.uploadimage-listing ul li {
+    padding: 0;
+    margin: 0 10px 20px 10px;
+    list-style: none;
+    display: inline-block;
+    width: 80px;
+}
+.uploadimage-listing ul li a {
+    border-radius: 3px;
+    display: block;
+    overflow: hidden;
+    border: solid 2px transparent;
+    position: relative;
+    height: 80px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.uploadimage-listing ul li a img {
+    max-width: 100%;
+}
+.uploadimage-listing ul li a:hover, .uploadimage-listing ul li.active a {
+    border: solid 2px #00c976;
+}
+.uploadimage-listing ul li.active a:before {
+    width: 32px;
+    height: 32px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(/assets/img/image-select-icon.png) top left no-repeat;
+}
+.uploadimage-listing ul li.upload-btn {
+    vertical-align: top;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+.uploadimage-listing ul li.upload-btn button {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background: url(/assets/img/plus-icon.png) center center no-repeat #e6e8f0;
+}
+.chat-window .chattext-list li .chat-fullimage.chat-video {
+    padding-top: 0;
+    width: 280px;
+    height: 169px;
+    position: relative;
+    vertical-align: middle;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.chat-window .chattext-list li .chat-fullimage.chat-video img {
+    max-width: 100%;
+}
+.chat-window .chattext-list li .chat-fullimage.chat-video:before {
+    background: url(/assets/img/video-icon.png) center center no-repeat rgba(52, 64, 74, 0.7);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.chat-window .chattext-list li.odd .chatbg .playlink {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0 0 0;
+    font-size: 16px;
+}
+.chat-window .chattext-list li.even .chatbg .playlink {
+    text-align: center;
+    color: #6a7fe8;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0 0 0;
+    font-size: 16px;
+}
+.chat-page .chat-window .chattext-list li .chat-fullimage.chat-video {
+    padding-top: 0;
+    width: 280px;
+    height: 169px;
+    position: relative;
+    vertical-align: middle;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.chat-page .chat-window .chattext-list li .chat-fullimage.chat-video img {
+    max-width: 100%;
+}
+.chat-page .chat-window .chattext-list li .chat-fullimage.chat-video:before {
+    background: url(/assets/img/video-icon.png) center center no-repeat rgba(52, 64, 74, 0.7);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.chat-window .chattext-list li.odd .chatbg .playlink {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 7px 0 10px 0;
+    font-size: 16px;
+    border-top: solid 1px #dfe2f2;
+}
+.chat-window .chattext-list li.even .chatbg .playlink {
+    text-align: center;
+    color: #6a7fe8;
+    text-decoration: none;
+    display: block;
+    padding: 7px 0 10px 0;
+    font-size: 16px;
+    border-top: solid 1px #dfe2f2;
+}
+.loading {
+    text-align: center;
+}
+.treeview-main .loading {
+    margin-bottom: 20px;
+}
+.image-info-popup:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+}
+ngb-modal-window.image-info-popup.modal.fade .modal-dialog {
+    z-index: 999;
+}
+ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
+    border-radius: 0;
+}
