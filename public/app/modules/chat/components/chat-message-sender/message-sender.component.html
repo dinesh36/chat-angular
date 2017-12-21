@@ -6,12 +6,23 @@
                   name="message"
                   ng-model="vs.message"
                   placeholder="Enter Message"
-                  style="resize: none;"></textarea>
+                  style="resize: none;" ng-keypress="vs.checkIfEnterKeyWasPressed($event)" ></textarea>
                 <div class="tabpanel-footer clearfix">
                     <a href="javascript:void(0)" class="click1"></a>
                     <a href="javascript:void(0)" class="click2"></a>
+                    <button type="button" class="btn uploadbtn" dropzone style="" id="companyInfoUploadBtn"
+                            dropzone-options="vz.dropzoneConfig" dropzone-object="vz.companyInfoFilesDropZone">
+                        <span class="icon"></span>
+                        Attach ...
+                        <input type="hidden"
+                               title="files"
+                               class="btn btn-success hidden"
+                               value="upload"
+                               id="files_for_contribution"
+                               name="files">
+                    </button>
                     <a href="javascript:void(0)" ng-click="vm.uploadFile()"></a>
-                    <button class="btn btn-secondary" ng-click="vs.sendMessage()">Send</button>
+                    <button class="btn btn-secondary" ng-click="vz.sendMessage()">Send</button>
                 </div>
             </div>
         </form>

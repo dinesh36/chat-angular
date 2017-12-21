@@ -45,7 +45,13 @@
                 vm.messages.push(data.data);
             });
             $rootScope.$on('NEW_MESSAGE', function(event,data){
+                console.log(data.data);
                 vm.messages.push(data.data.message);
+            });
+            $rootScope.$on('userChange',function(event, data){
+                vm.userStatus = data.active;
+                vm.messages = [];
+                //$scope.$apply();
             });
         }
     }

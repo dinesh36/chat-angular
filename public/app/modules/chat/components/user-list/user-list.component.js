@@ -52,14 +52,13 @@
          */
         function activate() {
             var userId = $location.search().id;
-            getActiveUser(parseInt(userId));
-            var user = _.find(vm.userList, {id:parseInt(userId)});
-            $rootScope.$broadcast('userChange',user);
-            //_.forEach(vm.userList, function (list) {
-            //   if(list.id === parseInt(userId)){
-            //       list.active = true;
-            //   }
-            //});
+            _.remove(vm.userList,{id:parseInt(userId)});
+            getActiveUser(parseInt(vm.userList[0].id));
+            var user = _.find(vm.userList, {id:parseInt(vm.userList[0].id)});
+            console.log(user)
+            setTimeout(function(){
+                $rootScope.$broadcast('userChange',user)
+            },1000);
         }
 
         function userDetails(user){
@@ -71,11 +70,7 @@
 
         function getActiveUser(id){
             _.forEach(vm.userList, function (list) {
-                if(list.id === id){
-                    list.active = true;
-                } else {
-                    list.active = false;
-                }
+                list.active = list.id === id;
             });
         }
     }
