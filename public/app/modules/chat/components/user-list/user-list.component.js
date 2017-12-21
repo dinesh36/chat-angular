@@ -18,7 +18,13 @@
         return {
             restrict:'E',
             replace:true,
-            templateUrl:'/app/modules/chat/components/user-list/user-list.component.html',
+            templateUrl        :function getTemplate(element,attrs){
+                if (attrs.showInChatWindow == 'false') {
+                    return '/app/modules/chat/components/user-list/user-list.component.html';
+                } else {
+                    return '/app/modules/chat/components/user-list/mini-user-list.component.html';
+                }
+            },
             controller:Controller,
             controllerAs:'vu',
             bindToController:true
@@ -42,7 +48,9 @@
             {id:7,name:'Muit','active':false}
         ];
         vm.users = {};
+        vm.listView = true;
         vm.userDetails = userDetails;
+        vm.getChatDetails = getChatDetails;
         activate();
 
         /**
@@ -55,7 +63,7 @@
             _.remove(vm.userList,{id:parseInt(userId)});
             getActiveUser(parseInt(vm.userList[0].id));
             var user = _.find(vm.userList, {id:parseInt(vm.userList[0].id)});
-            console.log(user)
+            console.log(user);
             setTimeout(function(){
                 $rootScope.$broadcast('userChange',user)
             },1000);
@@ -66,6 +74,10 @@
             getActiveUser(parseInt(user.id));
             //vm.users = {users:vm.userList,id:vm.userId};
             $rootScope.$broadcast('userChange',user);
+        }
+
+        function getChatDetails(user){
+            vm.listView = false;
         }
 
         function getActiveUser(id){

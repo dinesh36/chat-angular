@@ -1,0 +1,13 @@
+<div>
+    <div ng-if="vu.listView" class="livechat-list" ng-repeat="list in vu.userList" ng-class="list.active ? 'active':''" ng-click="vu.getChatDetails(list)">
+        <a href="javascript:void(0)">
+            <span class="livechat-img"><img src="/assets/img/user-img2.jpg"></span>
+            <span class="livechat-text">{{list.name}}</span>
+        </a>
+      </div>
+    <div ng-if="!vu.listView">
+        <chat-window></chat-window>
+        <span class="btn" ng-click="vu.listView = true">Back</span>
+        <a class="btn" ui-sref="app.chat">Detail</a>
+    </div>
+</div>
