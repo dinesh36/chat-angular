@@ -7,7 +7,7 @@
     angular
         .module('UserChat',[])
         .directive('userChat', Directive);
-    Controller.$inject = ['$scope', 'lodash'];
+    Controller.$inject = ['$scope', 'lodash','ChatService'];
 
     /**
      * @method Directive
@@ -20,7 +20,7 @@
             replace:true,
             templateUrl:'/app/modules/chat/components/user-list/user-list.component.html',
             controller:Controller,
-            controllerAs:'vs',
+            controllerAs:'vm',
             bindToController:true
         };
     }
@@ -30,7 +30,7 @@
      * @constructor
      * @ticket: BOMB-3280
      */
-    function Controller($scope, _) {
+    function Controller($scope, _,ChatService) {
         var vm = this;
 
         activate();
@@ -42,6 +42,8 @@
          */
         function activate() {
             alert(123);
+            vm.userList = ChatService.userList();
+            console.log(vm.userList);
         }
     }
 })();

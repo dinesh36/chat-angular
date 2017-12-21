@@ -1,1 +1,35 @@
-<div>This is Message sender component</div>
+
+<div class="chat-box">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <form ng-submit="vm.sendMessage(chatSender)" name="chatSender">
+            <div role="tabpanel" class="tab-pane active" id="home">
+        <textarea
+                    class="form-control msg_sender_"
+                  name="message"
+                  ng-model="vm.message"
+                  placeholder="Enter Message"
+                  style="resize: none;"></textarea>
+                <div class="tabpanel-footer clearfix">
+                    <a href="javascript:void(0)" class="click1" ></a>
+                    <a href="javascript:void(0)" class="click2"></a>
+
+                    <a href="javascript:void(0)" ng-click="vm.uploadFile()" ></a>
+
+                    <!--<a href="javascript:void(0)" class="click4"  ng-click="vm.sendVideo()"></a>-->
+                    <!--<a href="javascript:void(0)" ng-click="vm.openPRO()"  class="click5" ></a>-->
+                    <!--<a href="javascript:void(0)" class="click6" ></a>-->
+                    <button class="btn btn-secondary">Send</button>
+                </div>
+            </div>
+        </form>
+        <div role="tabpanel" class="tab-pane" id="profile">
+      <textarea class="form-control" placeholder="Messgae">
+      </textarea>
+        </div>
+    </div>
+</div>

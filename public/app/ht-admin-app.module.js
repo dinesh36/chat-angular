@@ -33,6 +33,7 @@
 		'MessageSender',
 		'ChatMain',
 		'ChatFeed',
+		'ChatWindow',
 		'ChatIO'
 	]);
 })();
