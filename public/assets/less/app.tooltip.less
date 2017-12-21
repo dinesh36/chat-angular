@@ -1,0 +1,54 @@
+.tooltip{
+	font-family: @font-family-primary ;
+	font-size: @font-size-xs;
+	z-index: 99999 !important;
+
+	.tooltip-inner {
+		color: #fff;
+		background: @brand-primary-dark;
+		border-radius: 3px;
+		padding: 10px 12px;
+		font-size: @font-size-xs;
+		text-align: left;
+	}
+	&.top{
+		.tooltip-arrow {
+			border-top-color:@brand-primary-dark !important;
+		}
+	}
+	&.top-left{
+		.tooltip-arrow {
+			border-top-color:@brand-primary-dark !important;
+		}
+	}
+	&.top-right{
+		.tooltip-arrow {
+			border-top-color:@brand-primary-dark !important;
+		}
+	}
+	&.right{
+		.tooltip-arrow {
+			border-right-color:@brand-primary-dark !important;
+		}
+	}
+	&.left{
+		.tooltip-arrow {
+			border-left-color:@brand-primary-dark !important;
+		}
+	}
+	&.bottom{
+		.tooltip-arrow {
+			border-bottom-color:@brand-primary-dark !important;
+		}
+	}
+	&.bottom-left{
+		.tooltip-arrow {
+			border-bottom-color:@brand-primary-dark !important;
+		}
+	}
+	&.top{
+		.bottom-right {
+			border-bottom-color:@brand-primary-dark;
+		}
+	}
+}

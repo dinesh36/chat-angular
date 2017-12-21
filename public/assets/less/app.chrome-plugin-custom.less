@@ -1,0 +1,466 @@
+.aAU {
+    .dw {
+        z-index: 4!important;
+    }
+}
+
+.ngdialog {
+    &.ngdialog-theme-default {
+        &.no-padding {
+            .ngdialog-content {
+                width: 700px;
+            }
+        }
+    }
+}
+
+.thumb-xs {
+    thumb {
+        padding: 0px 0;
+        font-size: 11px;
+        line-height: 24px;
+        height: 24px;
+    }
+}
+
+thumb {
+    display: block;
+    background: lightseagreen;
+    padding: 8px 0;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+}
+
+
+.email-tracking-wrapper {
+    position: absolute;
+    right: 250px;
+    top: 7px;
+    width: 520px;
+
+
+    .btn {
+        padding: 4px 7px;
+        font-size: @font-size-xs;
+        background: #00c853;
+        color: #fff;
+        border: 0;
+        border-radius: 3px;
+        cursor: pointer;
+        &.opened{
+          background: #546f7a;
+        }
+    }
+    .plugin-email-tracking {
+        white-space: normal;
+        border: 1px solid #e5e9e8;
+        background: #fff;
+        -webkit-box-shadow: 1px 0 10px 1px rgba(0,0,0,0.2);
+        -moz-box-shadow: 1px 0 10px 1px rgba(0,0,0,0.2);
+        box-shadow: 1px 0 10px 1px rgba(0,0,0,0.2);
+        color: #546e79;
+        padding: 15px 15px 5px;
+        font-size: 15px;
+        margin: 22px 0 0;
+        display: none;
+        position: relative;
+        z-index: 5;
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .col-md-6 {
+            width: 40%;
+            line-height: 18px;
+        }
+
+        .col-md-3 {
+            width: 20%;
+        }
+
+        .alink {
+            white-space: normal;
+            color: #2196F3;
+            margin-left: 18px;
+        }
+
+        .user-name {
+            max-width: 180px;
+        }
+        &.showTrackingLog{
+          display: block;
+        }
+    }
+
+}
+
+.text-ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.getstartBlock {
+    padding: 25% 10%;
+    color: #546e7a;
+    font-size: 13px;
+
+    .user-name {
+        font-size: 15px;
+        color: #546e7a;
+    }
+}
+
+.SalesMateLoginBox {
+    padding: 0 20px;
+    position: absolute;
+    height: ~"calc(100% - 117px)";
+    height: ~ "-webkit-calc(100% - 117px)";
+    overflow: auto;
+    color: #90a4ae;
+    font-size: @font-size-base;
+    overflow-x: hidden;
+    width: 100%;
+
+    .btn-sm.gplus {
+        margin: 0 auto;
+        width: 220px;
+        font-size: @font-size-base;
+        background: #cf4332!important;
+        border-color: #cf4332!important;
+        color: #fff !important;
+    }
+
+    .subCaption {
+        font-size: @font-size-base;
+        position: relative;
+        margin: 15px 0 30px;
+
+        &:before {
+            border-bottom: 1px solid #e0e6e8;
+            position: absolute;
+            content: '';
+            width: 120px;
+            left: 110px;
+            height: 8px;
+        }
+
+        span {
+            background: #f8fafb;
+            padding: 0 15px;
+            position: relative;
+        }
+    }
+}
+
+.SalesMateButton {
+    position: absolute !important;
+    top: 69px;
+    z-index: 3;
+    right: 15px;
+    background: @brand-primary;
+    padding: 5px 10px 6px 10px;
+    border-radius: 3px;
+
+    .logout-btn {
+        color: #fff;
+
+        &:hover {
+            color: #153359;
+        }
+    }
+
+    &:hover {
+        background: #0e8af2;
+    }
+}
+
+.quick-header {
+    background: @brand-primary-dark;
+    color: @nav-text-color;
+    line-height: 20px;
+
+    a {
+        color: @nav-text-color !important;
+    }
+
+    .font-size-xl {
+        font-size: 20px;
+    }
+}
+
+.domian {
+    position: relative;
+
+    soul {
+        input[type="text"] {
+            padding: 8px 96px 8px 10px !important;
+        }
+    }
+
+    &::after {
+        content: ".salesmate.io";
+        color: #90a4ae;
+        position: absolute;
+        right: 10px;
+        top: 23px;
+    }
+}
+
+#SalesMateViewer {
+    position: fixed;
+    top: 107px;
+    right: -330px;
+    height: ~"calc(100% - 105px)";
+    height: ~"-webkit-calc(100% - 105px)";
+    border: 1px solid #e5eaeb;
+    border-right: 0;
+    background: @color-value-0 !important;
+    z-index: 1;
+    width: 380px;
+    font-size: 12px;
+    color: @secondary-text;
+    box-sizing: border-box;
+
+
+}
+
+
+#SalesMateLoginFooter {
+    border-top: 1px solid #e5eaeb;
+    text-align: center;
+    padding: 20px;
+    color: @secondary-text;
+    line-height: 18px;
+    position: absolute;
+    bottom: 0;
+    background: @white-bg;
+    right: 0;
+    width: 379px;
+}
+
+#SalesMateWaitWindow {
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#SalesMateLoginWindow {
+    box-sizing: border-box;
+    display: block;
+}
+
+.fullScreenPopup {
+    .ngdialog-content {
+        .popup-scroll {
+            height: ~"calc(100% - 115px)";
+        }
+    }
+}
+
+.alertMsg {
+   min-height: auto !important;
+    .noty_close {
+        line-height: 22px;
+    }
+    thumb.rounded{
+      margin-right: 10px;
+    }
+  .avatar{
+    display: inline-block;}
+}
+
+.loadingBlock {
+    opacity: 0.7;
+    height: 100%;
+    text-align: center;
+    padding-top: 50%;
+    z-index: 9999;
+    background: rgb(255, 255, 255);
+}
+
+
+.ngdialog{
+  &.ngdialog-theme-default{
+      padding: 20px;
+      &.no-padder{
+        &.ngdialog-content{
+          padding: 0px;
+          width: 100%;
+        }
+      }
+      .dialog-header{
+        h3{ margin: 0; color:@white-bg;}
+      }
+
+      &.chrome-fix-template{
+        .dialog-header{
+          h3 {
+              color:@white-bg !important;
+              margin: 0;
+              padding: 0;
+          }
+        }
+      }
+      .ngdialog-content {
+          padding: 0px!important;
+          font-size: 13px!important;
+          font-family: 'Roboto',Arial,sans-serif  !important;
+          color:@color-value-70;
+      }
+      a { color:@brand-primary;}
+      .secondary-text{ color: @secondary-text !important}
+      .text-muted{ color: @text-muted !important}
+      .default-text{ color: @default-text !important}
+      .text-danger{ color: @brand-danger !important; }
+    .dealdetail{
+      ul{ margin-top: 0 !important;}
+    }
+  }
+}
+.form-wrapper {
+    padding: 20px;
+}
+
+.users-chip-wrapper{
+
+  .users-chip-container {
+    width: 100%;
+  }
+}
+
+.chrome-email-header{ position: relative;
+  z-index: 3;
+  background: @brand-secondary;
+  height: 34px;
+  border-bottom: 1px solid #dee7e8;
+}
+
+.btn-salesmate-send{
+  button{
+    background: @brand-primary;
+    color: #fff;
+    padding: 7px 10px;
+    font-size: 13px;
+    border: 0;
+    border-radius:2px;
+    cursor: pointer;
+    &:hover{
+      background: #0a68b4;
+    }
+  }
+}
+.salesmate-chrome-app{
+  .alert{
+    padding: 7px !important;
+  }
+}
+
+.border-b {
+    border-bottom: 1px solid @border-color-secondary;
+}
+
+.modal{
+  &.in{
+    &:hover{ text-decoration: none !important;}
+  }
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 5px  5px 0px 0px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  .btn {
+    border : 0px;
+    padding: 5px 15px;
+    margin-left: 5px;
+  }
+
+  .btn-default{
+    border:1px solid #e1e9ee;
+    color: @default-text;
+    &:hover{
+      background: #f1f2f3;
+    }
+  }
+
+  .btn-primary{
+    &:hover{
+      background: #c22c2c;
+    }
+  }
+}
+
+.avatar{
+  &.thumb-md{
+    thumb{
+      height: 42px;
+      width: 42px;
+      font-size: 18px;
+      padding: 0px;
+      line-height: 42px;
+      box-sizing: border-box;
+    }
+    img { max-width: 42px; }
+  }
+}
+
+.row{
+  &:before ,
+  &:after{
+     content: " ";
+   display: table;
+   clear: both;
+ }
+
+}
+
+.QuickContactPopup{
+   .form-sub-heading{
+     display: none;
+   }
+}
+
+.chrome-pugin-only{
+  .w-sm{ width: 110px;}
+}
+
+.custom-email-tracking-folder{
+  padding: 3px 0 0 26px;
+  border-left: 4px solid #fff;
+  a{ color: #222;
+    &:hover{ color:@brand-primary}
+  }
+  &:hover{
+    border-left: 4px solid @brand-primary;
+  }
+}
+
+.custom-view-popover{
+  .popover-view-content {
+    font-size: 13px !important;
+  }
+  .popover-list {
+      max-height: ~'calc(100vh - 560px)' !important;
+      overflow: auto;
+  }
+}
+
+.noty-schedule-block{
+  .hide{
+    display: none;
+  }
+  a{ cursor: pointer;}
+  td{
+    span{
+      display: inline-block;}
+  }
+}

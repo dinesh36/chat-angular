@@ -1,0 +1,527 @@
+.user-profile {
+    margin: -5px 0;
+
+    .user-name {
+        color: #153359;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .date {
+        color: #90a4ae;
+        font-size: 12px;
+    }
+}
+
+.dash-avatar {
+    width: 40px;
+    height: 40px;
+    background: #153359;
+    border-radius: 3px;
+
+    &.sky {
+        background: #80deea;
+    }
+
+    &.purple {
+        background: #9badf0;
+    }
+
+    &.green {
+        background: #9ae194;
+    }
+}
+
+.progress-steps-block {
+    background: @brand-primary-dark;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    width: 400px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            padding: 15px 20px;
+            list-style: none;
+            color: #a3bee0;
+            font-size: @font-size-xs;
+
+            &.active {
+                background: #08264c;
+                color: #fff;
+
+                .icon-check {
+                    color: #079655;
+                }
+            }
+
+            &.visited {
+                .icon-check {
+                    color: #079655;
+                }
+            }
+
+            .icon-check {
+                font-size: 18px;
+                color: #90a4ae;
+            }
+        }
+    }
+
+    .progress-title {
+        font-size: 18px;
+        color: @white-bg;
+
+        span {
+            color: #a3bee0;
+        }
+    }
+}
+
+.progressBlock {
+    width: 145px;
+    height: 145px;
+    position: fixed;
+    right: -75px;
+    bottom: -75px;
+    z-index: 99;
+}
+
+.content {
+    background: @white-bg;
+    color: @text-color-secondary;
+    padding: 20px;
+    border-radius: 3px;
+    position: relative;
+
+    h5 {
+        color: @brand-primary;
+        font-size: @font-size-sm;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0 0 15px;
+    }
+
+    &.work-block {
+        background: @bg-wild-blue;
+        color: @white-bg;
+        font-size: @font-size-sm;
+        padding: 20px;
+
+        h3 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+
+    &.suggested-block {
+        font-size: @font-size-xs;
+
+        .overflow-scroll {
+            max-height: 250px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        ul {
+            margin: 0 -20px;
+            padding: 0;
+
+            li {
+                list-style: none;
+                border-bottom: 1px solid #e5eaeb;
+                padding: 12px 20px;
+                position: relative;
+
+                &:last-child {
+                    border-bottom: 0 solid #e5eaeb;
+                }
+
+                .option {
+                    position: absolute;
+                    right: 27px;
+                    top: 10px;
+                }
+            }
+        }
+
+        .name {
+            color: @brand-primary-dark;
+            font-weight: 500;
+            font-size: @font-size-sm;
+        }
+
+        a {
+            color: @brand-primary;
+            font-weight: 400;
+        }
+
+        .btn {
+            padding: 2px 8px;
+
+            .fa-close {
+                color: @brand-danger;
+            }
+        }
+
+        .dash-avatar {
+            line-height: 40px;
+            text-align: center;
+            color: @white-bg;
+            font-size: @font-size-sm;
+        }
+    }
+
+    .number {
+        font-size: @font-size-lg;
+        color: @brand-primary-dark;
+        line-height: 20px;
+    }
+
+    &.sales-block {
+        .number {
+            font-size: @font-size-xl;
+        }
+    }
+
+    .overContent {
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+
+        .contentBlock {
+            padding: 60px 0 0;
+            font-size: @font-size-lg;
+        }
+
+        p {
+            color: #153359;
+
+            a {
+                color: @brand-primary
+            }
+        }
+    }
+
+    &.sales-goal-block {
+        padding: 0;
+
+        h5 {
+            padding: 20px;
+        }
+
+        .block {
+            padding: 15px 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.align-center {
+    text-align: center;
+}
+
+.box-shadow-b {
+    -webkit-box-shadow: @bottom-shadow;
+    -moz-box-shadow: @bottom-shadow;
+    box-shadow: @bottom-shadow;
+}
+
+.dash-block {
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            border-bottom: 1px solid #e5eaeb;
+            padding: 10px 20px;
+            position: relative;
+
+            .icon {
+                font-size: 18px;
+                color: #90a4ae;
+                display: none;
+            }
+
+            &:hover {
+                background-color: #f7f8f9;
+
+                .icon {
+                    display: block;
+                }
+
+                input[type=checkbox] + label:before {
+                    color: #90a4ae;
+                }
+            }
+
+            .title {
+                color: #546e7a;
+            }
+
+            .right-sub-block {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                height: 100%;
+                font-size: @font-size-sm;
+
+                .inner-box {
+                    margin-top: -10px;
+
+                    .t-checks {
+                        line-height: 1px;
+                    }
+                }
+
+                .text {
+                    color: #90a4ae;
+                    text-align: right;
+
+                    .amount {
+                        font-size: @font-size-xs;
+                        color: #546e7a;
+                    }
+                }
+            }
+
+            &.rotten {
+                border-left: 2px solid #ffc400;
+            }
+
+            &.won {
+                border-left: 2px solid #00e676;
+            }
+
+            &.lost {
+                border-left: 2px solid #ff5252;
+            }
+        }
+    }
+
+    .sub-title {
+        padding: 15px 20px 0;
+        font-size: @font-size-sm;
+        color: @brand-primary;
+        text-transform: uppercase;
+
+        &.overdue {
+            color: #ff5252;
+        }
+    }
+
+    .deal-name {
+        font-size: @font-size-sm;
+        color: #546e7a;
+        padding-bottom: 10px;
+    }
+
+    .checkbox {
+        margin-top: 0;
+    }
+
+    .task-name {
+        font-size: @font-size-sm;
+        position: relative;
+        color: #153359;
+    }
+
+    .dash-sub-option {
+        color: @text-color-secondary;
+        font-size: @font-size-xs;
+        margin-bottom: 5px;
+    }
+
+    .label {
+        font-weight: 400;
+        text-shadow: 0 0 0 rgba(0,0,0,.2);
+        font-size: 12px;
+
+        &.label-default-line {
+            border: 1px solid #d5dddf;
+            background: @white-bg;
+            color: #90a4ae;
+        }
+
+        &.label-default {
+            background-color: #d5dddf;
+            color: #546e7a;
+        }
+    }
+}
+
+.dashboard-tab {
+    background: @white-bg;
+    border-radius: 2px 2px 0 0;
+
+    &.nav-pills {
+        li {
+            a {
+                color: #90a4ae;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                font-size: @font-size-sm;
+            }
+
+            &.active,
+            &:hover {
+                a {
+                    -webkit-box-shadow: 0 2px 0 0 rgba(0,190,243,1);
+                    -moz-box-shadow: 0 2px 0 0 rgba(0,190,243,1);
+                    box-shadow: 0 2px 0 0 rgba(0,190,243,1);
+                    background-color: transparent;
+                    color: @brand-primary-dark;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+.dashboard-tab-container {
+    .tab-content {
+        padding: 0;
+        border: 0;
+        border-radius: 0 0 2px 2px;
+        overflow: auto;
+        height: 550px;
+    }
+}
+
+.border-b {
+    border-bottom: 1px solid @border-color-secondary;
+}
+
+.grid-title {
+    font-size: @font-size-sm;
+    color: @brand-primary;
+    text-transform: uppercase;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.activities-widget-btns {
+    .btn-default {
+        color: @secondary-text;
+
+        &.active {
+            color: @default-text;
+
+            b {
+                color: @secondary-text;
+            }
+        }
+
+        &.dropdown-toggle {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        &:active:focus,
+        &:focus {
+            background-color: #fff!important;
+        }
+    }
+}
+
+.hide-forever {
+    top: 19px;
+    right: 0;
+}
+
+.navi-user-thumb {
+    & > a {
+        padding: 11px 10px !important;
+        height: 50px!important;
+    }
+
+    .thumb-xs {
+        width: 30px!important;
+    }
+}
+
+.on-boarding-wrapper{
+  background:  url('/assets/images/dashboard-widget-bg.jpg') #fff left bottom repeat-x;
+  border-radius: 3px;
+  background-size: 100% auto;
+    h1{ font-weight: 300; font-size: 24px;}
+  .steps-wrapper{
+    li{ list-style: none;
+      border: 1px solid @border-color;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      padding: 20px;
+      color:@default-text;
+      display: flex;
+      background: @white-bg;
+      .content-block{
+        flex: 1;
+        justify-content: center;
+        align-self:center;
+      }
+      &:hover{
+        border:1px solid #d5dee5;
+      }
+    }
+    .boardingiconBlock{
+      border-radius: 30px;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      padding: 10px 0;
+      &.step1{ background: #20c1fb;}
+      &.step2{ background: #ffb516;}
+      &.step3{ background: #9169ff;}
+      &.checked{
+        background: @brand-success;
+        color: @white-bg;
+        font-size: 26px;
+        line-height: 42px;
+      }
+    }
+  }
+
+  .boardingicon {
+      background: url('/assets/images/on-boarding-steps-icons.png') no-repeat;
+      background-size: 100%;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+
+      &.step1 {
+          background-position: left -40px;
+      }
+
+      &.step2 {
+          background-position: left 0px;
+      }
+
+      &.step3 {
+          background-position: left -160px;
+      }
+
+  }
+  h3{ padding: 0; color: @brand-warning;}
+  .hide-forever{ text-decoration: underline;}
+  .download-links{
+    a{ float: left; margin: 0 10px 10px 0}
+  }
+  .support-arrow{
+    font-size: @font-size-xxs;
+    font-weight: bold;
+    margin-left: 2px;
+  }
+
+}

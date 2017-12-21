@@ -1,8 +1,15 @@
+body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 .navbar-collapse, .app-content, .app-footer{ margin-left: 0;}
+.app-header-fixed{ padding-top: 0;}
 #main {
-    padding-left: 0;
+    padding-left: 0; position: relative;
 }
+#main:after { content: ""; left: 0;  top:0; width: 100%; position: absolute; background-color:#1e93bf; height: 200px; z-index: 1;}
 #main .row{ margin: 0;}
+.chat-page-bg{ padding-top: 50px;}
+.chat-page{ padding:0; margin-bottom: 50px; z-index: 99; position: relative; -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75); }
 .chat-page .chat-userlist {
     /*width: 23%;*/
     background: #fff;
@@ -243,7 +250,7 @@
     margin-bottom: 0;
 }
 .chat-page .chat-user-detail {
-    background: #fff;
+
     height: 100vh;
 }
 .chat-page .chat-user-detail .user-info {
@@ -2201,3 +2208,20 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog {
 ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
     border-radius: 0;
 }
+
+
+.chat-feed{ background-color: #edf5f8; height: 100vh;}
+.chat-feed .time{ display: block; font-size: 12px;color:#91aec0;}
+.chat-feed .activity-list-main{ padding: 10px 18px;}
+.chat-feed .activity-list-main .activity-list{ margin-bottom: 20px; position: relative; padding-left: 20px;}
+.chat-feed .activity-list-main .activity-list .name{ font-weight: 600;}
+.chat-feed .activity-list-main .activity-list:after{ content:""; position: absolute; left: 0;  top:0; border-left: solid 3px  #28bebd; width: 3px; height: 100%; }
+.top-menu{ width: 100%; background-color:#fff; height: 50px; border-bottom: solid 1px #edeff5; padding: 10px; }
+.top-menu ul{ padding: 0; margin: 0;}
+.top-menu ul li{ display: inline-block;}
+.top-menu ul li a{ font-size: 20px;}
+
+.logo{  display: inline-block; border-right: solid 1px #edeff5; padding-right: 10px; max-width: 170px;}
+.logo img{ max-height: 40px;}
+.app-content-body{ background-color: #edf5f8;}
+.footer{ background-color:#1f8fbf; padding: 20px; color: #fff;}

@@ -1,48 +1,46 @@
 /*layout*/
-html, body{
+body,
+html {
 	width: 100%;
 	height: 100%;
 }
-body{
-	overflow-x: hidden;
-}
-
-.app{
+.app {
 	height: auto;
 	min-height: 100%;
 	width: 100%;
 	position: relative;
-	&:before{
+	&:before {
 		content: "";
 		position: absolute;
 		width: inherit;
 		top: 0;
 		bottom: 0;
 		z-index: -1;
-		background-color: @body-bg;
+		background-color: @color-value-10;
 		border: inherit;
 		display: block;
 	}
 }
-
-.app-header-fixed{
+.app-header-fixed {
 	padding-top: @app-header-height;
-	.app-header{
+	.app-header {
 		position: fixed;
 		top: 0;
+		left: 0;
 		width: 100%;
+		min-width:980px !important;
+		z-index: 100;
 	}
 }
-
-.app-header{
+.app-header {
 	z-index: 1025;
 	border-radius: 0;
+	background: @brand-dark2;
 }
-
 // menu
-.app-aside{
+.app-aside {
 	float: left;
-	&:before{
+	&:before {
 		content: "";
 		position: absolute;
 		width: inherit;
@@ -53,8 +51,7 @@ body{
 		border: inherit;
 	}
 }
-
-.app-aside-footer{
+.app-aside-footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -63,22 +60,19 @@ body{
 	.app-aside-folded & {
 		max-width: @app-aside-folded-width;
 	}
-	~ div{
+	~ div {
 		padding-bottom: 50px;
 	}
 }
-
-.app-aside-right{
+.app-aside-right {
 	padding-bottom: @app-header-height;
 }
-
 // content
-.app-content{
+.app-content {
 	height: 100%;
 	.clearfix();
 }
-
-.app-content-full{
+.app-content-full {
 	position: absolute;
 	top: @app-header-height;
 	bottom: @app-header-height;
@@ -87,52 +81,52 @@ body{
 	padding: 0 !important;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	&.h-full{
+	&.h-full {
 		bottom: 0;
 		height: auto;
-	}	
+	}
 }
-
-.app-content-body{
-	padding-bottom: @app-header-height;
+.app-content-body {
 	float: left;
 	width: 100%;
 }
-
 // footer
-.app-footer{
+.app-footer {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 1005;
-	&.app-footer-fixed{
+	&.app-footer-fixed {
 		position: fixed;
 	}
 }
-
-.hbox{
+.hbox {
 	display: table;
 	table-layout: fixed;
 	border-spacing: 0;
 	width: 100%;
 	height: 100%;
-	.col{
+	.col {
 		display: table-cell;
 		vertical-align: top;
 		height: 100%;
 		float: none;
 	}
 }
-
-.v-middle{vertical-align: middle !important;}
-.v-top{vertical-align: top !important;}
-.v-bottom{vertical-align: bottom !important;}
-
-.vbox{
+.v-middle {
+	vertical-align: middle !important;
+}
+.v-top {
+	vertical-align: top !important;
+}
+.v-bottom {
+	vertical-align: bottom !important;
+}
+.vbox {
 	display: table;
-	border-spacing:0;
-	position: relative;	
+	border-spacing: 0;
+	position: relative;
 	width: 100%;
 	height: 100%;
 	min-height: 240px;
@@ -143,7 +137,7 @@ body{
 			position: relative;
 			height: 100%;
 			width: 100%;
-			-webkit-overflow-scrolling:touch;
+			-webkit-overflow-scrolling: touch;
 			overflow: auto;
 			.ie & {
 				display: table-cell;
@@ -158,11 +152,9 @@ body{
 		}
 	}
 }
-
 // navbar
-
-.navbar{
-	.navbar-form-sm{
+.navbar {
+	.navbar-form-sm {
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
@@ -170,26 +162,29 @@ body{
 	border-radius: 0;
 	margin: 0;
 }
-
-.navbar-md{
+.navbar-md {
 	min-height: @app-header-md-height;
-	.navbar-btn{
+	.navbar-btn {
 		margin-top: 13px;
 	}
-	.navbar-form{
+	.navbar-form {
 		margin-top: 15px;
 	}
-	.navbar-nav > li > a{
+	.navbar-nav > li > a {
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
-	.navbar-brand{
-		line-height: 60px;
+	.navbar-brand {
+		line-height: 46px;
 	}
 }
+.navbar-header {
 
-.navbar-header{
-	> button{
+	@media (min-width: 100px) {
+			float: left;
+	}
+
+	> button {
 		text-decoration: none;
 		line-height: 30px;
 		font-size: 16px;
@@ -198,224 +193,36 @@ body{
 		background-color: transparent;
 	}
 }
-
-.navbar-brand{
+.navbar-brand {
 	float: none;
 	text-align: center;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 500;
 	height: auto;
-	line-height: @app-header-height;
+	line-height:46px;
 	display: inline-block;
-	padding: 0 20px;
-	&:hover{
+	padding: 0 15px;
+
+	&:hover {
 		text-decoration: none;
 	}
-	img{
+	img {
 		max-height: 20px;
-		margin-top: -4px;
 		vertical-align: middle;
 		display: inline;
-	}	
-}
-
-@media (min-width: 768px) {
-	.app-aside,
-	.navbar-header {
-		width: @app-aside-width;
-	}
-	.navbar-collapse,
-	.app-content,
-	.app-footer{
-		margin-left: @app-aside-width;
-	}
-
-	.app-aside-right{
-		position: absolute;
-		top: @app-header-height;
-		bottom: 0;
-		right: 0;
-		z-index: 1000;
-		&.pos-fix{
-			z-index: 1010;
-		}
-	}
-
-	.visible-folded{display: none;}
-
-	.app-aside-folded{
-		.hidden-folded{
-			display: none !important;
-		}
-		.visible-folded{
-			display: inherit;
-		}
-		.text-center-folded{
-			text-align: center;
-		}
-		.pull-none-folded{
-			float: none !important;
-		}
-		.w-auto-folded{
-			width: auto;
-		}
-
-		.app-aside,
-		.navbar-header {
-			width: @app-aside-folded-width;
-		}
-		.navbar-collapse,
-		.app-content,
-		.app-footer{
-			margin-left: @app-aside-folded-width;
-		}
-		.app-header{
-			.navbar-brand{
-				display: block;
-				padding: 0;
-			}
-		}
-		
-	}
-
-	.app-aside-fixed{
-		.app-aside:before{
-			position:fixed;
-		}
-		.app-header{
-			.navbar-header{
-				position: fixed;
-			}			
-		}
-		.aside-wrap{
-			position: fixed;
-			overflow: hidden;
-			top: @app-header-height;
-			bottom: 0;
-			left: 0;
-			width: @app-aside-width - 1;
-			z-index: 1000;
-			.navi-wrap{
-				width: @app-aside-width + @scroll-bar-width;
-				position: relative;
-				height: 100%;
-				overflow-x:hidden;
-				overflow-y: scroll;
-				-webkit-overflow-scrolling: touch;
-				&::-webkit-scrollbar {
-				  -webkit-appearance: none;
-				}
-				&::-webkit-scrollbar:vertical {
-				  width: @scroll-bar-width;
-				}
-				> *{
-					width: @app-aside-width;
-				}
-			}
-			.smart & .navi-wrap{
-				width: @app-aside-width;
-			}
-		}
-		&.app-aside-folded{
-			.app-aside{
-				position: fixed;
-				top: 0;
-				bottom: 0;
-				z-index: 1010;
-			}
-			.aside-wrap{
-				width: @app-aside-folded-width - 1;
-				.navi-wrap{
-					width: @app-aside-folded-width + @scroll-bar-width;
-					> *{
-						width: @app-aside-folded-width;
-					}
-				}
-				.smart & .navi-wrap{
-					width: @app-aside-folded-width;
-				}
-			}
-		}
-	}
-
-	.bg-auto{
-		&:before{
-			content: "";
-			position: absolute;
-			width: inherit;
-			top: 0;
-			bottom: 0;
-			z-index: -1;
-			background-color: inherit;
-			border: inherit;			
-		}
-		&.b-l:before{
-			margin-left: -1px;
-		}
-		&.b-r:before{
-			margin-right: -1px;
-		}
-	}
-
-	.col.show{
-		display: table-cell !important;
 	}
 }
-
-// sm
-@media (min-width: 768px) and (max-width: 991px) {
-	.hbox-auto-sm{
-		display: block;
-		> .col{
-			width: auto;
-			height: auto;
-			display: block;
-			&.show{
-				display: block !important;
-			}
-		}
-
-	}
+.sidebar,.middle-content {
+	background: #fff;
+	-webkit-box-shadow: @bottom-shadow;
+	-moz-box-shadow: @bottom-shadow;
+	box-shadow: @bottom-shadow;
 }
-// xs
-@media (max-width: 767px) {
-	.app-aside{
-		float: none;
-	}
-	.app-content-full{
-		width: 100% !important;
-	}
-	.hbox-auto-xs{
-		display: block;
-		> .col{
-			width: auto;
-			height: auto;
-			display: block;
-		}
-	}
-	.navbar-nav{
-		margin-top: 0;
-		margin-bottom: 0;
-		> li > a{
-			box-shadow:0 -1px 0 rgba(0,0,0,0.1);
-			.up{
-				top: 0;
-			}
-			.avatar{
-				width: 30px;
-				margin-top: -5px;
-			}
-		}
-		.open .dropdown-menu{
-			background-color: #fff;
-		}
-	}
-	.navbar-form{
-		box-shadow:0 -1px 0 rgba(0,0,0,0.1);
-		margin-top: 0 !important;
-		margin-bottom: 0 !important;
-		.form-group{
-			margin-bottom: 0;
-		}
-	}
-}
+
+[data-hover="dropdown"]{
+		&:hover{
+				& > .dropdown-menu{
+			    display: block;
+			  }
+      }
+  }

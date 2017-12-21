@@ -1,0 +1,59 @@
+sm-tag {
+	.form-control {
+		border: 1px solid @border-color-secondary;
+		height: auto;
+		box-shadow: none;
+		padding: 1px !important;
+		text-align: left;
+		&.ng2-tag-input-focus{
+			box-shadow: 0 1px #0d8bff !important;
+		}
+	}
+
+	rl-tag-input-item {
+		background: @color-value-10 !important;
+		line-height: 28px !important;
+		height: auto !important;
+		font-size: @font-size-base !important;
+		margin: 3px !important;
+
+		.ng2-tag-input-remove {
+			background: transparent !important;
+			color: #000 !important;
+			&:active{
+				color: #ff0000 !important
+			}
+
+		}
+		&.ng2-tag-input-item-selected{
+			background: #fe9090 !important;
+			color: #000 !important;
+
+		}
+	}
+
+	.ng2-tag-input-field {
+		padding: 6px 6px !important;
+		font-size: @font-size-base !important;
+	}
+
+	slabel {
+		line-height: 28px;
+	}
+	rl-tag-input-autocomplete{
+		 width: 100%;
+		 padding: 8px;
+		 .rl-autocomplete-item{ background: #fff !important;
+			 line-height: 28px !important;
+			 height: auto !important;
+			 font-size: @font-size-sm;
+			 cursor: pointer;
+			 &:hover{
+				 background: #0097cf !important;
+				 color: #fff;
+			 }
+		 }
+	}
+
+
+}
