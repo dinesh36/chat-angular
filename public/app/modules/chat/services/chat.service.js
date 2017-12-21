@@ -12,6 +12,17 @@
 		};
 
 		function init() {
+			var socket = io();
+			$rootScope.$on('SEND_MESSAGE', function(event,data){
+				console.log(data.data);
+				socket.emit('new message', data.data);
+			});
+
+			socket.on('new message', function (data) {
+				console.log('here in message');
+				console.log(data);
+				$rootScope.$broadcast('NEW_MESSAGE', {action:'newMessage', data:data});
+			});
             setInterval(function () {
                 var data = {moduleId:1,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Contact'};
                 $rootScope.$broadcast('FEEDS', {action:'feeds', data:data});
