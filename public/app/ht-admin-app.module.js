@@ -32,6 +32,7 @@
 		'MessageList',
 		'MessageSender',
 		'ChatMain',
-		'ChatFeed'
+		'ChatFeed',
+		'ChatWindow'
 	]);
 })();

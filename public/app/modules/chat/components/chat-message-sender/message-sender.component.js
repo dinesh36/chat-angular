@@ -32,7 +32,8 @@
      */
     function Controller($scope, _) {
         var vm = this;
-
+        vm.sendMessage = sendMessage;
+        vm.uploadFile = uploadFile;
         activate();
 
         /**
@@ -41,6 +42,16 @@
          * @ticket BOMB-1491, BOMB-1933
          */
         function activate() {
+        }
+
+        function sendMessage(form){
+            console.log(vm.message);
+            console.log(vm.message);
+
+        }
+
+        function uploadFile(){
+            console.log('uploadFile')
         }
     }
 })();
