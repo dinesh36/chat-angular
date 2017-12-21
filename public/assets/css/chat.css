@@ -2225,3 +2225,16 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 .logo img{ max-height: 40px;}
 .app-content-body{ background-color: #edf5f8;}
 .footer{ background-color:#1f8fbf; padding: 20px; color: #fff;}
+
+.livechat-main{  z-index: 99;}
+.chat-icon{  background: url(/assets/img/chat-icon.png) top left no-repeat; position: absolute;  right: 10px;  bottom: 60px;}
+.livechat-list-main{ position: absolute; right: 0; bottom: 150px; width: 370px; z-index: 99; background-color: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75); border-radius: 10px; right: 20px; }
+.livechat-text{ color: #000;}
+.livechat-list{ padding: 10px;}
+.livechat-list:hover{ background-color:#f7f8fa; }
+.livechat-list .livechat-img{ display: inline-block; width: 32px; height: 31px; border-radius: 50%; overflow: hidden; vertical-align: middle; }
+.livechat-list .livechat-img img{ max-width: 100%;}
+.livechat-list .livechat-text{ display: inline-block;  vertical-align: middle; padding-left: 10px;}
+.livechat-list-main .livechat-list-title{ background-color: #00c0f3; color: #fff; padding: 20px; border-radius: 10px 10px 0 0; }
