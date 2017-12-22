@@ -453,10 +453,10 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     float: right;
     margin-left: 0;
     margin-right: 15px;
-    background-color: #6a7fe8;
+    background-color: #153359;
     color: #fff;
     border-radius: 3px;
-    border-color: #6a7fe8;
+    border-color: #153359;
 }
 .chat-page .chat-window .chattext-list li.odd .chatbg:after,.chattext-list li.odd .chatbg:after {
     left: 100%;
@@ -468,7 +468,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     position: absolute;
     pointer-events: none;
     border-color: rgba(106, 127, 232, 0);
-    border-left-color: #6a7fe8;
+    border-left-color: #153359;
     border-width: 7px;
     margin-top: -7px;
 }
@@ -482,7 +482,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     position: absolute;
     pointer-events: none;
     border-color: rgba(0, 167, 254, 0);
-    border-left-color: #6a7fe8;
+    border-left-color: #153359;
     border-width: 8px;
     margin-top: -8px;
 }
