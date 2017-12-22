@@ -53,7 +53,6 @@
                 $scope.$apply();
             });
             $rootScope.$on('NEW_MESSAGE', function(event,data){
-                console.log(data.data);
                 if(data.data.message){
                     if(data.data.message.msgFrom == $location.search().id){
                         data.data.message.isLoggingUser = true;
@@ -61,7 +60,6 @@
                         data.data.message.isLoggingUser = false;
                     }
                 }
-                console.log(data.data.message )
                 vm.messages.push(data.data.message);
                 $scope.$apply();
             });

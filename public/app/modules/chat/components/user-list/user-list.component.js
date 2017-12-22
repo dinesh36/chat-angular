@@ -50,7 +50,6 @@
         vm.users = {};
         vm.listView = true;
         vm.userDetails = userDetails;
-        vm.getChatDetails = getChatDetails;
         activate();
 
         /**
@@ -73,11 +72,10 @@
             //vm.userId = ;
             getActiveUser(parseInt(user.id));
             //vm.users = {users:vm.userList,id:vm.userId};
-            $rootScope.$broadcast('userChange',user);
-        }
-
-        function getChatDetails(user){
-            vm.listView = false;
+            setTimeout(function(){
+                $rootScope.$broadcast('userChange',user)
+            },1000);
+            //$rootScope.$broadcast('userChange',user);
         }
 
         function getActiveUser(id){

@@ -95,8 +95,20 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 .chat-page .chat-window-main {
     /*width: 51%;*/
 }
+.chat-window-mini .chat-window-main{ width: 100%; padding: 0;}
+.chat-window-mini .chat-box{bottom: 0;
+    position: absolute;
+    width: 100%;}
+.chat-window-mini .chat-window{ height: 200px; overflow-y: auto;}
+
 .chat-page .chat-window-main .chat-window{background-color: #edf5f8;}
 .chat-page .chat-window .chattitle .chat-userimg{    border-radius: 50%;
+    overflow: hidden;
+    width: 33px;
+    height: 33px;
+    float: left;
+}
+.chat-window-mini  .chat-window .chattitle .chat-userimg{    border-radius: 50%;
     overflow: hidden;
     width: 33px;
     height: 33px;
@@ -570,35 +582,35 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     vertical-align: middle;
     margin-top: 5px;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click0 {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click0 , .click0 {
     background: url(/assets/img/attach-icon.png) left top no-repeat;
     width: 15px;
     height: 15px;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1 {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1,.click1 {
     background: url(/assets/img/physio-sprite-img.png) -841px -50px no-repeat;
     width: 15px;
     height: 15px;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click2 {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click2 ,.click2 {
     background: url(/assets/img/physio-sprite-img.png) -905px -50px no-repeat;
     width: 15px;
     height: 15px;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3 {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3,.click3 {
     background: url(/assets/img/physio-sprite-img.png) -969px -50px no-repeat;
     width: 15px;
     height: 15px;
     border: none;
     vertical-align: middle;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:focus {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:focus,.click3:focus {
     outline: none;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:hover {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:hover ,click3:hover {
     outline: none;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click4 {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click4, .click4 {
     background: url(/assets/img/physio-sprite-img.png) -1033px -50px no-repeat;
     width: 15px;
     height: 15px;
@@ -1413,50 +1425,50 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 .patient-chat-page .chat-window .chat-box .help-icon i {
     font-size: 16px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content textarea {
+.patient-chat-page .chat-window .chat-box .tab-content textarea,.tab-content textarea {
     border: 0;
     height: 75px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer,.tabpanel-footer {
     background-color: #f7f8fc;
     padding: 7px 15px;
     border-radius: 0 0 5px 5px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer a {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer a,.tabpanel-footer a {
     margin-right: 15px;
     display: inline-block;
     vertical-align: middle;
     margin-top: 5px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1 {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1,.tabpanel-footer .click1 {
     background: url(/assets/img/physio-sprite-img.png) -841px -50px no-repeat;
     width: 15px;
     height: 15px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click2 {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click2 ,.tabpanel-footer .click2 {
     background: url(/assets/img/physio-sprite-img.png) -905px -50px no-repeat;
     width: 15px;
     height: 15px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3 {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3,.tabpanel-footer .click3 {
     background: url(/assets/img/physio-sprite-img.png) -969px -50px no-repeat;
     width: 15px;
     height: 15px;
     border: none;
     vertical-align: middle;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:focus {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:focus,.tabpanel-footer .click3:focus {
     outline: none;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:hover {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:hover ,.tabpanel-footer .click3:hover {
     outline: none;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click4 {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click4,.tabpanel-footer .click4 {
     background: url(/assets/img/physio-sprite-img.png) -1033px -50px no-repeat;
     width: 15px;
     height: 15px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click5 {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click5 ,.tabpanel-footer .click5 {
     background: url(/assets/img/physio-sprite-img.png) -1097px -50px no-repeat;
     width: 15px;
     height: 15px;
@@ -1466,7 +1478,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     width: 15px;
     height: 15px;
 }
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .btn {
+.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .btn, .tabpanel-footer .btn {
     background-color: #ffae00;
     font-size: 14px;
     font-weight: 600;
@@ -2262,3 +2274,5 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 .model-body .deal-list{ padding: 5px;}
 
 .dz-preview { display: none;}
+
+.share-icon{float: right;}
