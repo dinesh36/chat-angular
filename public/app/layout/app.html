@@ -2,6 +2,7 @@
   <ul>
   <li><a href="/#/app/dashboard" class="logo"><img src="/assets/img/logo.png"/> </a></li>
   <li><a href="/#/app/chat"> Chat</a></li>
+    <li><a href="/#/app/send-feeds"> Send Feed</a></li>
 </ul>
 </div>
 
@@ -22,7 +23,7 @@
   <div class="livechat-main">
     <div class="chat-icon"><a href="javascript:void(0);"><img src="/assets/img/chat-icon.png"/> </a> </div>
     <div class="livechat-list-main">
-      <div class="livechat-list-title">Conversations</div>
+      <div class="livechat-list-title">Conversations <a onclick="hideDiv()" class="close-icon pull-right">X</a></div>
       <user-chat show-in-chat-window="true"></user-chat>
     </div>
   </div>
@@ -35,4 +36,7 @@
             $(".livechat-list-main").toggle();
         });
     });
+    function hideDiv() {
+        $(".livechat-list-main").hide();
+    }
 </script>

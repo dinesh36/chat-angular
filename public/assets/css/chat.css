@@ -1583,7 +1583,7 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 .logo{  display: inline-block; border-right: solid 1px #edeff5; padding-right: 10px; max-width: 170px;}
 .logo img{ max-height: 40px;}
 .app-content-body{ background-color: #edf5f8;}
-.footer{ background-color:#1f8fbf; padding: 20px; color: #fff;}
+.footer{ background-color:#1f8fbf; padding: 20px; color: #fff; position: fixed; bottom: 0; width: 100%;}
 
 .livechat-main{  z-index: 99;}
 .chat-icon{  background: url(/assets/img/chat-icon.png) top left no-repeat; position: absolute;  right: 10px;  bottom: 60px;}
@@ -1610,10 +1610,19 @@ ngb-modal-window.image-info-popup.modal.fade .modal-dialog .modal-body {
 .ngdialog.ngdialog-theme-default .ngdialog-content{ padding: 0;}
 .modal-header{ background-color: #00c0f3; color: #fff; border-radius: 5px 5px 0 0;}
 .modal-header h4{ width: 80%; display: inline-block; padding: 0; margin: 0;}
-.modal-header .close-icon{ width: 10px; display: inline-block;}
+.modal-header .close-icon{ width: 10px; display: inline-block; }
 .model-body { padding: 15px;}
 .model-body .deal-list{ padding: 5px;}
 
 .dz-preview { display: none;}
 
 .share-icon{float: right;}
+
+.back-btn{ position: absolute;  top:80px; left: 20px; color: #1c80a5;}
+.back-btn:hover{ color: #1e93bf;}
+.livechat-main .close-icon{font-size: 14px; font-weight: 600;}
+
+.dashboard-page{ box-shadow: none; min-height: 400px;}
+.dashboard-page .big-logo{ text-align: center; width: 100%; display: block; margin-top: 300px; }
+.links{ width: 100%; text-align: center; margin: 20px 0;}
+.links h2{ display: inline-block; margin: 30px 20px;}
