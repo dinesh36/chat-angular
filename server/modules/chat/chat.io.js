@@ -1,12 +1,18 @@
 // Chatroom
 function init(io){
-	var sockets = [];
+	var sockets = {};
 
 	var numUsers = 0;
 
 	io.on('connection', function (socket) {
 		var addedUser = false;
-
+		var userId = socket.request._query['userId'];
+		sockets[userId] = socket;
+		socket.userId = userId;
+		socket.broadcast.emit('status', {
+			userId: socket.userId,
+			status: 'online'
+		});
 		// when the client emits 'new message', this listens and executes
 		socket.on('new message', function (data) {
 			// we tell the client to execute 'new message'
@@ -22,6 +28,15 @@ function init(io){
 				username: socket.username,
 				message: data
 			});
+		});
+
+		socket.on('status',function(data){
+			var userId = data.userId;
+			if(sockets[userId]){
+				socket.emit('status',{userId:userId,status:'online'});
+			} else {
+				socket.emit('status',{userId:userId,status:'offline'});
+			}
 		});
 
 		socket.on('screen share', function (data) {
@@ -75,9 +90,13 @@ function init(io){
 
 		// when the user disconnects.. perform this
 		socket.on('disconnect', function () {
+			socket.broadcast.emit('status', {
+				userId: socket.userId,
+				status: 'offline'
+			});
+			delete sockets[socket.userId];
 			if (addedUser) {
 				--numUsers;
-
 				// echo globally that this client has left
 					socket.broadcast.emit('user left', {
 					username: socket.username,

@@ -25,7 +25,7 @@
                 <li ng-repeat="list in vu.userList" ng-class="list.active ? 'active':''" ng-click="vu.userDetails(list)">
                     <a href="javascript:void(0)">
                         <div class="chat-user-img-main">
-                            <div ng-class="list.active ? 'online':''" ></div>
+                            <div ng-class="list.status==='online' ? 'online':''" ></div>
                             <span class="chat-user-img">
                               <img src="assets/img/user-img2.jpg"/>
                            </span>
