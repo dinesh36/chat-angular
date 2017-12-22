@@ -34,7 +34,7 @@
 			.state('app.dashboard', {
 				url:'/dashboard',
 				controllerAs:'vm',
-				template:'<div>hello</div>'
+				templateUrl:'/app/layout/dashboard.html'
 			});
 	}
 
