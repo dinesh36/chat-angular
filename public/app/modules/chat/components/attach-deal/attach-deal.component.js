@@ -25,8 +25,8 @@
         activate();
 
         function activate() {
-            vm.dealList = [{id:1, title:'deal 1', value:2500},{id:2, title:'deal 2', value:2520},{id:3, title:'deal 3', value:250},{id:4, title:'deal 4', value:2100},
-                {id:5, title:'deal 5', value:250550},{id:6, title:'deal 6', value:232500},{id:7, title:'deal 7', value:13300},{id:8, title:'deal 8', value:100}];
+            vm.dealList = [{id:611, title:'Custom colored bullets', value:2500},{id:610, title:'David Fairclough Deal', value:2520},{id:597, title:'iPhone deal', value:250},{id:586, title:'test deal with this page', value:2100},
+                {id:604, title:'Only Won', value:250550},{id:601, title:'Deal', value:232500},{id:612, title:'overdue deal', value:13300},{id:590, title:'call today', value:100}];
             console.log(vm.dealList)
         }
 
