@@ -95,20 +95,20 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 .chat-page .chat-window-main {
     /*width: 51%;*/
 }
-.chat-window-mini .chat-window-main{ width: 100%; padding: 0;}
+.chat-window-mini .chat-window-main{ width: 100%; padding: 0; height: 400px; overflow-y: auto;}
 .chat-window-mini .chat-box{bottom: 0;
     position: absolute;
     width: 100%;}
-.chat-window-mini .chat-window{ height: 200px; overflow-y: auto;}
+.chat-window-mini .chat-window{ height: 270px; overflow-y: auto;}
 
-.chat-page .chat-window-main .chat-window{background-color: #edf5f8;}
+.chat-page .chat-window-main .chat-window,.chat-window{background-color: #edf5f8;}
 .chat-page .chat-window .chattitle .chat-userimg{    border-radius: 50%;
     overflow: hidden;
     width: 33px;
     height: 33px;
     float: left;
 }
-.chat-window-mini  .chat-window .chattitle .chat-userimg{    border-radius: 50%;
+.chat-window-mini  .chat-window .chattitle .chat-userimg,.chat-userimg{    border-radius: 50%;
     overflow: hidden;
     width: 33px;
     height: 33px;
@@ -371,7 +371,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     margin: 0 0 25px 0;
     font-weight: 600;
 }
-.chat-page .chat-window .chattitle {
+.chat-page .chat-window .chattitle ,.chattitle {
     width: 100%;
     padding: 16px 10px 15px 10px;
     text-align: center;
@@ -381,7 +381,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     font-size: 18px;
     font-weight: 600;
 }
-.chat-page .chat-window .chattitle i {
+.chat-page .chat-window .chattitle i,.chattitle i {
     font-size: 8px;
     color: #00c272;
     vertical-align: middle;
@@ -394,13 +394,13 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     height: 450px;
 
 }
-.chat-page .chat-window .chattext-list li {
+.chat-page .chat-window .chattext-list li,.chattext-list li {
     margin: 25px 0 0 0;
     list-style: none;
     display: inline-block;
     width: 100%;
 }
-.chat-page .chat-window .chattext-list li .info {
+.chat-page .chat-window .chattext-list li .info , .chattext-list li .info {
     float: left;
     font-size: 12px;
     color: #989bb2;
@@ -408,7 +408,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     width: 100%;
     padding-top: 8px;
 }
-.chat-page .chat-window .chattext-list li .chatbg {
+.chat-page .chat-window .chattext-list li .chatbg,.chatbg {
     float: left;
     font-size: 14px;
     font-weight: normal;
@@ -442,14 +442,14 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 .chat-page .chat-window .chattext-list li .chat-fullimage img {
     max-width: 100%;
 }
-.chat-page .chat-window .chattext-list li.odd .info {
+.chat-page .chat-window .chattext-list li.odd .info ,.chattext-list li.odd .info {
     float: right;
     text-align: right;
     width: 100%;
     padding-left: 0;
     padding-right: 48px;
 }
-.chat-page .chat-window .chattext-list li.odd .chatbg {
+.chat-page .chat-window .chattext-list li.odd .chatbg,.chattext-list li.odd .chatbg {
     float: right;
     margin-left: 0;
     margin-right: 15px;
@@ -458,7 +458,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     border-radius: 3px;
     border-color: #6a7fe8;
 }
-.chat-page .chat-window .chattext-list li.odd .chatbg:after {
+.chat-page .chat-window .chattext-list li.odd .chatbg:after,.chattext-list li.odd .chatbg:after {
     left: 100%;
     top: 20px;
     border: solid transparent;
@@ -472,7 +472,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     border-width: 7px;
     margin-top: -7px;
 }
-.chat-page .chat-window .chattext-list li.odd .chatbg:before {
+.chat-page .chat-window .chattext-list li.odd .chatbg:before,.chattext-list li.odd .chatbg:before {
     left: 100%;
     top: 20px;
     border: solid transparent;
@@ -486,10 +486,10 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     border-width: 8px;
     margin-top: -8px;
 }
-.chat-page .chat-window .chattext-list li.odd .chat-userimg {
+.chat-page .chat-window .chattext-list li.odd .chat-userimg ,.chattext-list li.odd .chat-userimg {
     float: right;
 }
-.chat-page .chat-window .chattext-list li.even .chatbg:after {
+.chat-page .chat-window .chattext-list li.even .chatbg:after,.chattext-list li.even .chatbg:after {
     right: 100%;
     top: 20px;
     border: solid transparent;
@@ -536,12 +536,13 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     border-width: 8px;
     margin-top: -8px;
 }
-.chat-page .chat-window .chat-box {
+.chat-page .chat-window .chat-box,.chat-window .chat-box {
     background-color: #fff;
     border: solid 1px #dfe2f2;
     border-radius: 5px;
     margin: 20px;
 }
+.chat-window-mini .chat-window .chat-box{ margin: 0;}
 .chat-page .chat-window .chat-box .nav-tabs > li > a {
     color: #989bb2;
     font-size: 13px;
@@ -549,6 +550,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     padding: 12px 15px;
     cursor: pointer;
 }
+.chat-window-mini .chat-window .chat-box .tab-content{ margin: 5px;}
 .chat-page .chat-window .chat-box .nav-tabs > li.active > a {
     font-weight: 600;
     color: #666980;
@@ -567,16 +569,16 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
 .chat-page .chat-window .chat-box .help-icon i {
     font-size: 16px;
 }
-.chat-page .chat-window .chat-box .tab-content textarea {
+.chat-page .chat-window .chat-box .tab-content textarea,.chat-window .chat-box .tab-content textarea {
     border: 0;
     height: 75px;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer , .chat-window .chat-box .tab-content .tabpanel-footer {
     background-color: #f7f8fc;
     padding: 7px 15px;
     border-radius: 0 0 5px 5px;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer a {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer a,.chat-window .chat-box .tab-content .tabpanel-footer a {
     margin-right: 15px;
     display: inline-block;
     vertical-align: middle;
@@ -625,7 +627,7 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     width: 15px;
     height: 15px;
 }
-.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .btn {
+.chat-page .chat-window .chat-box .tab-content .tabpanel-footer .btn, .chat-window .chat-box .tab-content .tabpanel-footer .btn {
     font-size: 14px;
     font-weight: 600;
     padding: 5px 12px;
@@ -874,672 +876,10 @@ body{font-family: 'Open Sans', sans-serif; background-color: #edf5f8;}
     padding-right: 0;
     padding-left: 0;
 }
-.patient-chat-page .chatlist ul {
-    padding: 0;
-    margin: 0;
-}
-.patient-chat-page .chatlist ul li {
-    list-style: none;
-    padding: 20px 18px;
-    margin: 0;
-    border-bottom: solid 1px #edeff5;
-}
-.patient-chat-page .chatlist ul li .chat-user-img {
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-.patient-chat-page .chatlist ul li a:hover {
-    text-decoration: none;
-    outline: none;
-}
-.patient-chat-page .chatlist ul li:hover {
-    background: #f2f4fc;
-}
-.patient-chat-page .chatlist ul li.active {
-    background: #f2f4fc;
-}
-.patient-chat-page .chatlist h4 {
-    font-size: 15px;
-    color: #36394d;
-    display: inline-block;
-    vertical-align: middle;
-}
-.patient-chat-page .chatlist h4 span {
-    font-size: 13px;
-    color: #989bb2;
-    display: block;
-}
-.patient-chat-page .chatlist .chat-time {
-    float: right;
-    font-size: 13px;
-    color: #b8bacc;
-}
 .mbn {
     margin-bottom: 0;
 }
-.patient-chat-page .chat-user-detail {
-    background: #fff;
-    height: 100vh;
-    border-left: 1px solid #dfe2f2;
-    border-top: 1px solid #dfe2f2;
-}
-.patient-chat-page .chat-user-detail .user-info {
-    border-bottom: solid 1px #edeff5;
-    padding: 20px 18px;
-}
-.patient-chat-page .chat-user-detail .user-info .user-info-img {
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 56px;
-    height: 56px;
-    vertical-align: middle;
-    margin-right: 16px;
-}
-.patient-chat-page .chat-user-detail .user-info h4 {
-    display: inline-block;
-    vertical-align: middle;
-    width: 128px;
-    color: #36394d;
-    font-size: 15px;
-    padding: 0;
-    margin: 0;
-}
-.patient-chat-page .chat-user-detail .user-info h4 span {
-    color: #989bb2;
-    font-size: 13px;
-    display: block;
-    padding-top: 8px;
-}
-.patient-chat-page .chat-user-detail .user-info-details {
-    padding: 20px 18px;
-    border-bottom: solid 1px #edeff5;
-}
-.patient-chat-page .chat-user-detail .user-info-details h4 {
-    font-size: 14px;
-    color: #666980;
-    padding: 0;
-    margin: 0 0 25px 0;
-    font-weight: 600;
-}
-.patient-chat-page .chat-user-detail .user-info-details .user-info-list {
-    color: #36394d;
-    font-size: 12px;
-    line-height: 28px;
-    display: block;
-    text-align: left;
-}
-.patient-chat-page .chat-user-detail .user-info-details .user-info-list span {
-    font-size: 12px;
-    color: #989bb2;
-    padding-right: 10px;
-    width: 105px;
-    display: inline-block;
-}
-.patient-chat-page .chat-user-detail .user-info-tracks {
-    padding: 20px 18px;
-    border-bottom: solid 1px #edeff5;
-}
-.patient-chat-page .chat-user-detail .user-info-tracks h4 {
-    font-size: 14px;
-    color: #666980;
-    padding: 0;
-    margin: 0 0 25px 0;
-    font-weight: 600;
-}
-.patient-chat-page .chat-user-detail .user-info-tracks h5 {
-    font-size: 14px;
-    color: #36394d;
-    padding: 0;
-    margin: 0 0 12px 0;
-}
-.patient-chat-page .chat-user-detail .user-info-nextaction {
-    padding: 20px 18px;
-    border-bottom: solid 1px #edeff5;
-    height: 100%;
-}
-.patient-chat-page .chat-user-detail .user-info-nextaction a {
-    color: #6a7fe8;
-    line-height: 27px;
-    font-size: 14px;
-    font-weight: normal;
-    text-decoration: none;
-}
-.patient-chat-page .chat-user-detail .user-info-nextaction a i {
-    color: #b8bacc;
-    font-size: 9px;
-    padding-right: 10px;
-    font-weight: bold;
-}
-.patient-chat-page .chat-user-detail .user-info-nextaction h4 {
-    font-size: 14px;
-    color: #666980;
-    padding: 0;
-    margin: 0 0 25px 0;
-    font-weight: 600;
-}
-.patient-chat-page .chat-user-detail .nav-tabs li a {
-    padding: 20px 17px;
-    position: relative;
-    border-bottom: 2px solid transparent;
-    border-radius: 0;
-    color: #989bb2;
-    font-weight: normal;
-}
-.patient-chat-page .chat-user-detail .nav-tabs li a .chat-number {
-    background-color: #f44336;
-    color: #fff;
-    display: inline-block;
-    border-radius: 50%;
-    position: absolute;
-    text-align: center;
-    height: 16px;
-    line-height: normal;
-    font-size: 12px;
-    padding: 0px 5px;
-    right: 5px;
-    top: 10px;
-}
-.patient-chat-page .chat-user-detail .tab-content {
-    padding: 0;
-}
-.patient-chat-page .chat-user-detail .tab-content .tab-pane {
-    padding: 20px;
-}
-.patient-chat-page .chat-user-detail .tab-content .tab-pane .yourcare-team {
-    padding: 20px;
-}
-.patient-chat-page .chat-user-detail .tab-content .tab-pane:first-child {
-    padding: 0;
-}
-.patient-chat-page .chat-user-detail .tab-content p {
-    color: #989bb2;
-}
-.patient-chat-page .chat-user-detail .tab-content .checklist1 {
-    padding: 0;
-    margin: 0;
-}
-.patient-chat-page .chat-user-detail .tab-content .checklist1 li {
-    padding: 0;
-    margin: 30px 0 0 0;
-    list-style: none;
-}
-.patient-chat-page .chat-user-detail .tab-content .checklist1 li label {
-    color: #36394d;
-    font-size: 16px;
-    font-weight: normal;
-    vertical-align: top;
-    padding-left: 15px;
-}
-.patient-chat-page .chat-user-detail .tab-content .checklist1 li label span {
-    color: #989bb2;
-    font-size: 13px;
-    display: block;
-}
-.patient-chat-page .chat-user-detail .tab-content .checklist1 li .icheckbox_flat-green, .patient-chat-page .chat-user-detail .tab-content .checklist1 li .iradio_flat-green {
-    margin-top: 5px;
-}
-.patient-chat-page .chat-user-detail .tab-content ul {
-    padding: 0;
-    margin: 0;
-}
-.patient-chat-page .chat-user-detail .tab-content ul li {
-    padding: 0;
-    margin: 30px 0 0 0;
-    list-style: none;
-}
-.patient-chat-page .chat-user-detail .tab-content ul li .download-icon {
-    float: right;
-}
-.patient-chat-page .chat-user-detail .tab-content ul li a {
-    text-decoration: none;
-    color: #36394d;
-    font-weight: normal;
-    font-size: 14px;
-}
-.patient-chat-page .chat-user-detail .tab-content ul li a img {
-    margin-right: 10px;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .company-logo {
-    width: 65px;
-    margin-right: 20px;
-    display: inline-block;
-    vertical-align: top;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .company-logo img {
-    max-width: 100%;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right {
-    display: inline-block;
-    width: 238px;
-    vertical-align: top;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right h4 {
-    padding: 0;
-    margin: 0;
-    color: #36394d;
-    font-size: 16px;
-    font-weight: 600;
-    padding-bottom: 10px;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right p {
-    color: #666980;
-    font-size: 14px;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number {
-    color: #666980;
-    font-size: 14px;
-    font-weight: normal;
-    display: block;
-    margin-top: 20px;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number i {
-    color: #b8bacc;
-    font-size: 16px;
-    margin-right: 10px;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number a {
-    color: #666980;
-    text-decoration: none;
-    font-weight: normal;
-}
-.patient-chat-page .chat-user-detail .tab-content .yourcare-team .info-right .number a.webline {
-    color: #6a7fe8;
-    float: right;
-}
-.patient-chat-page .chat-user-detail .tab-content .dr-list {
-    margin-top: 40px;
-}
-.patient-chat-page .chat-user-detail .tab-content .dr-list h4 {
-    color: #666980;
-    font-size: 14px;
-    font-weight: normal;
-    padding: 0 20px;
-    margin: 0 0 20px 0;
-}
-.patient-chat-page .chat-user-detail .tab-content .chatlist li {
-    padding: 20px 18px;
-    margin: 0;
-}
-.patient-chat-page .chat-user-detail .tab-content .chatlist li a h4 {
-    margin: 0;
-    padding: 0;
-}
-.patient-chat-page .chat-user-detail .tab-content .chatlist li a h4 span {
-    margin-top: 10px;
-}
-.patient-chat-page .chat-window .chattitle {
-    width: 100%;
-    padding: 11px 20px 10px 20px;
-    text-align: center;
-    background-color: #fff;
-    border-top: solid 1px #edeff5;
-    border-bottom: solid 1px #edeff5;
-    color: #36394d;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: left;
-}
-.patient-chat-page .chat-window .chattitle i {
-    font-size: 8px;
-    color: #00c272;
-    vertical-align: middle;
-    padding-right: 10px;
-}
-.patient-chat-page .chat-window .chattitle .dr-name {
-    text-align: left;
-    float: left;
-    width: 20%;
-}
-.patient-chat-page .chat-window .chattitle .dr-name .dr-img {
-    width: 33px;
-    height: 33px;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 17px;
-}
-.patient-chat-page .chat-window .chattitle .chat-top-tab {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    margin-top: 5px;
-}
-.patient-chat-page .chat-window .chattitle .chat-top-tab a {
-    color: #666980;
-    font-size: 14px;
-    font-weight: normal;
-    padding: 5px 13px;
-    display: inline-block;
-    margin: 0 5px;
-}
-.patient-chat-page .chat-window .chattitle .chat-top-tab a:hover {
-    background-color: #ffb300;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-}
-.patient-chat-page .chat-window .chattitle .chat-top-tab a:focus {
-    text-decoration: none;
-}
-.patient-chat-page .chat-window .chattitle .chat-top-tab a.active {
-    background-color: #ffb300;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-}
-.patient-chat-page .chat-window .chattitle .chat-date {
-    float: right;
-    width: 20%;
-    color: #666980;
-    font-size: 14px;
-    font-weight: normal;
-    text-align: right;
-}
-.patient-chat-page .chat-window .chattitle .chat-date span {
-    color: #989bb2;
-    display: block;
-}
-.patient-chat-page .chat-window .chattext-list {
-    padding: 0px 10px;
-    margin: 0px !important;
-    overflow-y: auto;
-}
-.patient-chat-page .chat-window .chattext-list li {
-    margin: 25px 0 0 0;
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-}
-.patient-chat-page .chat-window .chattext-list li .info {
-    float: left;
-    font-size: 12px;
-    color: #989bb2;
-    padding-left: 48px;
-    width: 100%;
-    padding-top: 8px;
-}
-.patient-chat-page .chat-window .chattext-list li .chatbg {
-    float: left;
-    font-size: 14px;
-    font-weight: normal;
-    margin-left: 15px;
-    position: relative;
-    padding: 0;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #dfe2f2;
-    background-color: #fff;
-    border-radius: 3px;
-    word-wrap: break-word;
-    max-width: 80%;
-}
-.patient-chat-page .chat-window .chattext-list li .chatbg .chattext {
-    padding: 15px;
-    display: block;
-}
-.patient-chat-page .chat-window .chattext-list li .chat-userimg {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 33px;
-    height: 33px;
-    float: left;
-}
-.patient-chat-page .chat-window .chattext-list li .chat-userimg img {
-    height: 100%;
-    width: 100%;
-}
-.patient-chat-page .chat-window .chattext-list li .chat-fullimage {
-    padding-top: 10px;
-    width: 100%;
-    display: block;
-}
-.patient-chat-page .chat-window .chattext-list li .chat-fullimage img {
-    max-width: 100%;
-}
-.patient-chat-page .chat-window .chattext-list li.odd .info {
-    float: right;
-    text-align: right;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 48px;
-}
-.patient-chat-page .chat-window .chattext-list li.odd .chatbg {
-    float: right;
-    margin-left: 0;
-    margin-right: 15px;
-    background-color: #6a7fe8;
-    color: #fff;
-    border-radius: 3px;
-    border-color: #6a7fe8;
-}
-.patient-chat-page .chat-window .chattext-list li.odd .chatbg:after {
-    left: 100%;
-    top: 20px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(106, 127, 232, 0);
-    border-left-color: #6a7fe8;
-    border-width: 7px;
-    margin-top: -7px;
-}
-.patient-chat-page .chat-window .chattext-list li.odd .chatbg:before {
-    left: 100%;
-    top: 20px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(0, 167, 254, 0);
-    border-left-color: #6a7fe8;
-    border-width: 8px;
-    margin-top: -8px;
-}
-.patient-chat-page .chat-window .chattext-list li.odd .chat-userimg {
-    float: right;
-}
-.patient-chat-page .chat-window .chattext-list li.even .chatbg:after {
-    right: 100%;
-    top: 20px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(255, 255, 255, 0);
-    border-right-color: #fff;
-    border-width: 7px;
-    margin-top: -7px;
-}
-.patient-chat-page .chat-window .chattext-list li.even .chatbg:before {
-    right: 100%;
-    top: 20px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(227, 230, 244, 0);
-    border-right-color: #dfe2f2;
-    border-width: 8px;
-    margin-top: -8px;
-}
-.patient-chat-page .chat-window .chattext-list li.chatnote .chatbg {
-    background-color: #fff6b7;
-    border-color: #ffed71;
-    color: #36394d;
-}
-.patient-chat-page .chat-window .chattext-list li.chatnote .chatbg:after {
-    border-color: rgba(255, 246, 183, 0);
-    border-left-color: #fff6b7;
-    border-width: 7px;
-    margin-top: -7px;
-}
-.patient-chat-page .chat-window .chattext-list li.chatnote .chatbg:before {
-    border-color: rgba(255, 246, 183, 0);
-    border-left-color: #fff6b7;
-    border-width: 8px;
-    margin-top: -8px;
-}
-.patient-chat-page .chat-window .chat-box {
-    background-color: #fff;
-    border: solid 1px #dfe2f2;
-    border-radius: 5px;
-    margin: 20px;
-}
-.patient-chat-page .chat-window .chat-box .nav-tabs > li > a {
-    color: #989bb2;
-    font-size: 13px;
-    font-weight: normal;
-    padding: 12px 15px;
-}
-.patient-chat-page .chat-window .chat-box .nav-tabs > li.active > a {
-    font-weight: 600;
-    color: #666980;
-}
-.patient-chat-page .chat-window .chat-box .nav-tabs > li.active > a:hover {
-    font-weight: 600;
-    color: #666980;
-}
-.patient-chat-page .chat-window .chat-box .nav-tabs > li.active > a:focus {
-    font-weight: 600;
-    color: #666980;
-}
-.patient-chat-page .chat-window .chat-box .help-icon {
-    float: right;
-}
-.patient-chat-page .chat-window .chat-box .help-icon i {
-    font-size: 16px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content textarea,.tab-content textarea {
-    border: 0;
-    height: 75px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer,.tabpanel-footer {
-    background-color: #f7f8fc;
-    padding: 7px 15px;
-    border-radius: 0 0 5px 5px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer a,.tabpanel-footer a {
-    margin-right: 15px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 5px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click1,.tabpanel-footer .click1 {
-    background: url(/assets/img/physio-sprite-img.png) -841px -50px no-repeat;
-    width: 15px;
-    height: 15px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click2 ,.tabpanel-footer .click2 {
-    background: url(/assets/img/physio-sprite-img.png) -905px -50px no-repeat;
-    width: 15px;
-    height: 15px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3,.tabpanel-footer .click3 {
-    background: url(/assets/img/physio-sprite-img.png) -969px -50px no-repeat;
-    width: 15px;
-    height: 15px;
-    border: none;
-    vertical-align: middle;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:focus,.tabpanel-footer .click3:focus {
-    outline: none;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click3:hover ,.tabpanel-footer .click3:hover {
-    outline: none;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click4,.tabpanel-footer .click4 {
-    background: url(/assets/img/physio-sprite-img.png) -1033px -50px no-repeat;
-    width: 15px;
-    height: 15px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click5 ,.tabpanel-footer .click5 {
-    background: url(/assets/img/physio-sprite-img.png) -1097px -50px no-repeat;
-    width: 15px;
-    height: 15px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .click6 {
-    background: url(/assets/img/physio-sprite-img.png) -1159px -50px no-repeat;
-    width: 15px;
-    height: 15px;
-}
-.patient-chat-page .chat-window .chat-box .tab-content .tabpanel-footer .btn, .tabpanel-footer .btn {
-    background-color: #ffae00;
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    padding: 5px 12px;
-    float: right;
-    display: inline-block;
-    border-radius: 3px;
-}
-.patient-chat-page .progress {
-    border-radius: 5px;
-    height: 7px;
-    background-color: #edeff5 !important;
-}
-.patient-chat-page .progress .progress-bar {
-    background-color: #00c272;
-}
-.patient-chat-page .nav-tabs > li.active > a {
-    border: none;
-    border-bottom: solid 2px #ffc107;
-    font-weight: 600;
-}
-.patient-chat-page .nav-tabs > li.active > a:hover {
-    border: none;
-    border-bottom: solid 2px #ffc107;
-    font-weight: 600;
-}
-.patient-chat-page .nav-tabs > li.active > a:focus {
-    border: none;
-    border-bottom: solid 2px #ffc107;
-    font-weight: 600;
-}
-.patient-chat-page .avatar {
-    height: 100% !important;
-    width: 100% !important;
-    text-align: center !important;
-    padding: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    font-size: 12px;
-    font-weight: normal;
-}
-.patient-chat-page .avatar img {
-    width: 100%;
-}
-.patient-chat-page .chat-window-main {
-    background: url(/assets/img/physio-patient-chat-bg.jpg) top left repeat;
-}
-.icheckbox_flat-green {
-    background: url(/assets/img/green.png) top left no-repeat;
-}
-.iradio_flat-green {
-    background: url(/assets/img/green.png) top left no-repeat;
-}
-.patient-chat-page .chat-image-uploader .dz-preview {
-    display: none;
-}
-.patient-popup.send-image-popup .modal-dialog {
-    width: 750px;
-}
+
 .folders-manager {
     display: inline-block;
     width: 238px;
