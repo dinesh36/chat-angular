@@ -86,6 +86,11 @@
 			$rootScope.$on('$stateChangeSuccess', function(event, toState){
 				$rootScope.title = toState.title || 'HT Admin';
 				$(window).scrollTop(0);
+				if(toState.name==='app.chat'){
+					$rootScope.showChat = false;
+				} else {
+					$rootScope.showChat = true;
+				}
 			});
 			$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState){
 			});
