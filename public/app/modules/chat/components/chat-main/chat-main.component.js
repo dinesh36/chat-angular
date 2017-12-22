@@ -29,7 +29,6 @@
         function activate() {
             vm.name = 'sagar';
             vm.userId = $location.search().id;
-            ChatService.init();
         }
     }
 })();

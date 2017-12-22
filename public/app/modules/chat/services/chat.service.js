@@ -12,23 +12,25 @@
 		};
 
 		function init() {
-			var socket = io();
+			var socket = io(),
+				userId=1;
 			$rootScope.$on('SEND_MESSAGE', function(event,data){
 				socket.emit('new message', data.data);
 			});
 
+			$rootScope.$on('userChange',function(event, data){
+				userId = data.id;
+			});
+
 			$rootScope.$on('SEND_FEED', function(event,data){
-				console.log('send feed for the user feed.',data.data);
 				socket.emit('user feed', data.data);
 			});
 
 			socket.on('user feed', function (data) {
-				console.log('got feed for the user feed.',data);
 				$rootScope.$broadcast('RECEIVE_FEED', {action:'getFeed', data:data});
 			});
 
 			socket.on('new message', function (data) {
-				console.log('sdhdjsadjhasdas',data);
 				$rootScope.$broadcast('NEW_MESSAGE', {action:'newMessage', data:data});
 			});
 
@@ -41,7 +43,7 @@
 				html2canvas(document.body).then(function (canvas) {
 					document.body.appendChild(canvas);
 					var dataURL = canvas.toDataURL();
-					socket.emit('screen share', dataURL);
+					socket.emit('screen share', {data:dataURL,userId:userId});
 					$('iframe').remove();
 					$('canvas').remove();
 				})
@@ -52,10 +54,6 @@
 			});
         }
 		function getMessages(data){
-
-			console.log(data);
-			console.log('msgFrom',parseInt($location.search().id));
-			console.log('msgTo',data.id);
 			var msgFrom = parseInt($location.search().id);
 			var msgTo = data.id;
 			return $http.get('api/chats?msgFrom='+msgFrom+'&msgTo='+msgTo);
