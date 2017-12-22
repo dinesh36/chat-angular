@@ -22,15 +22,15 @@
     function Controller($state,_,$rootScope,$scope){
         var vm = this;
         vm.closeDialog = closeDialog;
-        vm.src = '';
+        // vm.src = '';
         function closeDialog(){
             $scope.closeThisDialog(0);
         }
         activate();
         function activate() {
             $rootScope.$on('SCREEN_SHARE',function(event,data){
-                if($scope.userId == data.data.message.userId){
-                    $('.__src').attr('src',data.data.message.data);
+                if($scope.userId == data.message.userId){
+                    $('.__src').attr('src',data.message.data);
                 }
             });
         }

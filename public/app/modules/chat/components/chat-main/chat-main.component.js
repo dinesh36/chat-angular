@@ -27,6 +27,7 @@
         activate();
 
         function activate() {
+            //$('.chat-icon').css('display', 'none');
             vm.name = 'sagar';
             vm.userId = $location.search().id;
         }

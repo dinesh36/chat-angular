@@ -16,12 +16,12 @@ function getMessage(req, res) {
     };
   Chat.find(query, function (err, data) {
       if(err) {
-        res.sendError(new Exception('DBError', 'Error in getting saved messages.'));
+        res.send('Error in getting saved messages.');
       } else {
         if(data) {
           res.send(data);
         } else {
-          res.sendError(new Exception('Object Not Found'));
+          res.send('Object Not Found');
         }
       }
     });

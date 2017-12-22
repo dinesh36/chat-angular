@@ -12,8 +12,8 @@
 		};
 
 		function init() {
-			var socket = io(),
-				userId=1;
+			var userId=parseInt($location.search().id) || 1,
+				socket = io.connect({query: 'userId=' + userId});
 			$rootScope.$on('SEND_MESSAGE', function(event,data){
 				socket.emit('new message', data.data);
 			});
@@ -33,6 +33,14 @@
 			socket.on('new message', function (data) {
 				$rootScope.$broadcast('NEW_MESSAGE', {action:'newMessage', data:data});
 			});
+			
+			socket.on('status',function(data){
+				$rootScope.$broadcast('STATUS', {action:'status', data:data});
+			});
+
+			$rootScope.$on('STATUS_ASK', function(event,data){
+				socket.emit('status', data);
+			});
 
             setInterval(function () {
                 var data = {moduleId:1,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Contact'};
@@ -43,14 +51,19 @@
 				html2canvas(document.body).then(function (canvas) {
 					document.body.appendChild(canvas);
 					var dataURL = canvas.toDataURL();
-					socket.emit('screen share', {data:dataURL,userId:userId});
+					socket.emit('screen share', {
+						data:dataURL,
+						userId:parseInt($location.search().id) || 1
+					});
 					$('iframe').remove();
 					$('canvas').remove();
 				})
 			},1000);
 
 			socket.on('screen share', function (data) {
-				$rootScope.$broadcast('SCREEN_SHARE', {action:'screenShare', data:data});
+				console.log('here in share',data);
+				$rootScope.$broadcast('SCREEN_SHARE',data);
+				console.log('yes here');
 			});
         }
 		function getMessages(data){
