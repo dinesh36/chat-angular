@@ -48,6 +48,7 @@
             {id:7,name:'Muit','active':false}
         ];
         vm.users = {};
+        vm.selectedUser = {};
         vm.listView = true;
         vm.userDetails = userDetails;
         activate();
@@ -70,6 +71,7 @@
 
         function userDetails(user){
             //vm.userId = ;
+            vm.selectedUser = user;
             getActiveUser(parseInt(user.id));
             //vm.users = {users:vm.userList,id:vm.userId};
             setTimeout(function(){
