@@ -1,7 +1,7 @@
 'use strict';
 (function(){
 	angular.module('HTAdminApp')
-		.run(['$rootScope', '$state', '$stateParams', '$location', RunHTAdminApp])
+		.run(['$rootScope', '$state', '$stateParams', '$location','ChatService', RunHTAdminApp])
 		.config(['$stateProvider', '$urlRouterProvider', ConfigHTAdminApp])
 		.value('froalaConfig', {
 			'key':'oGLGTI1DMJc1BWLg1PO=='
@@ -33,7 +33,6 @@
 			})
 			.state('app.dashboard', {
 				url:'/dashboard',
-				controller:'DashboardController',
 				controllerAs:'vm',
 				template:'<div>hello</div>'
 			});
@@ -44,7 +43,8 @@
 	 * @description function to be called when application is ready to run
      * @constructor
      */
-	function RunHTAdminApp($rootScope, $state, $stateParams){
+	function RunHTAdminApp($rootScope, $state, $stateParams,$location,ChatService){
+		ChatService.init();
 		$rootScope.$state = $state;
 		$rootScope.$stateParams = $stateParams;
 		$rootScope.errorMessage = '';
