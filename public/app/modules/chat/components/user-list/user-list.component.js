@@ -48,6 +48,7 @@
             {id:7,name:'Muit','active':false,status:'offline'}
         ];
         vm.users = {};
+        vm.selectedUser = {};
         vm.listView = true;
         vm.userDetails = userDetails;
         activate();
@@ -78,6 +79,7 @@
         }
 
         function userDetails(user){
+            vm.selectedUser = user;
             getActiveUser(parseInt(user.id));
             setTimeout(function(){
                 $rootScope.$broadcast('userChange',user)

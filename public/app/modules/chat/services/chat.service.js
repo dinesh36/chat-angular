@@ -67,7 +67,7 @@
 			});
         }
 		function getMessages(data){
-			var msgFrom = parseInt($location.search().id);
+			var msgFrom = parseInt($location.search().id) || 1;
 			var msgTo = data.id;
 			return $http.get('api/chats?msgFrom='+msgFrom+'&msgTo='+msgTo);
 		}

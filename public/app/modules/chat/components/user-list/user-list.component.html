@@ -4,7 +4,7 @@
             <button class="btn" id="searchbtn" type="submit">
                 <i aria-hidden="true" class="fa fa-search"></i>
             </button>
-            <input class="form-control" id="searchtextbox" placeholder="Search Users" type="text">
+            <input class="form-control" ng-model="vu.searchVisibleFields" id="searchtextbox" placeholder="Search Users" type="text">
         </div>
         <!--<div class="filterlist">-->
             <!--<a class="select-option" href="javascript:void(0)">Newest<i class="icon-arrow-down"></i> </a>-->
@@ -22,12 +22,12 @@
     <div class="search-results" >
         <div class="chatlist">
             <ul >
-                <li ng-repeat="list in vu.userList" ng-class="list.active ? 'active':''" ng-click="vu.userDetails(list)">
+                <li ng-repeat="list in vu.userList | filter:vu.searchVisibleFields" ng-class="list.active ? 'active':''" ng-click="vu.userDetails(list)">
                     <a href="javascript:void(0)">
                         <div class="chat-user-img-main">
                             <div ng-class="list.status==='online' ? 'online':''" ></div>
                             <span class="chat-user-img">
-                              <img src="assets/img/user-img2.jpg"/>
+                              <img src="/assets/img/user2.jpg"/>
                            </span>
                         </div>
                         <h4>

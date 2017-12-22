@@ -64,6 +64,10 @@
                 $scope.$apply();
             });
             $rootScope.$on('userChange',function(event, data){
+                setTimeout(function(){
+                    var height = $(".chattext-list").prop("scrollHeight");
+                    $('.chattext-list').scrollTop(height);
+                },100)
                 vm.messages = [];
                 //$scope.$apply();
                 ChatService.getMessages(data).then(function(data){

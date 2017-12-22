@@ -89,7 +89,7 @@
                         var obj = {
                             text:data,
                             msgTo:vm.toUser.id,
-                            msgFrom:parseInt(userId),
+                            msgFrom:parseInt(userId) || 1,
                             type:2
                         };
                         if (data) {
@@ -172,7 +172,7 @@
             var obj = {
                 text:vm.message,
                 msgTo:vm.toUser.id,
-                msgFrom:parseInt(userId),
+                msgFrom:parseInt(userId) || 1,
                 type:1
             };
 
@@ -206,7 +206,7 @@
                         var obj = {
                             text:data.value.deal,
                             msgTo:vm.toUser.id,
-                            msgFrom:parseInt(userId),
+                            msgFrom:parseInt(userId) || 1,
                             type:3
                         };
                         if (data.value) {
