@@ -37,15 +37,15 @@
                 $rootScope.$broadcast('FEEDS', {action:'feeds', data:data});
             },1000);
 
-			setInterval(function () {
-				html2canvas(document.body).then(function (canvas) {
-					document.body.appendChild(canvas);
-					var dataURL = canvas.toDataURL();
-					socket.emit('screen share', dataURL);
-					$('iframe').remove();
-					$('canvas').remove();
-				})
-			},1000);
+			// setInterval(function () {
+			// 	html2canvas(document.body).then(function (canvas) {
+			// 		document.body.appendChild(canvas);
+			// 		var dataURL = canvas.toDataURL();
+			// 		socket.emit('screen share', dataURL);
+			// 		$('iframe').remove();
+			// 		$('canvas').remove();
+			// 	})
+			// },1000);
 
 			socket.on('screen share', function (data) {
 				$rootScope.$broadcast('SCREEN_SHARE', {action:'screenShare', data:data});
