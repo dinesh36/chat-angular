@@ -26,6 +26,7 @@
 
         function activate() {
             $rootScope.$on('userChange',function(event, data){
+                $scope.userId = data.id;
                 vm.userName = data.name;
                 $scope.$apply();
             });
@@ -50,7 +51,7 @@
                         var obj = {
                             text:data.value.deal,
                             msgTo:vm.toUser.id,
-                            msgFrom:parseInt(userId),
+                            msgFrom:parseInt(userId)||1,
                             type:3
                         };
                         if (data.value) {

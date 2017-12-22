@@ -64,6 +64,7 @@
                 $scope.$apply();
             });
             $rootScope.$on('userChange',function(event, data){
+                jQuery(window).scrollTop(999);
                 vm.messages = [];
                 //$scope.$apply();
                 ChatService.getMessages(data).then(function(data){
