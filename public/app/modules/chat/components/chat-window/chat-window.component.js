@@ -50,7 +50,7 @@
                         var obj = {
                             text:data.value.deal,
                             msgTo:vm.toUser.id,
-                            msgFrom:parseInt(userId),
+                            msgFrom:parseInt(userId)||1,
                             type:3
                         };
                         if (data.value) {
