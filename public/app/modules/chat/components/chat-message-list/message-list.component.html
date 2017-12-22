@@ -11,7 +11,7 @@
                         <img src="{{message.text}}" alt="">
                     </span>
                 </span>
-                <span class="chattext" ng-if="message.type==3"><a target="_blank" ui-sref="app.dealDetail({id:message.text.id})">{{message.text.title}}</a></span>
+                <span class="chattext" ng-if="message.type==3"><a target="_blank" href="https://test.salesmate.io/#/app/deals/{{message.text.id}}/detail"><i class="fa fa-tags"></i>{{message.text.title}}</a></span>
             </div>
             <span class="info">Sent an hour ago</span>
         </li>

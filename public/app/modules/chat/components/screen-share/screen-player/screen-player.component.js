@@ -22,14 +22,16 @@
     function Controller($state,_,$rootScope,$scope){
         var vm = this;
         vm.closeDialog = closeDialog;
-        vm.src = 'https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png';
+        vm.src = '';
         function closeDialog(){
             $scope.closeThisDialog(0);
         }
         activate();
         function activate() {
             $rootScope.$on('SCREEN_SHARE',function(event,data){
-                $('.__src').attr('src',data.data.message);
+                if($scope.userId == data.data.message.userId){
+                    $('.__src').attr('src',data.data.message.data);
+                }
             });
         }
     }
