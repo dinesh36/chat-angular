@@ -21,7 +21,7 @@
 
 <div class="footer">
   <div class="livechat-main">
-    <div class="chat-icon"><a href="javascript:void(0);"><img src="/assets/img/chat-icon.png"/> </a> </div>
+    <div class="chat-icon" ng-show="$root.showChat"><a href="javascript:void(0);"><img src="/assets/img/chat-icon.png"/> </a> </div>
     <div class="livechat-list-main">
       <div class="livechat-list-title">Conversations <a onclick="hideDiv()" class="close-icon pull-right">X</a></div>
       <user-chat show-in-chat-window="true"></user-chat>
