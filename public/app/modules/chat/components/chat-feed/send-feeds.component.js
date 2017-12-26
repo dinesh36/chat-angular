@@ -28,15 +28,15 @@
             var action = '';
             switch(name){
                 case 'Contact':
-                    data={moduleId:1,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Contact'};
+                    data={moduleId:1,name:'Akshay Kalola', action:'created', createdBy:'Dinesh', moduleName:'Contact'};
                     action='CONTACT_CREATED';
                     break;
                 case 'Company':
-                    data={moduleId:5,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Company'};
+                    data={moduleId:5,name:'Rapidops Inc', action:'created', createdBy:'Dinesh', moduleName:'Company'};
                     action='COMPANY_CREATED';
                     break;
                 case 'Deal':
-                    data={moduleId:4,name:'sagar', action:'created', createdBy:'Dinesh', moduleName:'Deal'};
+                    data={moduleId:4,name:'Meeting with Rushi Pandya', action:'created', createdBy:'Dinesh', moduleName:'Deal'};
                     action='DEAL_CREATED';
                     break;
                 case 'Activity':
